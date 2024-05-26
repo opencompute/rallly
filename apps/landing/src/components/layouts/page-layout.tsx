@@ -53,7 +53,7 @@ const Menu: React.FunctionComponent<{ className: string }> = ({
       <NavLink href="/blog">
         <Trans i18nKey="blog" />
       </NavLink>
-      <NavLink href="https://support.rallly.co">
+      <NavLink href="https://kinpal.com">
         <Trans i18nKey="support" />
       </NavLink>
     </nav>
@@ -90,7 +90,7 @@ const PageLayout: React.FunctionComponent<PageLayoutProps> = ({ children }) => {
         <div className="mb-16 flex w-full items-center">
           <div className="flex grow items-center gap-x-12">
             <Link className="inline-block rounded" href="/">
-              <Image src="/logo.svg" width={130} height={30} alt="rallly.co" />
+              <Image src="/logo.svg" width={130} height={30} alt="kinpal.com" />
             </Link>
             <Menu className="hidden items-center space-x-8 lg:flex" />
           </div>
@@ -143,7 +143,7 @@ const PageLayout: React.FunctionComponent<PageLayoutProps> = ({ children }) => {
                   <DropdownMenuItem asChild>
                     <Link
                       className="flex items-center gap-3 p-2 text-lg"
-                      href="https://support.rallly.co"
+                      href="https://kinpal.com"
                     >
                       <Trans i18nKey="support" />
                     </Link>

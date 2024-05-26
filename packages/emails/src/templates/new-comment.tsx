@@ -12,8 +12,8 @@ export const NewCommentEmail = ({
   name = "Guest",
   title = "Untitled Poll",
   authorName = "Someone",
-  pollUrl = "https://rallly.co",
-  disableNotificationsUrl = "https://rallly.co",
+  pollUrl = "https://kinpal.com",
+  disableNotificationsUrl = "https://kinpal.com",
   ctx = defaultEmailContext,
 }: NewCommentEmailProps) => {
   return (

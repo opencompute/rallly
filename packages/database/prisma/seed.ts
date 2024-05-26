@@ -103,7 +103,7 @@ async function main() {
   const freeUser = await prisma.user.create({
     data: {
       name: "Dev User",
-      email: "dev@rallly.co",
+      email: "dev@kinpal.com",
       timeZone: "America/New_York",
     },
   });
@@ -111,7 +111,7 @@ async function main() {
   const proUser = await prisma.user.create({
     data: {
       name: "Pro User",
-      email: "dev+pro@rallly.co",
+      email: "dev+pro@kinpal.com",
       customerId: "cus_123",
       subscription: {
         create: {
@@ -128,7 +128,7 @@ async function main() {
   const proUserLegacy = await prisma.user.create({
     data: {
       name: "Pro User Legacy",
-      email: "dev+prolegacy@rallly.co",
+      email: "dev+prolegacy@kinpal.com",
     },
   });
 

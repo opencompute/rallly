@@ -19,7 +19,7 @@ interface LoginEmailProps {
 export const LoginEmail = ({
   name = "Guest",
   code = "123456",
-  magicLink = "https://rallly.co",
+  magicLink = "https://kinpal.com",
   ctx = defaultEmailContext,
 }: LoginEmailProps) => {
   return (

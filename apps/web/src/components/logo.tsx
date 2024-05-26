@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const sizes = {
   sm: {
-    width: 120,
+    width: 22,
     height: 22,
   },
   md: {
-    width: 150,
+    width: 30,
     height: 30,
   },
 };

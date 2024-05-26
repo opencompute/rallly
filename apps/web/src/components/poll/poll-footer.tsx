@@ -8,12 +8,12 @@ export function PollFooter() {
       <Trans
         defaults="Powered by <a>{name}</a>"
         i18nKey="poweredByRallly"
-        values={{ name: "rallly.co" }}
+        values={{ name: "kinpal.com" }}
         components={{
           a: (
             <Link
               className="hover:text-primary-600 rounded-none border-b border-b-gray-500 font-semibold"
-              href="https://rallly.co"
+              href="https://kinpal.com"
             />
           ),
         }}

@@ -22,8 +22,8 @@ import { linkToApp } from "@/lib/linkToApp";
 import { NextPageWithLayout } from "@/types";
 import { getStaticTranslations } from "@/utils/page-translations";
 
-const monthlyPriceUsd = 7;
-const annualPriceUsd = 42;
+const monthlyPriceUsd = 6;
+const annualPriceUsd = 60;
 
 export const UpgradeButton = ({
   children,

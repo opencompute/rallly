@@ -9,7 +9,7 @@ const schema = z.object({
 });
 
 export const config = {
-  runtime: "edge",
+  runtime: "nodejs",
 };
 
 const regularFont = fetch(
@@ -39,7 +39,7 @@ export default async function handler(req: NextRequest) {
           <div tw="flex justify-between items-center w-full">
             <img
               alt="Rallly"
-              src="https://rallly.co/logo-color.svg"
+              src="https://kinpal.com/logo-color.svg"
               height={64}
             />
             <div tw="flex text-gray-800 text-3xl tracking-tight font-bold">

@@ -22,4 +22,4 @@ The initial price for Rallly Pro will be $5 per month or $30 per year. That's ju
 
 With your support, I can sustain my work on Rallly, implementing numerous highly-requested features. As a subscriber, you are playing a key role to make this happen, and also have the opportunity to influence Rallly's future direction.
 
-Thank you and as always if you have any [feedback](mailto:feedback@rallly.co), I'd be happy to hear from you!
+Thank you and as always if you have any [feedback](mailto:feedback@kinpal.com), I'd be happy to hear from you!

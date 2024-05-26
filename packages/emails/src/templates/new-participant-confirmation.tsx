@@ -11,7 +11,7 @@ interface NewParticipantConfirmationEmailProps {
 export const NewParticipantConfirmationEmail = ({
   title = "Untitled Poll",
   name = "John",
-  editSubmissionUrl = "https://rallly.co",
+  editSubmissionUrl = "https://kinpal.com",
   ctx = defaultEmailContext,
 }: NewParticipantConfirmationEmailProps) => {
   const { domain } = ctx;

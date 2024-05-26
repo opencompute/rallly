@@ -36,4 +36,4 @@ Scores are now visualized slightly different. Each option will show a number ind
 
 ## Conclusion
 
-Thanks for following along and I really hope you like the new version. If you have any [feedback](mailto:feedback@rallly.co) I'd love to hear from you.
+Thanks for following along and I really hope you like the new version. If you have any [feedback](mailto:feedback@kinpal.com) I'd love to hear from you.

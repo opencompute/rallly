@@ -58,7 +58,6 @@ export const EmailLayout = ({
         }}
       >
         <Container style={containerStyles}>
-          <Img src={logoUrl} alt="Rallly" width={128} />
           <Section style={sectionStyles}>
             {recipientName ? <Text>Hi {recipientName},</Text> : null}
             {children}
@@ -80,15 +79,11 @@ export const EmailLayout = ({
             <Link style={linkStyles} href={baseUrl}>
               Home
             </Link>
-            <span>&nbsp;&bull;&nbsp;</span>
-            <Link style={linkStyles} href="https://twitter.com/ralllyco">
+            <span>&nbsp;&nbsp;&nbsp;</span>
+            <Link style={linkStyles} href="https://twitter.com/kinpalai">
               Twitter
             </Link>
-            <span>&nbsp;&bull;&nbsp;</span>
-            <Link style={linkStyles} href="https://github.com/lukevella/rallly">
-              Github
-            </Link>
-            <span>&nbsp;&bull;&nbsp;</span>
+            <span>&nbsp;&nbsp;&nbsp;</span>
             <Link
               style={linkStyles}
               href={`mailto:${process.env["SUPPORT_EMAIL"]}`}

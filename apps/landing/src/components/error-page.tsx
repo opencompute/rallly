@@ -34,7 +34,7 @@ const ErrorPage: React.FunctionComponent<ComponentProps> = ({
             {t("goToHome")}
           </Link>
           <Link
-            href="https://support.rallly.co"
+            href="https://kinpal.com"
             passHref={true}
             className="btn-default"
           >

@@ -95,7 +95,7 @@ const Footer: React.FunctionComponent = () => {
           <div className="flex items-center space-x-6">
             <Link
               target="_blank"
-              href="https://twitter.com/ralllyco"
+              href="https://twitter.com/kinpalai"
               className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
             >
               <TwitterIcon className="size-5" />
@@ -109,14 +109,14 @@ const Footer: React.FunctionComponent = () => {
             </Link>
             <Link
               target="_blank"
-              href="https://www.linkedin.com/company/rallly"
+              href="https://www.linkedin.com/company/kinpal"
               className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
             >
               <LinkedinIcon className="size-5" />
             </Link>
             <Link
               target="_blank"
-              href="https://github.com/lukevella/rallly"
+              href="https://github.com/opencompute/rallly"
               className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
             >
               <GithubIcon className="size-5" />
@@ -147,7 +147,7 @@ const Footer: React.FunctionComponent = () => {
             </li>
             <li>
               <Link
-                href="https://rallly.co/blog"
+                href="https://kinpal.com/blog"
                 className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
               >
                 <Trans i18nKey="blog" defaults="Blog" />
@@ -155,7 +155,7 @@ const Footer: React.FunctionComponent = () => {
             </li>
             <li>
               <Link
-                href="https://support.rallly.co"
+                href="https://kinpal.com"
                 className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
               >
                 <Trans i18nKey="support" defaults="Support" />

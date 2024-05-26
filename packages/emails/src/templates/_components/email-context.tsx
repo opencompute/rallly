@@ -5,7 +5,7 @@ export type EmailContext = {
 };
 
 export const defaultEmailContext = {
-  logoUrl: "https://rallly.co/logo.png",
-  baseUrl: "https://rallly.co",
-  domain: "rallly.co",
+  logoUrl: "https://kinpal.com/logo.png",
+  baseUrl: "https://kinpal.com",
+  domain: "kinpal.com",
 };

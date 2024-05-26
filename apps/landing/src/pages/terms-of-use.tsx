@@ -46,7 +46,7 @@ const PrivacyPolicy = () => {
         <h2>4. Links to Third-Party Websites</h2>
         <p>
           This website may contain links to third-party websites that are not
-          owned or controlled by rallly.co. We have no control over, and assume
+          owned or controlled by kinpal.com. We have no control over, and assume
           no responsibility for, the content, privacy policies, or practices of
           any third-party websites.
         </p>
@@ -62,7 +62,7 @@ const PrivacyPolicy = () => {
         <h2>6. Contact</h2>
         <p>
           If you have any questions about these terms of use, please contact us
-          at <a href="mailto:support@rallly.co">support@rallly.co</a>.
+          at <a href="mailto:support@kinpal.com">support@kinpal.com</a>.
         </p>
 
         <p className="text-sm font-semibold">

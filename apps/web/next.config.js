@@ -38,7 +38,7 @@ const nextConfig = {
     return [
       {
         source: "/support",
-        destination: "https://support.rallly.co",
+        destination: "https://kinpal.com",
         permanent: true,
       },
       {

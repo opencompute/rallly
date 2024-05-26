@@ -19,7 +19,7 @@ I plan to disable the legacy database in about two months so until then all
 polls created with the old version will still be available. Hopefully this will
 be enough time for any active polls to be transferred over.
 
-If you have any issue accessing your poll please reach out through the on-site chat or send an email to [support@rallly.co](mailto:support@rallly.co).
+If you have any issue accessing your poll please reach out through the on-site chat or send an email to [support@kinpal.com](mailto:support@kinpal.com).
 
 ## What's new?
 
@@ -80,4 +80,4 @@ There are a few upsides of sharing links directly with your participants too. Yo
 
 ## This is only the beginning
 
-There's plenty of new features coming so make sure to [follow me](https://twitter.com/imlukevella) or [@ralllyco](https://twitter.com/ralllyco) on Twitter for updates.
+There's plenty of new features coming so make sure to [follow me](https://twitter.com/imlukevella) or [@kinpalai](https://twitter.com/kinpalai) on Twitter for updates.

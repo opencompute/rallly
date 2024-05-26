@@ -42,4 +42,4 @@ need to be a marksman to select the right options.
 ## In conclusion
 
 Hopefully you will enjoy this update and find it useful.
-I work on things based on the feedback I get so why not send a tweet to [@ralllyco](https://twitter.com/ralllyco) or [@imlukevella](https://twitter.com/imlukevella) and let me know how you like this update and what you'd like to see next?
+I work on things based on the feedback I get so why not send a tweet to [@kinpalai](https://twitter.com/kinpalai) or [@imlukevella](https://twitter.com/imlukevella) and let me know how you like this update and what you'd like to see next?

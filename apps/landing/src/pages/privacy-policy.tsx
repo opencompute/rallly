@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
         <h1>Privacy Policy</h1>
         <p>Last updated: 1 August 2023</p>
         <p>
-          At rallly.co, we take your privacy seriously. This privacy policy
+          At kinpal.com, we take your privacy seriously. This privacy policy
           explains how we collect, use, and disclose your personal data, and
           your rights in relation to your personal data under the General Data
           Protection Regulation (GDPR).
@@ -114,7 +114,7 @@ const PrivacyPolicy = () => {
 
         <p>
           To exercise any of these rights, please contact us at{" "}
-          <a href="mailto:support@rallly.co">support@rallly.co</a>.
+          <a href="mailto:support@kinpal.com">support@kinpal.com</a>.
         </p>
 
         <h2>Contact</h2>
@@ -122,7 +122,7 @@ const PrivacyPolicy = () => {
         <p>
           If you have any questions or concerns about our privacy policy or our
           practices with regards to your personal data, please contact us at{" "}
-          <a href="mailto:support@rallly.co">support@rallly.co</a>.
+          <a href="mailto:support@kinpal.com">support@kinpal.com</a>.
         </p>
       </div>
     </PageLayout>

@@ -12,8 +12,8 @@ export const NewParticipantEmail = ({
   name = "John",
   title = "Untitled Poll",
   participantName = "Someone",
-  pollUrl = "https://rallly.co",
-  disableNotificationsUrl = "https://rallly.co",
+  pollUrl = "https://kinpal.com",
+  disableNotificationsUrl = "https://kinpal.com",
   ctx = defaultEmailContext,
 }: NewParticipantEmailProps) => {
   return (

@@ -3,7 +3,7 @@
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg",
-    "href": "https://rallly.co"
+    "href": "https://kinpal.com"
   },
   "favicon": "/favicon.png",
   "colors": {
@@ -18,7 +18,7 @@
   },
   "topbarCtaButton": {
     "name": "Go to App",
-    "url": "https://app.rallly.co"
+    "url": "https://kinpal.com"
   },
   "topbarLinks": [
     {
@@ -91,11 +91,11 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/ralllyco",
-    "linkedin": "https://www.linkedin.com/company/rallly/",
-    "github": "https://github.com/lukevella/rallly",
+    "twitter": "https://twitter.com/kinpalai",
+    "linkedin": "https://www.linkedin.com/company/kinpal",
+    "github": "https://github.com/opencompute/rallly",
     "discord": "https://discord.com/invite/uzg4ZcHbuM",
-    "website": "https://rallly.co/"
+    "website": "https://kinpal.com"
   },
   "feedback": {
     "suggestEdit": true,

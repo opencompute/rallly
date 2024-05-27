@@ -1,6 +1,6 @@
 export const sessionConfig = {
   password: process.env.SECRET_PASSWORD ?? "",
-  cookieName: "rallly-session",
+  cookieName: "kinpal-session",
   cookieOptions: {
     secure: process.env.NEXT_PUBLIC_BASE_URL?.startsWith("https://") ?? false,
   },

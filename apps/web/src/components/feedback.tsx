@@ -56,7 +56,7 @@ const FeedbackButton = () => {
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
-          <Link href={`https://kinpal.com`} target={"_blank"}>
+          <Link href={`https://support.kinpal.com`} target={"_blank"}>
             <LifeBuoyIcon className="mr-2 size-4" />
             <Trans i18nKey={"getSupport"} defaults={"Get Support"} />
           </Link>

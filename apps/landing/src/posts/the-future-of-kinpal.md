@@ -8,7 +8,7 @@ Kinpal has always been about simplifying group scheduling, but my aim is to evol
 
 ## The Workflow
 
-![funnel](/static/images/the-future-of-rallly/funnel.svg)
+![funnel](/static/images/the-future-of-kinpal/funnel.svg)
 
 Envisioned as a three-component funnel, this new workflow is designed to simplify and streamline your scheduling process.
 
@@ -18,19 +18,19 @@ Here's how these components will work together:
 
 ### Availability Grids
 
-![Availability Grids](/static/images/the-future-of-rallly/availability-grid.svg)
+![Availability Grids](/static/images/the-future-of-kinpal/availability-grid.svg)
 
 When you're scheduling an event, getting a general idea of participants' availability can be incredibly helpful. The Availability Grid will let users select a broad range, and participants can then highlight areas on the grid to indicate when they are available. This will give hosts a quick snapshot of potential suitable time slots.
 
 ### Polls
 
-![Polls](/static/images/the-future-of-rallly/poll.svg)
+![Polls](/static/images/the-future-of-kinpal/poll.svg)
 
 Polling is at the core of what Kinpal does, and it fits seamlessly into this new workflow. Once you've gathered general availability, hosts will be able to narrow down a few options and let participants vote for their preferred dates.
 
 ### RSVP
 
-![RSVP](/static/images/the-future-of-rallly/rsvp.svg)
+![RSVP](/static/images/the-future-of-kinpal/rsvp.svg)
 
 After you've narrowed down to a single date through polling, the RSVP component will come into play. This page will let participants confirm their attendance and access detailed information about your event.
 

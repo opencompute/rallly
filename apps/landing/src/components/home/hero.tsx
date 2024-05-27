@@ -1,4 +1,3 @@
-import { Badge } from "@rallly/ui/badge";
 import { Button } from "@rallly/ui/button";
 import { preventWidows } from "@rallly/utils";
 import { m } from "framer-motion";
@@ -81,24 +80,6 @@ export const MarketingHero = ({
 }) => {
   return (
     <div className="mt-8 max-w-full text-center sm:mt-16">
-      <div className="mb-8">
-        <Link
-          locale="en"
-          href="/blog/rallly-3-0-self-hosting"
-          className="hover:ring-primary relative inline-flex items-center gap-x-3 rounded-full border bg-gray-100 py-1 pl-1 pr-4 text-sm leading-6 text-gray-600 hover:bg-gray-50 focus:ring-2 focus:ring-gray-300 focus:ring-offset-1"
-        >
-          <Badge variant="green">
-            <Trans i18nKey="home:new" defaults="New" />
-          </Badge>
-          <span className="flex items-center gap-x-1">
-            <Trans
-              i18nKey="home:selfHostingBlog"
-              defaults="Kinpal 3.0 Self-Hosting"
-            />
-            <ChevronRightIcon className="-mr-1 size-4" aria-hidden="true" />
-          </span>
-        </Link>
-      </div>
       <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
         {preventWidows(title)}
       </h1>

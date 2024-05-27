@@ -18,7 +18,7 @@
   },
   "topbarCtaButton": {
     "name": "Go to App",
-    "url": "https://kinpal.com"
+    "url": "https://app.kinpal.com"
   },
   "topbarLinks": [
     {
@@ -55,7 +55,7 @@
     "twitter": "https://twitter.com/kinpalai",
     "linkedin": "https://www.linkedin.com/company/kinpal",
     "github": "https://github.com/opencompute/rallly",
-    "discord": "https://discord.com/invite/uzg4ZcHbuM",
+    "discord": "https://discord.gg/7f7NEcBg",
     "website": "https://kinpal.com"
   },
   "feedback": {

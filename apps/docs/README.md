@@ -1,6 +1,6 @@
 # Support Docs
 
-Live site: [https://kinpal.com](https://kinpal.com)
+Live site: [https://support.kinpal.com](https://support.kinpal.com)
 
 Our docs are written in [MDX](https://mdxjs.com/) which is mostly [Markdown](https://www.markdownguide.org/cheat-sheet) with the ability to use components inside.
 

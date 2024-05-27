@@ -19,7 +19,7 @@ In order to maintain a high standard of code quality, please ensure that you are
 
 ## Translations 🌐
 
-To contribute translations, please check out our [guide for translators](https://support.rallly.co/contribute/translations) which contains all the information you need to get started.
+To contribute translations, please check out our [guide for translators](https://support.kinpal.com/contribute/translations) which contains all the information you need to get started.
 
 ## Becoming a Sponsor 💰
 
@@ -31,7 +31,7 @@ Donations are also accepted through [PayPal](http://paypal.me/ralllyco).
 
 ## Documentation
 
-To contribute documentation please check out the [contributing guide](https://support.rallly.co/contribute/documentation) which contains all the information you need to get started.
+To contribute documentation please check out the [contributing guide](https://support.kinpal.com/contribute/documentation) which contains all the information you need to get started.
 
 ## Code of Conduct 👮‍♀️
 

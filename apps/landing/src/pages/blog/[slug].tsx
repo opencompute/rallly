@@ -67,20 +67,19 @@ const Page: NextPageWithLayout<Props> = ({ post }) => {
         <PostBody content={post.content} />
         <div className="mt-8 flex items-center gap-x-4">
           <Image
-            src="/static/images/luke-vella.jpg"
-            width={48}
-            height={48}
-            className="rounded-full"
-            alt="Luke Vella"
+            src="/logo.svg"
+            width={32}
+            height={32}
+            alt="Kinpal"
           />
           <div>
             <div className="font-medium leading-none">Luke Vella</div>
             <div>
               <Link
                 className="text-muted-foreground hover:text-primary text-sm"
-                href="https://twitter.com/imlukevella"
+                href="https://twitter.com/kinpalai"
               >
-                @imlukevella
+                @kinpalai
               </Link>
             </div>
           </div>

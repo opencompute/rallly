@@ -117,7 +117,7 @@ export const UserDropdown = ({ className }: { className?: string }) => {
         <DropdownMenuItem asChild={true}>
           <Link
             target="_blank"
-            href="https://kinpal.com"
+            href="https://support.kinpal.com"
             className="flex items-center gap-x-2"
           >
             <LifeBuoyIcon className="text-muted-foreground size-4" />
@@ -131,7 +131,7 @@ export const UserDropdown = ({ className }: { className?: string }) => {
           <DropdownMenuItem asChild={true}>
             <Link
               target="_blank"
-              href="https://support.rallly.co/self-hosting/pricing"
+              href="https://support.kinpal.com/self-hosting/pricing"
               className="flex items-center gap-x-2"
             >
               <GemIcon className="text-muted-foreground size-4" />

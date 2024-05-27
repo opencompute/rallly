@@ -6,15 +6,15 @@ excerpt: Introducing Kinpal Pro, the premium subscription plan that will complet
 
 Introducing Kinpal Pro, the premium subscription plan that will complete your scheduling workflow.
 
-![Billing Page](/static/images/rallly-pro-launch/billing-page.png)
+![Billing Page](/static/images/kinpal-pro-launch/billing-page.png)
 
 The flagship feature included with Kinpal Pro is the ability to select a date and finalize your polls.
 
-![Finalize Page](/static/images/rallly-pro-launch/finalize-page.png)
+![Finalize Page](/static/images/kinpal-pro-launch/finalize-page.png)
 
 When you finalize a poll you and your participants will receive an email with the final date and a calendar invite.
 
-![Email](/static/images/rallly-pro-launch/email.png)
+![Email](/static/images/kinpal-pro-launch/email.png)
 
 Kinpal Pro users will also be able to keep their polls indefinitely. i.e. They won't be automatically deleted due to inactivity or dates being in the past.
 

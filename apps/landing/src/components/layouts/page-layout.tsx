@@ -44,7 +44,7 @@ const Menu: React.FunctionComponent<{ className: string }> = ({
 }) => {
   return (
     <nav className={className}>
-      <NavLink href="https://support.rallly.co/workflow/create">
+      <NavLink href="https://support.kinpal.com/workflow/create">
         <Trans i18nKey="howItWorks" defaults="How it Works" />
       </NavLink>
       <NavLink href="/pricing">
@@ -53,7 +53,7 @@ const Menu: React.FunctionComponent<{ className: string }> = ({
       <NavLink href="/blog">
         <Trans i18nKey="blog" />
       </NavLink>
-      <NavLink href="https://kinpal.com">
+      <NavLink href="https://support.kinpal.com">
         <Trans i18nKey="support" />
       </NavLink>
     </nav>
@@ -89,8 +89,8 @@ const PageLayout: React.FunctionComponent<PageLayoutProps> = ({ children }) => {
       <div className="mx-auto w-full max-w-full grow p-4 sm:max-w-7xl sm:px-8 sm:py-6">
         <div className="mb-16 flex w-full items-center">
           <div className="flex grow items-center gap-x-12">
-            <Link className="inline-block rounded" href="/">
-              <Image src="/logo.svg" width={130} height={30} alt="kinpal.com" />
+            <Link className="font-semibold rounded text-primary-600" href="/">
+              <Image src="/logo.svg" width={30} height={30} alt="kinpal.com" className="inline-block" /> Kinpal
             </Link>
             <Menu className="hidden items-center space-x-8 lg:flex" />
           </div>
@@ -119,7 +119,7 @@ const PageLayout: React.FunctionComponent<PageLayoutProps> = ({ children }) => {
                   <DropdownMenuItem asChild>
                     <Link
                       className="flex items-center gap-3 p-2 text-lg"
-                      href="https://support.rallly.co/workflow/create"
+                      href="https://support.kinpal.com/workflow/create"
                     >
                       <Trans i18nKey="howItWorks" defaults="How it Works" />
                     </Link>
@@ -143,7 +143,7 @@ const PageLayout: React.FunctionComponent<PageLayoutProps> = ({ children }) => {
                   <DropdownMenuItem asChild>
                     <Link
                       className="flex items-center gap-3 p-2 text-lg"
-                      href="https://kinpal.com"
+                      href="https://support.kinpal.com"
                     >
                       <Trans i18nKey="support" />
                     </Link>

@@ -1,6 +1,6 @@
 <div align="center">
   
-<img src="./assets/images/logo-color.svg" width="200px" alt="Kinpal" />
+<img src="./assets/images/logo-color.svg" width="30px" alt="Kinpal" />
 
 </div>
 <br />
@@ -9,7 +9,7 @@
 [![Actions Status](https://github.com/lukevella/rallly/workflows/CI/badge.svg?branch=main)](https://github.com/lukevella/rallly/actions)
 [![Crowdin](https://badges.crowdin.net/rallly/localized.svg)](https://crowdin.com/project/rallly)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-orange.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Discord](https://img.shields.io/badge/-Join%20Chat-7289DA?logo=discord&logoColor=white)](https://discord.gg/uzg4ZcHbuM)
+[![Discord](https://img.shields.io/badge/-Join%20Chat-7289DA?logo=discord&logoColor=white)](https://discord.gg/7f7NEcBg)
 [![Donate](https://img.shields.io/badge/-Donate%20with%20Paypal-white?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=7QXP2CUBLY88E)
 
 </div>
@@ -22,7 +22,7 @@ Built with [Next.js](https://github.com/vercel/next.js/), [Prisma](https://githu
 
 ## Self-hosting
 
-Check out the [self-hosting docs](https://support.rallly.co/self-hosting) for more information on running your own instance of Kinpal.
+Check out the [self-hosting docs](https://support.kinpal.com/self-hosting) for more information on running your own instance of Kinpal.
 
 ## Local Installation
 
@@ -43,7 +43,7 @@ The following instructions are for running the project locally for development.
 
 3. Setup environment variables
 
-   Create a `.env` file by copying `.env.development`. This will be were you can set your [configuration options](https://support.rallly.co/self-hosting/configuration-options).
+   Create a `.env` file by copying `.env.development`. This will be were you can set your [configuration options](https://support.kinpal.com/self-hosting/configuration-options).
 
    ```bash
    cp .env.development .env
@@ -85,7 +85,7 @@ Please read our [contributing guide](CONTRIBUTING.md) to learn about how to cont
 
 ### Translators 🌐
 
-You can help translate Kinpal to another language by following our [guide for translators](https://support.rallly.co/contribute/translations).
+You can help translate Kinpal to another language by following our [guide for translators](https://support.kinpal.com/contribute/translations).
 
 ## License
 

@@ -4,7 +4,7 @@ import Link from "next/link";
 export function LogoLink() {
   return (
     <Link
-      className="inline-block transition-transform active:translate-y-1"
+      className="font-semibold inline-block text-primary-600 transition-transform active:translate-y-1"
       href="/"
     >
       <Image
@@ -13,8 +13,8 @@ export function LogoLink() {
         width={32}
         height={32}
         priority={true}
-        className="shrink-0"
-      />
+        className="inline-block shrink-0"
+      /> Kinpal
     </Link>
   );
 }

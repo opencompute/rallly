@@ -18,10 +18,10 @@ const Page: NextPageWithLayout<Props> = ({ allPosts }) => {
     <div>
       <NextSeo
         title={t("blog:blogTitle", {
-          defaultValue: "Rallly - Blog",
+          defaultValue: "Kinpal - Blog",
         })}
         description={t("blog:blogDescription", {
-          defaultValue: "News, updates and announcement about Rallly.",
+          defaultValue: "News, updates and announcement about Kinpal.",
         })}
       />
       <div>

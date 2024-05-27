@@ -1,17 +1,17 @@
 ---
 icon: gear
 title: Configuration Options
-description: Using environment variable to configure a self-hosted instance of Rallly.
+description: Using environment variable to configure a self-hosted instance of Kinpal.
 ---
 
 ## Environment variables
 
 An environment variable is a dynamic value that can be set outside of an application and is used to configure or customize the behavior of an application.
-This page lists all environment variables supported by Rallly.
+This page lists all environment variables supported by Kinpal.
 
 ### Base Configuration
 
-These variables need to be configured for Rallly to run and function properly.
+These variables need to be configured for Kinpal to run and function properly.
 
 <ParamField path="DATABASE_URL" required>
   Postgres database connection string
@@ -34,7 +34,7 @@ These variables need to be configured for Rallly to run and function properly.
 
 ### Email Configuration
 
-These variables need to be configured to let Rallly send out transactional emails.
+These variables need to be configured to let Kinpal send out transactional emails.
 
 <ParamField path="NOREPLY_EMAIL">
   This email is used as the sender for all transactional emails. If not set,
@@ -43,7 +43,7 @@ These variables need to be configured to let Rallly send out transactional email
 
 <ParamField path="NOREPLY_EMAIL_NAME">
   This name is used as the sender name for all transactional emails. If not set,
-  `Rallly` will be used instead.
+  `Kinpal` will be used instead.
 </ParamField>
 
 <ParamField path="SUPPORT_EMAIL" required>

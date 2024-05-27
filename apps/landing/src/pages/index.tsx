@@ -12,7 +12,7 @@ const Page: NextPageWithLayout = () => {
   return (
     <Marketing
       title={t("home:metaTitle", {
-        defaultValue: "Rallly - Schedule Group Meetings",
+        defaultValue: "Kinpal - Schedule Group Meetings",
       })}
       description={t("home:metaDescription", {
         defaultValue:

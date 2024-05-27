@@ -55,7 +55,7 @@ const MyApp: NextPage<AppPropsWithLayout> = ({ Component, pageProps }) => {
       <DefaultSeo
         canonical={canonicalUrl}
         openGraph={{
-          siteName: "Rallly",
+          siteName: "Kinpal",
           type: "website",
           url: canonicalUrl,
           images: [
@@ -63,7 +63,7 @@ const MyApp: NextPage<AppPropsWithLayout> = ({ Component, pageProps }) => {
               url: absoluteUrl("/og-image-1200.png"),
               width: 1200,
               height: 630,
-              alt: "Rallly | Schedule group meetings",
+              alt: "Kinpal | Schedule group meetings",
               type: "image/png",
             },
           ],
@@ -78,7 +78,7 @@ const MyApp: NextPage<AppPropsWithLayout> = ({ Component, pageProps }) => {
         }}
       />
       <SoftwareAppJsonLd
-        name="Rallly"
+        name="Kinpal"
         aggregateRating={{
           ratingValue: "4.3",
           bestRating: "5",

@@ -32,7 +32,7 @@ const BillingPortal = () => {
       <p className="text-sm">
         <Trans
           i18nKey="activeSubscription"
-          defaults="Thank you for subscribing to Rallly Pro. You can manage your subscription and billing details from the billing portal."
+          defaults="Thank you for subscribing to Kinpal Pro. You can manage your subscription and billing details from the billing portal."
         />
       </p>
       <div className="mt-6">

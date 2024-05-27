@@ -62,7 +62,7 @@ const Footer: React.FunctionComponent = () => {
             src="/logo-grayscale.svg"
             width={140}
             height={30}
-            alt="Rallly"
+            alt="Kinpal"
           />
           <div className="my-8 text-sm text-gray-500">
             <p className="mb-4 leading-relaxed">

@@ -41,7 +41,7 @@ export default async function handler(req: NextRequest) {
           <div tw="mb-16 flex justify-between">
             <div tw="flex justify-between items-center w-full">
               <img
-                alt="Rallly"
+                alt="Kinpal"
                 src="https://kinpal.com/logo-color.svg"
                 height={64}
               />

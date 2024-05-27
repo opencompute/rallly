@@ -5,7 +5,7 @@ excerpt: A recap of what has changed and some information about the upcoming pri
 ---
 
 Wow, time flies!
-It's been over a month since the [Rallly Pro launch](/blog/rallly-pro-launch).
+It's been over a month since the [Kinpal Pro launch](/blog/rallly-pro-launch).
 A heartfelt thank you to each of you who subscribed – your support means a lot.
 Knowing that there is value in what I've built is a huge morale boost and drives me to push the boundaries even further!
 
@@ -22,9 +22,9 @@ You can keep your participant details private by hiding the participant list or 
 
 **Table View Revamp** - The table view has been overhauled to improve it's readability. There's a lot less repetition and clutter making it easier to work with long lists of options.
 
-## 🎉 Grab Rallly Pro at Launch Pricing!
+## 🎉 Grab Kinpal Pro at Launch Pricing!
 
-If you haven't jumped aboard yet, the launch price for Rallly Pro is still up for grabs.
+If you haven't jumped aboard yet, the launch price for Kinpal Pro is still up for grabs.
 **As an early adopter, you will not be impacted by future price increases**, so you will be benefitting from significantly reduced rates once more features are added.
 If you haven't already, you should check out the new [feedback portal](https://feedback.rallly.co) to see what features are coming next.
 
@@ -33,11 +33,11 @@ Ready to go Pro? You can upgrade from your [billing page](https://kinpal.com/set
 ### Pricing Updates
 
 The current price is about 3 to 4 times cheaper than competitors in the same space.
-My aim is to eventually price Rallly Pro to be in line with similar products but I'll be adjusting the price in stages as more features are released. The next stage will be **$7/month** or **$42/year**.
+My aim is to eventually price Kinpal Pro to be in line with similar products but I'll be adjusting the price in stages as more features are released. The next stage will be **$7/month** or **$42/year**.
 The updated prices will kick in on **1st September 2023** (so you have until then to lock in the current rate).
 
 ## 👍 Thank you
 
-To all the subscribers and sponsors who make it possible for me to continue my work on Rallly.
+To all the subscribers and sponsors who make it possible for me to continue my work on Kinpal.
 
 Cheers!

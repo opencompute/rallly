@@ -11,7 +11,7 @@ export const emailClient = new EmailClient({
   },
   mail: {
     from: {
-      name: (process.env.NOREPLY_EMAIL_NAME as string) || "Rallly",
+      name: (process.env.NOREPLY_EMAIL_NAME as string) || "Kinpal",
       address:
         (process.env.NOREPLY_EMAIL as string) ||
         (process.env.SUPPORT_EMAIL as string),

@@ -12,11 +12,11 @@ const Page: NextPageWithLayout = () => {
   return (
     <Marketing
       title={t("home:doodleAlternativeMetaTitle", {
-        defaultValue: "Best Free Doodle Alternative | Rallly",
+        defaultValue: "Best Free Doodle Alternative | Kinpal",
       })}
       description={t("home:doodleAlternativeMetaDescription", {
         defaultValue:
-          "Looking for a Doodle alternative? Try Rallly! It's free, easy to use, and doesn't require an account.",
+          "Looking for a Doodle alternative? Try Kinpal! It's free, easy to use, and doesn't require an account.",
       })}
     >
       <MarketingHero
@@ -25,7 +25,7 @@ const Page: NextPageWithLayout = () => {
         })}
         description={t("home:doodleAlternativeDescription", {
           defaultValue:
-            "Rallly is the Doodle alternative that everyone is looking for. Thousands of users have already made the switch and are now enjoying professional ad-free meeting polls in an intuitive and easy-to-use interface.",
+            "Kinpal is the Doodle alternative that everyone is looking for. Thousands of users have already made the switch and are now enjoying professional ad-free meeting polls in an intuitive and easy-to-use interface.",
         })}
         callToAction={
           <Trans i18nKey="home:createAPoll" defaults="Create a Meeting Poll" />

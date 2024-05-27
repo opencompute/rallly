@@ -12,7 +12,7 @@ const Page: NextPageWithLayout = () => {
   return (
     <Marketing
       title={t("home:freeSchedulingPollMetaTitle", {
-        defaultValue: "Free Scheduling Poll | Rallly",
+        defaultValue: "Free Scheduling Poll | Kinpal",
       })}
       description={t("home:freeSchedulingPollMetaDescription", {
         defaultValue:
@@ -25,7 +25,7 @@ const Page: NextPageWithLayout = () => {
         })}
         description={t("home:freeSchedulingPollDescription", {
           defaultValue:
-            "Rallly let's you create beautiful and easy to use scheduling polls so you can find the best time for your next event.",
+            "Kinpal let's you create beautiful and easy to use scheduling polls so you can find the best time for your next event.",
         })}
         callToAction={
           <Trans

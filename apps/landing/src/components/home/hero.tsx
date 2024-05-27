@@ -57,7 +57,7 @@ const Screenshot = () => {
       >
         <Image
           src="/static/images/hero-shot.png"
-          alt="Screenshot of Rallly Poll"
+          alt="Screenshot of Kinpal Poll"
           width={1440}
           height={1152}
           quality={100}
@@ -93,7 +93,7 @@ export const MarketingHero = ({
           <span className="flex items-center gap-x-1">
             <Trans
               i18nKey="home:selfHostingBlog"
-              defaults="Rallly 3.0 Self-Hosting"
+              defaults="Kinpal 3.0 Self-Hosting"
             />
             <ChevronRightIcon className="-mr-1 size-4" aria-hidden="true" />
           </span>

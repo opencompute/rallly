@@ -9,7 +9,7 @@ export function LogoLink() {
     >
       <Image
         src="/logo-mark.svg"
-        alt="Rallly"
+        alt="Kinpal"
         width={32}
         height={32}
         priority={true}

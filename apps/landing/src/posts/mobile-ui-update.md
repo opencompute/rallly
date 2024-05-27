@@ -4,7 +4,7 @@ date: "2022-04-20"
 excerpt: An update focusing on improving the usability of the app on mobile devices.
 ---
 
-Did you know over half of all Rallly users are on mobile devices?
+Did you know over half of all Kinpal users are on mobile devices?
 
 ![Device data](/static/images/device-data.png)
 

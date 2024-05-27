@@ -1,6 +1,6 @@
 <div align="center">
   
-<img src="./assets/images/logo-color.svg" width="200px" alt="Rallly" />
+<img src="./assets/images/logo-color.svg" width="200px" alt="Kinpal" />
 
 </div>
 <br />
@@ -14,7 +14,7 @@
 
 </div>
 
-<img src="./assets/images/splash.png" alt="Rallly" />
+<img src="./assets/images/splash.png" alt="Kinpal" />
 
 Schedule group meetings with friends, colleagues and teams. Create meeting polls to find the best date and time to organize an event based on your participants' availability. Save time and avoid back-and-forth emails.
 
@@ -22,7 +22,7 @@ Built with [Next.js](https://github.com/vercel/next.js/), [Prisma](https://githu
 
 ## Self-hosting
 
-Check out the [self-hosting docs](https://support.rallly.co/self-hosting) for more information on running your own instance of Rallly.
+Check out the [self-hosting docs](https://support.rallly.co/self-hosting) for more information on running your own instance of Kinpal.
 
 ## Local Installation
 
@@ -85,11 +85,11 @@ Please read our [contributing guide](CONTRIBUTING.md) to learn about how to cont
 
 ### Translators 🌐
 
-You can help translate Rallly to another language by following our [guide for translators](https://support.rallly.co/contribute/translations).
+You can help translate Kinpal to another language by following our [guide for translators](https://support.rallly.co/contribute/translations).
 
 ## License
 
-Rallly is open-source under the GNU Affero General Public License Version 3 (AGPLv3) or any later version. See [LICENSE](LICENSE) for more detail.
+Kinpal is open-source under the GNU Affero General Public License Version 3 (AGPLv3) or any later version. See [LICENSE](LICENSE) for more detail.
 
 ## Sponsors
 

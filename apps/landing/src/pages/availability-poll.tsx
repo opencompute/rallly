@@ -12,11 +12,11 @@ const Page: NextPageWithLayout = () => {
   return (
     <Marketing
       title={t("home:availabilityPollMetaTitle", {
-        defaultValue: "Availability Poll | Streamline Scheduling with Rallly",
+        defaultValue: "Availability Poll | Streamline Scheduling with Kinpal",
       })}
       description={t("home:availabilityPollMetaDescription", {
         defaultValue:
-          "Schedule meetings and events seamlessly with Rallly's Availability Poll. Ensure everyone's availability is considered for a smooth and efficient planning experience.",
+          "Schedule meetings and events seamlessly with Kinpal's Availability Poll. Ensure everyone's availability is considered for a smooth and efficient planning experience.",
       })}
     >
       <MarketingHero

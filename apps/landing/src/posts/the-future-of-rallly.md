@@ -1,10 +1,10 @@
 ---
-title: The Future of Rallly
+title: The Future of Kinpal
 date: "2023-06-18"
-excerpt: Rallly has always been about simplifying group scheduling, but my aim is to evolve it into more than just a polling platform.
+excerpt: Kinpal has always been about simplifying group scheduling, but my aim is to evolve it into more than just a polling platform.
 ---
 
-Rallly has always been about simplifying group scheduling, but my aim is to evolve it into more than just a polling platform. I'm looking to create a unique, flexible, and familiar workflow that will assist users in finding the perfect date for their event.
+Kinpal has always been about simplifying group scheduling, but my aim is to evolve it into more than just a polling platform. I'm looking to create a unique, flexible, and familiar workflow that will assist users in finding the perfect date for their event.
 
 ## The Workflow
 
@@ -26,7 +26,7 @@ When you're scheduling an event, getting a general idea of participants' availab
 
 ![Polls](/static/images/the-future-of-rallly/poll.svg)
 
-Polling is at the core of what Rallly does, and it fits seamlessly into this new workflow. Once you've gathered general availability, hosts will be able to narrow down a few options and let participants vote for their preferred dates.
+Polling is at the core of what Kinpal does, and it fits seamlessly into this new workflow. Once you've gathered general availability, hosts will be able to narrow down a few options and let participants vote for their preferred dates.
 
 ### RSVP
 
@@ -40,4 +40,4 @@ The above components will follow this order: Availability Grid -> Poll -> RSVP. 
 
 ## Conclusion
 
-I am incredibly excited to start working on this enhanced workflow for Rallly. As always, your feedback is invaluable to me. Let me know if you think this workflow could be useful or if you have any suggestions for improvement. I'm looking forward to continuing to shape Rallly into a tool that makes scheduling easy and efficient for everyone.
+I am incredibly excited to start working on this enhanced workflow for Kinpal. As always, your feedback is invaluable to me. Let me know if you think this workflow could be useful or if you have any suggestions for improvement. I'm looking forward to continuing to shape Kinpal into a tool that makes scheduling easy and efficient for everyone.

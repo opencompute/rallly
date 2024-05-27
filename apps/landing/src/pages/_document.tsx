@@ -75,7 +75,7 @@ export default function Document() {
           href="/favicon-128x128.png"
           sizes="128x128"
         />
-        <meta name="application-name" content="Rallly" />
+        <meta name="application-name" content="Kinpal" />
         <meta name="msapplication-TileColor" content="#FFFFFF" />
         <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
         <meta

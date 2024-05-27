@@ -83,7 +83,7 @@ import { Trans } from "@/components/trans";
 //       <h2 className="mb-12 text-center">Testimonials</h2>
 //       <div className="">
 //         {/* <Testimonial author="Dan">
-//           {`Rallly is the only service that meets all my needs and is 100%
+//           {`Kinpal is the only service that meets all my needs and is 100%
 //         free. It's incredibly easy to use, no sign-in even required. And I
 //         trust rallly.co because the entire project is open source.`}
 //         </Testimonial>
@@ -279,7 +279,7 @@ const BigTestimonial = () => {
         <p className="max-w-xl text-center text-lg font-medium leading-normal">
           <Trans
             i18nKey="home:ericQuote"
-            defaults="“If your scheduling workflow lives in emails, I strongly encourage you to try and let Rallly simplify your scheduling tasks for a more organized and less stressful workday.”"
+            defaults="“If your scheduling workflow lives in emails, I strongly encourage you to try and let Kinpal simplify your scheduling tasks for a more organized and less stressful workday.”"
           />
         </p>
         <p className="mt-1">

@@ -97,7 +97,7 @@
   "polls": "Ankete",
   "timeZoneSelect__noOption": "Nije pronađena nijedna opcija",
   "timeZoneSelect__inputPlaceholder": "Pretraživanje…",
-  "poweredByRallly": "Pogoni <a>{name}</a>",
+  "poweredByKinpal": "Pogoni <a>{name}</a>",
   "participants": "Sudionici",
   "language": "Jezik",
   "languageDescription": "Odaberi željeni jezik",

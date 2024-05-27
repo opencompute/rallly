@@ -145,6 +145,18 @@ export function Sidebar() {
               </li>
             </IfGuest>
             <li>
+              <NavItem
+                target="_blank"
+                href="https://support.kinpal.com"
+                icon={LifeBuoyIcon}
+              >
+                <Trans i18nKey="support" />
+                <Icon>
+                  <ArrowUpRightIcon />
+                </Icon>
+              </NavItem>
+            </li>
+            <li>
               <NavItem href="/settings/preferences" icon={Settings2Icon}>
                 <Trans i18nKey="preferences" />
               </NavItem>

@@ -11,8 +11,8 @@ const PrivacyPolicy = () => {
         <h1>Terms of Use</h1>
         <p>Last updated: 4 July 2023</p>
         <p>
-          {`This website is operated by Stack Snap Ltd. References made to "we",
-          "us" or "our" pertain directly and exclusively to Stack Snap Ltd. We
+          {`This website is operated by Kinpal Inc. References made to "we",
+          "us" or "our" pertain directly and exclusively to Kinpal Inc. We
           provide you, as the user, with this website, which includes all the
           information, tools, and services accessible on it, under the
           stipulation that you agree to all the terms, conditions, policies, and
@@ -63,20 +63,6 @@ const PrivacyPolicy = () => {
         <p>
           If you have any questions about these terms of use, please contact us
           at <a href="mailto:support@kinpal.com">support@kinpal.com</a>.
-        </p>
-
-        <p className="text-sm font-semibold">
-          Stack Snap Ltd.
-          <br />
-          The Gallery 14
-          <br />
-          Upland Road
-          <br />
-          London
-          <br />
-          SE22 9EE
-          <br />
-          United Kingdom
         </p>
       </div>
     </PageLayout>

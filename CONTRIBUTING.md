@@ -4,9 +4,9 @@ Contributions are welcome from anyone who is interested in improving this projec
 
 ## Code 🧑‍💻
 
-Have a look at the [open issues](https://github.com/lukevella/rallly/issues) and look for issues that are labeled with `help wanted` or `good first issue`. If you find an issue that you would like to work on, please leave a comment on the issue to let us know.
+Have a look at the [open issues](https://github.com/opencompute/rallly/issues) and look for issues that are labeled with `help wanted` or `good first issue`. If you find an issue that you would like to work on, please leave a comment on the issue to let us know.
 
-If there isn't an issue for the work that you would like to contribute, start by opening a [discussion](https://github.com/lukevella/rallly/discussions/new/choose) to discuss the changes that you would like to make.
+If there isn't an issue for the work that you would like to contribute, start by opening a [discussion](https://github.com/opencompute/rallly/discussions/new/choose) to discuss the changes that you would like to make.
 
 In order to maintain a high standard of code quality, please ensure that you are familiar with the technology stack used in this project where it applies to your code. The technology stack used in this project is:
 

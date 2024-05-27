@@ -9,6 +9,7 @@ import {
   SelectValue,
 } from "@rallly/ui/select";
 import {
+  GithubIcon,
   LinkedinIcon,
   TwitterIcon,
 } from "lucide-react";
@@ -58,7 +59,7 @@ const Footer: React.FunctionComponent = () => {
           <Image
             src="/logo-grayscale.svg"
             width={140}
-            height={30}
+            height={140}
             alt="Kinpal"
           />
           <div className="flex items-center space-x-6">
@@ -82,6 +83,13 @@ const Footer: React.FunctionComponent = () => {
               className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
             >
               <LinkedinIcon className="size-5" />
+            </Link>
+            <Link
+              target="_blank"
+              href="https://github.com/opencompute/rallly"
+              className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
+            >
+              <GithubIcon className="size-5" />
             </Link>
           </div>
         </div>

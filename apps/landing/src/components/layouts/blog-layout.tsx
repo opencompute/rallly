@@ -24,7 +24,7 @@ export const BlogLayout = ({ children }: React.PropsWithChildren) => {
         <div className="flex sm:ml-11">
           <div
             className="ml-embedded min-h-[88px] w-96 p-0"
-            data-form="h9YecB"
+            data-form="2nv4fu"
           />
         </div>
       </div>

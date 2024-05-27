@@ -73,7 +73,7 @@ const Page: NextPageWithLayout<Props> = ({ post }) => {
             alt="Kinpal"
           />
           <div>
-            <div className="font-medium leading-none">Luke Vella</div>
+            <div className="font-medium leading-none">Kinpal</div>
             <div>
               <Link
                 className="text-muted-foreground hover:text-primary text-sm"

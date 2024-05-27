@@ -4,7 +4,7 @@ title: Docker Compose
 description: How to Self-Host Kinpal using Docker Compose
 ---
 
-This page will guide you through the process of setting up a self-hosted instance of Kinpal using the Docker Compose configuration published in the [rallly-selfhosted](https://github.com/lukevella/rallly-selfhosted) repository on Github.
+This page will guide you through the process of setting up a self-hosted instance of Kinpal using the Docker Compose configuration published in the [rallly-selfhosted](https://github.com/opencompute/rallly-selfhosted) repository on Github.
 
 ## Requirements
 
@@ -20,14 +20,14 @@ _You will also need to have access to an SMTP server to send emails._
 ### 1. Clone the repository
 
 ```sh
-git clone https://github.com/lukevella/rallly-selfhosted.git
+git clone https://github.com/opencompute/rallly-selfhosted.git
 cd rallly-selfhosted
 ```
 
 If you don't have `git` installed you can download the repo using `curl`
 
 ```sh
-curl -L https://github.com/lukevella/rallly-selfhosted/archive/master.tar.gz | tar -xz
+curl -L https://github.com/opencompute/rallly-selfhosted/archive/master.tar.gz | tar -xz
 cd rallly-selfhosted-main
 ```
 
@@ -112,7 +112,7 @@ You can set the version in `docker-compose.yml` by changing the following line:
 - image: lukevella/rallly:<version>
 ```
 
-Check the [releases](https://github.com/lukevella/rallly/releases) to see what versions are available.
+Check the [releases](https://github.com/opencompute/rallly/releases) to see what versions are available.
 We follow semver versioning so you may want to set your version to a major release (e.g. `lukevella/rallly:3`) to avoid pulling in breaking changes.
 
 ## Update Instructions

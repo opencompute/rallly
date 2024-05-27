@@ -1,14 +1,14 @@
 ---
-title: Introducing Kinpal 3.0 - What's new?
+title: Introducing Kinpal 1.0 - What's new?
 date: "2023-06-19"
-excerpt: Kinpal 3.0 is a significant stepping stone as we had towards expanding Kinpal with more features.
+excerpt: Kinpal 1.0 is a significant stepping stone as we had towards expanding Kinpal with more features.
 ---
 
-Kinpal 3.0 is a significant stepping stone as we head towards expanding Kinpal with more features. Check out the post about [the future of Kinpal](/blog/the-future-of-kinpal) if you'd like to learn more about where things are going, but in the meantime let's go over this update in detail and I'll explain some of the changes that were made.
+Kinpal 1.0 is a significant stepping stone as we head towards expanding Kinpal with more features. Check out the post about [the future of Kinpal](/blog/the-future-of-kinpal) if you'd like to learn more about where things are going, but in the meantime let's go over this update in detail and I'll explain some of the changes that were made.
 
 ## Navigation
 
-Kinpal 3.0 features an updated UI that lets you navigate between screens quickly and easily. This will also enable even more pages and features to be added in the future so keep an eye out for that.
+Kinpal 1.0 features an updated UI that lets you navigate between screens quickly and easily. This will also enable even more pages and features to be added in the future so keep an eye out for that.
 
 ![Navigation](/static/images/introducing-kinpal-3-0/navigation.png)
 
@@ -20,7 +20,7 @@ The new polls page gives you an overview of all the polls you created as well as
 
 ## Poll Status
 
-Rather than locking a poll, you can now pause it to prevent changes from being made to your poll. This change in terminology was done to compliment the new finalization feature which will be launched for [Kinpal Pro](/blog/introducing-kinpal-pro) users.
+Rather than locking a poll, you can now pause it to prevent changes from being made to your poll. This change in terminology was done to compliment the new finalization feature which will be launched for Kinpal Pro users.
 
 ![Poll Status](/static/images/introducing-kinpal-3-0/poll-status.png)
 

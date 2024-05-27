@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   
-[![Actions Status](https://github.com/lukevella/rallly/workflows/CI/badge.svg?branch=main)](https://github.com/lukevella/rallly/actions)
+[![Actions Status](https://github.com/opencompute/rallly/workflows/CI/badge.svg?branch=main)](https://github.com/opencompute/rallly/actions)
 [![Crowdin](https://badges.crowdin.net/rallly/localized.svg)](https://crowdin.com/project/rallly)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-orange.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Discord](https://img.shields.io/badge/-Join%20Chat-7289DA?logo=discord&logoColor=white)](https://discord.gg/7f7NEcBg)
@@ -31,7 +31,7 @@ The following instructions are for running the project locally for development.
 1. Clone the repository and switch to the project directory
 
    ```bash
-   git clone https://github.com/lukevella/rallly.git
+   git clone https://github.com/opencompute/rallly.git
    cd rallly
    ```
 

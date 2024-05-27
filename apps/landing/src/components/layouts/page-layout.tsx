@@ -90,7 +90,7 @@ const PageLayout: React.FunctionComponent<PageLayoutProps> = ({ children }) => {
         <div className="mb-16 flex w-full items-center">
           <div className="flex grow items-center gap-x-12">
             <Link className="font-semibold rounded text-primary-600" href="/">
-              <Image src="/logo.svg" width={30} height={30} alt="kinpal.com" className="inline-block" /> Kinpal
+              <Image src="/logo.svg" width={32} height={32} alt="kinpal.com" className="inline-block" /> Kinpal
             </Link>
             <Menu className="hidden items-center space-x-8 lg:flex" />
           </div>

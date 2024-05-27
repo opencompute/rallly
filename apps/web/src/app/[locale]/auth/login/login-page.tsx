@@ -4,7 +4,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 
-import { Logo } from "@/components/logo";
+import { LogoLink } from "@/app/components/logo-link";
 import { Skeleton } from "@/components/skeleton";
 import { Trans } from "@/components/trans";
 import { UserAvatar } from "@/components/user";
@@ -45,7 +45,7 @@ export const LoginPage = ({ magicLink, email }: PageProps) => {
   return (
     <div className="flex h-screen flex-col items-center justify-center gap-4 p-4">
       <div className="mb-6">
-        <Logo />
+        <LogoLink />
       </div>
 
       <div className="shadow-huge rounded-md bg-white p-4">

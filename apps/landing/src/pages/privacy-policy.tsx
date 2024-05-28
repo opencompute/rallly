@@ -21,7 +21,7 @@ const PrivacyPolicy = () => {
 
         <p>
           We store personal data (names and email addresses) on
-          DigitalOcean&apos;s servers, which are located in the United States.
+          Supabase&apos;s servers, which are located in the United States.
           The reason for storing data in the US is to improve performance for
           users by having the data stored closer to where our compute services
           are running. By using our services, you acknowledge that your personal

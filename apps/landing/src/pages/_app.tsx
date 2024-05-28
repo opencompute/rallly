@@ -69,7 +69,7 @@ const MyApp: NextPage<AppPropsWithLayout> = ({ Component, pageProps }) => {
           ],
         }}
         facebook={{
-          appId: "920386682263077",
+          appId: "2464088027133969",
         }}
         twitter={{
           handle: "@nextcompute",

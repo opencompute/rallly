@@ -19,7 +19,7 @@ import { useRouter } from "next/router";
 import * as React from "react";
 
 import { Trans } from "@/components/trans";
-import DigitalOcean from "~/digitalocean.svg";
+import Supabase from "~/supabase.svg";
 import Vercel from "~/vercel-logotype-dark.svg";
 
 export const LanguageSelect = () => {
@@ -86,7 +86,7 @@ const Footer: React.FunctionComponent = () => {
             </Link>
             <Link
               target="_blank"
-              href="https://github.com/opencompute/rallly"
+              href="https://github.com/kinpalai"
               className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
             >
               <GithubIcon className="size-5" />
@@ -225,7 +225,7 @@ const Footer: React.FunctionComponent = () => {
             <div>
               <Link
                 target="_blank"
-                href="https://vercel.com?utm_source=rallly&utm_campaign=oss"
+                href="https://vercel.com?utm_source=kinpal&utm_campaign=oss"
                 className="inline-block text-white"
               >
                 <Vercel className="h-5" />
@@ -235,9 +235,9 @@ const Footer: React.FunctionComponent = () => {
               <Link
                 target="_blank"
                 className="inline-block"
-                href="https://m.do.co/c/f91efc9c9e50"
+                href="https://supabase.com"
               >
-                <DigitalOcean className="h-7" />
+                <Supabase className="h-7" />
               </Link>
             </div>
           </div>

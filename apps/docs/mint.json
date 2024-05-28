@@ -54,13 +54,9 @@
   "footerSocials": {
     "twitter": "https://twitter.com/kinpalai",
     "linkedin": "https://www.linkedin.com/company/kinpal",
-    "github": "https://github.com/opencompute/rallly",
+    "github": "https://github.com/kinpalai",
     "discord": "https://discord.gg/7f7NEcBg",
     "website": "https://kinpal.com"
-  },
-  "feedback": {
-    "suggestEdit": true,
-    "raiseIssue": true
   },
   "redirects": [
     {

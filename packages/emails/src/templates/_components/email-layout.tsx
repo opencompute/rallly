@@ -58,6 +58,7 @@ export const EmailLayout = ({
         }}
       >
         <Container style={containerStyles}>
+          <Img src={logoUrl} alt="Kinpal" width={32} />
           <Section style={sectionStyles}>
             {recipientName ? <Text>Hi {recipientName},</Text> : null}
             {children}

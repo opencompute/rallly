@@ -72,7 +72,7 @@ const Footer: React.FunctionComponent = () => {
             </Link>
             <Link
               target="_blank"
-              href="https://discord.gg/7f7NEcBg"
+              href="https://discord.gg/ZRZKqJf3tY"
               className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
             >
               <DiscordIcon className="size-5" />

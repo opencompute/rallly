@@ -14,6 +14,7 @@ import NextAuth, {
 import AzureADProvider from "next-auth/providers/azure-ad";
 import CredentialsProvider from "next-auth/providers/credentials";
 import EmailProvider from "next-auth/providers/email";
+import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import { Provider } from "next-auth/providers/index";
 
@@ -155,8 +156,19 @@ if (
       tenantId: process.env.MICROSOFT_TENANT_ID,
       clientId: process.env.MICROSOFT_CLIENT_ID,
       clientSecret: process.env.MICROSOFT_CLIENT_SECRET,
+      allowDangerousEmailAccountLinking: true,
       wellKnown:
         "https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration",
+    }),
+  );
+}
+
+if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET) {
+  providers.push(
+    GithubProvider({
+      clientId: process.env.GITHUB_CLIENT_ID,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET,
+      allowDangerousEmailAccountLinking: true,
     }),
   );
 }

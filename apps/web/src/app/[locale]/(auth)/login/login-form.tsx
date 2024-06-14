@@ -92,6 +92,25 @@ export function LoginForm() {
       });
     }
 
+    if (providers?.github) {
+      res.push({
+        login: () => {
+          signIn("github", {
+            callbackUrl,
+          });
+        },
+        icon: (
+          <Image
+            src="/static/github.svg"
+            width={20}
+            height={20}
+            alt="GitHub"
+          />
+        ),
+        name: t("loginWith", { provider: providers.github.name }),
+      });
+    }
+
     if (allowGuestAccess) {
       res.push({
         login: () => {

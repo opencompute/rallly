@@ -55,7 +55,7 @@ export const NewPollEmail = ({
       preview="Share your participant link to start collecting responses."
     >
       <Text>
-        Your poll has been successfully created! Here are the details:
+        Your meeting poll has been successfully created! Here are the details:
       </Text>
       <Card>
         <Text>

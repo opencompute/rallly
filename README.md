@@ -43,7 +43,7 @@ The following instructions are for running the project locally for development.
 
 3. Setup environment variables
 
-   Create a `.env` file by copying `.env.development`. This will be were you can set your [configuration options](https://support.kinpal.com/self-hosting/configuration-options).
+   Create a `.env` file by copying `.env.development`. This will be where you can set your [configuration options](https://support.kinpal.com/self-hosting/configuration-options).
 
    ```bash
    cp .env.development .env

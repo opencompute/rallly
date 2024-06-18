@@ -10,7 +10,6 @@ import { AppProps } from "next/app";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Script from "next/script";
 import { appWithTranslation } from "next-i18next";
 import { DefaultSeo, SoftwareAppJsonLd } from "next-seo";
 import React from "react";
@@ -98,16 +97,18 @@ const MyApp: NextPage<AppPropsWithLayout> = ({ Component, pageProps }) => {
           name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=yes"
         />
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${ga}');
+            `,
+          }}
+        />
       </Head>
-      <Script async src={`https://www.googletagmanager.com/gtag/js?id=${ga}`} />
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${ga}');
-        `}
-      </Script>
       <style jsx global>{`
         html {
           --font-inter: ${inter.style.fontFamily};

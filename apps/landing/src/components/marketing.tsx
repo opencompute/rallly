@@ -83,7 +83,7 @@ import { Trans } from "@/components/trans";
 //         {/* <Testimonial author="Dan">
 //           {`Kinpal is the only service that meets all my needs and is 100%
 //         free. It's incredibly easy to use, no sign-in even required. And I
-//         trust rallly.co because the entire project is open source.`}
+//         trust kinpal.com because the entire project is open source.`}
 //         </Testimonial>
 //         <Testimonial author="Robert">
 //           I was looking for something simple and clean (without tons of ads)
@@ -99,7 +99,7 @@ import { Trans } from "@/components/trans";
 //         <Button className="rounded-full px-6" asChild>
 //           <Link
 //             target="_blank"
-//             href="https://www.trustpilot.com/evaluate/rallly.co"
+//             href="https://www.trustpilot.com/evaluate/kinpal.com"
 //           >
 //             <span>Share your experience</span>
 //             <ArrowRight className="size-4" />

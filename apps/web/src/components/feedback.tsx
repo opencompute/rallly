@@ -29,7 +29,7 @@ const FeedbackButton = () => {
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
           <Link
-            href={`https://feedback.rallly.co/?b=feedback`}
+            href={`https://kinpal.featurebase.app/?b=feedback`}
             target={"_blank"}
           >
             <SmileIcon className="mr-2 size-4" />
@@ -38,7 +38,7 @@ const FeedbackButton = () => {
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Link
-            href={`https://feedback.rallly.co/?b=feature-request`}
+            href={`https://kinpal.featurebase.app/?b=feature-request`}
             target={"_blank"}
           >
             <LightbulbIcon className="mr-2 size-4" />
@@ -47,7 +47,7 @@ const FeedbackButton = () => {
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Link
-            href={`https://feedback.rallly.co/?b=bug-reports`}
+            href={`https://kinpal.featurebase.app/?b=bug-reports`}
             target={"_blank"}
           >
             <BugIcon className="mr-2 size-4" />

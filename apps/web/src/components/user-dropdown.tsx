@@ -143,7 +143,7 @@ export const UserDropdown = ({ className }: { className?: string }) => {
           <DropdownMenuItem asChild={true}>
             <Link
               target="_blank"
-              href="https://feedback.rallly.co"
+              href="https://kinpal.featurebase.app"
               className="flex items-center gap-x-2"
             >
               <MegaphoneIcon className="text-muted-foreground size-4" />

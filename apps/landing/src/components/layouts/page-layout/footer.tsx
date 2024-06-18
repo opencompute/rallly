@@ -108,15 +108,6 @@ const Footer: React.FunctionComponent = () => {
             </li>
             <li>
               <Link
-                target="_blank"
-                className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
-                href="https://github.com/opencompute/rallly/discussions"
-              >
-                <Trans i18nKey="discussions" defaults="Discussions" />
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="https://kinpal.com/blog"
                 className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
               >
@@ -133,7 +124,7 @@ const Footer: React.FunctionComponent = () => {
             </li>
             <li>
               <Link
-                href="https://rallly.openstatus.dev"
+                href="https://kinpal.openstatus.dev"
                 className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
               >
                 <Trans i18nKey="status" defaults="Status" />

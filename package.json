@@ -1,13 +1,13 @@
 {
   "name": "rallly",
   "private": true,
-  "version": "3.7.0",
+  "version": "3.8.0",
   "scripts": {
     "dev": "dotenv -c development -- turbo dev --filter=@rallly/web",
     "dev:emails": "turbo dev --filter=@rallly/emails",
     "dev:landing": "dotenv -c development turbo dev --filter=@rallly/landing",
-    "start": "dotenv -c -- turbo run start --filter=@rallly/web",
-    "start:landing": "dotenv -c -- turbo run start --filter=@rallly/landing",
+    "start": "turbo run start --filter=@rallly/web",
+    "start:landing": "turbo run start --filter=@rallly/landing",
     "build": "dotenv -c -- turbo run build --filter=@rallly/web",
     "build:landing": "dotenv -c -- turbo run build --filter=@rallly/landing",
     "build:test": "turbo build:test",
@@ -22,7 +22,7 @@
     "test:unit": "turbo test:unit",
     "lint": "turbo lint",
     "i18n:scan": "turbo i18n:scan",
-    "lint:tsc": "turbo lint:tsc",
+    "type-check": "turbo type-check",
     "prettier": "prettier --write .",
     "release": "./scripts/create-release.sh"
   },
@@ -34,10 +34,10 @@
     "packages/*"
   ],
   "dependencies": {
-    "@prisma/client": "^5.3.1",
+    "@prisma/client": "^5.15.0",
     "@sentry/nextjs": "^7.77.0",
     "framer-motion": "^10.16.4",
-    "next": "^14.0.4",
+    "next": "^14.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.2.2",

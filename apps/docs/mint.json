@@ -26,10 +26,9 @@
       "url": "/contact/support"
     }
   ],
-  "anchors": [
+  "tabs": [
     {
       "name": "Contact",
-      "icon": "messages",
       "url": "contact"
     }
   ],

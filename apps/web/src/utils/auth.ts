@@ -186,7 +186,6 @@ const getAuthOptions = (...args: GetServerSessionParams) =>
     providers: providers,
     pages: {
       signIn: "/login",
-      signOut: "/logout",
       error: "/auth/error",
     },
     events: {
@@ -203,12 +202,6 @@ const getAuthOptions = (...args: GetServerSessionParams) =>
               locale: user.locale,
             },
           },
-        });
-      },
-      signOut({ session }) {
-        posthog?.capture({
-          distinctId: session.user.id,
-          event: "logout",
         });
       },
     },

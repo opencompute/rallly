@@ -19,8 +19,6 @@ import { useRouter } from "next/router";
 import * as React from "react";
 
 import { Trans } from "@/components/trans";
-import Supabase from "~/supabase.svg";
-import Vercel from "~/vercel-logotype-dark.svg";
 
 export const LanguageSelect = () => {
   const router = useRouter();
@@ -222,22 +220,32 @@ const Footer: React.FunctionComponent = () => {
           </div>
           <div className="flex flex-wrap items-center gap-x-8 gap-y-2 md:justify-end">
             <div>
-              <Link
+              <a
                 target="_blank"
                 href="https://vercel.com?utm_source=kinpal&utm_campaign=oss"
                 className="inline-block text-white"
               >
-                <Vercel className="h-5" />
-              </Link>
+                <Image
+                  src="/static/images/partners/vercel-logotype-dark.svg"
+                  alt="Vercel"
+                  width={100}
+                  height={24}
+                />
+              </a>
             </div>
             <div>
-              <Link
+              <a
                 target="_blank"
                 className="inline-block"
                 href="https://supabase.com"
               >
-                <Supabase className="h-7" />
-              </Link>
+                <Image
+                  src="/static/images/partners/supabase.svg"
+                  alt="Supabase"
+                  width={123}
+                  height={24}
+                />
+              </a>
             </div>
           </div>
         </div>

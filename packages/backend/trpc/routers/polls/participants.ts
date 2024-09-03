@@ -1,10 +1,9 @@
 import { prisma } from "@rallly/database";
 import { TRPCError } from "@trpc/server";
-import { waitUntil } from "@vercel/functions";
 import { z } from "zod";
 
 import { createToken } from "../../../session";
-import { publicProcedure, router } from "../../trpc";
+import { publicProcedure, rateLimitMiddleware, router } from "../../trpc";
 import { DisableNotificationsPayload } from "../../types";
 
 export const participants = router({
@@ -55,6 +54,7 @@ export const participants = router({
       });
     }),
   add: publicProcedure
+    .use(rateLimitMiddleware)
     .input(
       z.object({
         pollId: z.string(),
@@ -69,14 +69,6 @@ export const participants = router({
       }),
     )
     .mutation(async ({ ctx, input: { pollId, votes, name, email } }) => {
-      const { success } = await ctx.ratelimit();
-
-      if (!success) {
-        throw new TRPCError({
-          code: "TOO_MANY_REQUESTS",
-          message: "Rate limit exceeded. Please try again later.",
-        });
-      }
       const { user } = ctx;
 
       const poll = await prisma.poll.findUnique({
@@ -98,6 +90,7 @@ export const participants = router({
             name: name,
             email,
             userId: user.id,
+            locale: user.locale ?? undefined,
           },
         });
 
@@ -113,7 +106,6 @@ export const participants = router({
         return participant;
       });
 
-      const emailsToSend: Promise<void>[] = [];
       if (email) {
         const token = await createToken(
           { userId: user.id },
@@ -122,19 +114,17 @@ export const participants = router({
           },
         );
 
-        emailsToSend.push(
-          ctx.emailClient.sendTemplate("NewParticipantConfirmationEmail", {
+        ctx.user
+          .getEmailClient()
+          .queueTemplate("NewParticipantConfirmationEmail", {
             to: email,
-            subject: `Thanks for responding to ${poll.title}`,
             props: {
-              name,
               title: poll.title,
               editSubmissionUrl: ctx.absoluteUrl(
                 `/invite/${poll.id}?token=${token}`,
               ),
             },
-          }),
-        );
+          });
       }
 
       const watchers = await prisma.watcher.findMany({
@@ -159,24 +149,18 @@ export const participants = router({
           { watcherId: watcher.id, pollId },
           { ttl: 0 },
         );
-        emailsToSend.push(
-          ctx.emailClient.sendTemplate("NewParticipantEmail", {
-            to: email,
-            subject: `${participant.name} has responded to ${poll.title}`,
-            props: {
-              name: watcher.user.name,
-              participantName: participant.name,
-              pollUrl: ctx.absoluteUrl(`/poll/${poll.id}`),
-              disableNotificationsUrl: ctx.absoluteUrl(
-                `/auth/disable-notifications?token=${token}`,
-              ),
-              title: poll.title,
-            },
-          }),
-        );
+        ctx.user.getEmailClient().queueTemplate("NewParticipantEmail", {
+          to: email,
+          props: {
+            participantName: participant.name,
+            pollUrl: ctx.absoluteUrl(`/poll/${poll.id}`),
+            disableNotificationsUrl: ctx.absoluteUrl(
+              `/auth/disable-notifications?token=${token}`,
+            ),
+            title: poll.title,
+          },
+        });
       }
-
-      waitUntil(Promise.all(emailsToSend));
 
       return participant;
     }),

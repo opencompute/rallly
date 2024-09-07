@@ -2,7 +2,9 @@ import { prisma } from "@rallly/database";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 
-import { createToken } from "../../../session";
+import { absoluteUrl } from "@/utils/absolute-url";
+import { createToken } from "@/utils/session";
+
 import { publicProcedure, rateLimitMiddleware, router } from "../../trpc";
 import { DisableNotificationsPayload } from "../../types";
 
@@ -120,7 +122,7 @@ export const participants = router({
             to: email,
             props: {
               title: poll.title,
-              editSubmissionUrl: ctx.absoluteUrl(
+              editSubmissionUrl: absoluteUrl(
                 `/invite/${poll.id}?token=${token}`,
               ),
             },
@@ -153,8 +155,8 @@ export const participants = router({
           to: email,
           props: {
             participantName: participant.name,
-            pollUrl: ctx.absoluteUrl(`/poll/${poll.id}`),
-            disableNotificationsUrl: ctx.absoluteUrl(
+            pollUrl: absoluteUrl(`/poll/${poll.id}`),
+            disableNotificationsUrl: absoluteUrl(
               `/auth/disable-notifications?token=${token}`,
             ),
             title: poll.title,

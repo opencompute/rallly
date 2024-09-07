@@ -14,32 +14,26 @@ import React, { useState } from "react";
 import { Trans } from "@/components/trans";
 import { usePreferences } from "@/contexts/preferences";
 import { getBrowserTimeZone } from "@/utils/date-time-utils";
+import { safeLocalStorage } from "@/utils/local-storage";
 
 export function TimeZoneChangeDetector() {
+  const [open, setOpen] = useState(false);
+
   const { preferences, updatePreferences } = usePreferences();
+  const currentTimeZone = getBrowserTimeZone();
 
   const [previousTimeZone, setPreviousTimeZone] = useState(() => {
-    try {
-      const cachedPreviousTimeZone = localStorage.getItem("previousTimeZone");
-      if (cachedPreviousTimeZone) {
-        return cachedPreviousTimeZone;
-      }
-    } catch (e) {
-      console.error(e);
+    const cachedPreviousTimeZone = safeLocalStorage.getItem("previousTimeZone");
+    if (cachedPreviousTimeZone) {
+      return cachedPreviousTimeZone;
     }
 
-    const timeZone = preferences.timeZone ?? getBrowserTimeZone();
+    const timeZone = preferences.timeZone ?? currentTimeZone;
 
-    try {
-      localStorage.setItem("previousTimeZone", timeZone);
-    } catch (e) {
-      console.error(e);
-    }
+    safeLocalStorage.setItem("previousTimeZone", timeZone);
 
     return timeZone;
   });
-  const currentTimeZone = getBrowserTimeZone();
-  const [open, setOpen] = useState(false);
 
   const posthog = usePostHog();
 
@@ -61,10 +55,11 @@ export function TimeZoneChangeDetector() {
             />
           </DialogTitle>
         </DialogHeader>
-        <p className="text-muted-foreground text-sm">
+        <p className="text-muted-foreground text-sm leading-relaxed">
           <Trans
             i18nKey="timeZoneChangeDetectorMessage"
-            defaults="Your timezone has changed to {currentTimeZone}. Do you want to update your preferences?"
+            defaults="Your timezone has changed to <b>{currentTimeZone}</b>. Do you want to update your preferences?"
+            components={{ b: <b className="text-foreground font-medium" /> }}
             values={{ currentTimeZone }}
           />
         </p>

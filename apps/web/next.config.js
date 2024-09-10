@@ -16,6 +16,17 @@ require("dotenv").config({
 const nextConfig = {
   output:
     process.env.NEXT_PUBLIC_SELF_HOSTED === "true" ? "standalone" : undefined,
+  images: {
+    remotePatterns: [
+      {
+        hostname: "app.kinpal.com",
+        pathname: "/api/storage/**",
+      },
+      {
+        hostname: "d39ixtfgglw55o.cloudfront.net",
+      },
+    ],
+  },
   productionBrowserSourceMaps: true,
   transpilePackages: [
     "@rallly/database",
@@ -50,6 +61,10 @@ const nextConfig = {
         permanent: true,
       },
     ];
+  },
+  experimental: {
+    // necessary for server actions using aws-sdk
+    serverComponentsExternalPackages: ["@aws-sdk"],
   },
 };
 

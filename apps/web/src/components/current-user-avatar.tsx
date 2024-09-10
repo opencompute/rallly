@@ -1,14 +1,22 @@
 "use client";
-import { Avatar, AvatarFallback, AvatarImage } from "@rallly/ui/avatar";
 
+import { OptimizedAvatarImage } from "@/components/optimized-avatar-image";
 import { useUser } from "@/components/user-provider";
 
-export const CurrentUserAvatar = ({ className }: { className?: string }) => {
+export const CurrentUserAvatar = ({
+  size,
+  className,
+}: {
+  size: number;
+  className?: string;
+}) => {
   const { user } = useUser();
   return (
-    <Avatar className={className}>
-      <AvatarImage src={user.image ?? undefined} />
-      <AvatarFallback>{user.name[0]}</AvatarFallback>
-    </Avatar>
+    <OptimizedAvatarImage
+      className={className}
+      src={user.image ?? undefined}
+      name={user.name}
+      size={size}
+    />
   );
 };

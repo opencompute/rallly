@@ -9,7 +9,7 @@ import {
 import { Input } from "@rallly/ui/input";
 import { useForm } from "react-hook-form";
 
-import { CurrentUserAvatar } from "@/components/current-user-avatar";
+import { ProfilePicture } from "@/app/[locale]/(admin)/settings/profile/profile-picture";
 import { Trans } from "@/components/trans";
 import { useUser } from "@/components/user-provider";
 
@@ -27,7 +27,6 @@ export const ProfileSettings = () => {
   });
 
   const { control, handleSubmit, formState, reset } = form;
-
   return (
     <div className="grid gap-y-4">
       <Form {...form}>
@@ -38,9 +37,7 @@ export const ProfileSettings = () => {
           })}
         >
           <div className="flex flex-col gap-y-4">
-            <div>
-              <CurrentUserAvatar className="size-14" />
-            </div>
+            <ProfilePicture />
             <FormField
               control={control}
               name="name"

@@ -7,14 +7,17 @@ import { cn } from "@rallly/ui";
 
 const Avatar = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
->(({ className, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root> & {
+    size?: number;
+  }
+>(({ className, size = 48, ...props }, ref) => (
   <AvatarPrimitive.Root
     ref={ref}
     className={cn(
-      "relative flex size-10 shrink-0 overflow-hidden rounded-full",
+      "relative flex shrink-0 overflow-hidden rounded-full",
       className,
     )}
+    style={{ width: size, height: size }}
     {...props}
   />
 ));
@@ -39,7 +42,7 @@ const AvatarFallback = React.forwardRef<
   <AvatarPrimitive.Fallback
     ref={ref}
     className={cn(
-      "bg-muted flex h-full w-full items-center justify-center rounded-full",
+      "bg-primary-100 text-primary-800 flex h-full w-full items-center justify-center rounded-full font-medium",
       className,
     )}
     {...props}

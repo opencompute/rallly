@@ -39,12 +39,13 @@ export function OptimizedAvatarImage({
       ) : null}
       {!src || !isLoaded ? (
         <AvatarFallback
+          seed={name}
           className={cn({
             "text-xs": size <= 24,
             "text-lg": size >= 48,
           })}
         >
-          {name[0]}
+          {name[0]?.toUpperCase()}
         </AvatarFallback>
       ) : null}
     </Avatar>

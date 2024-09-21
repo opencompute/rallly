@@ -36,9 +36,9 @@ export function PayWallDialog({ children, ...forwardedProps }: DialogProps) {
   return (
     <Dialog {...dialog.dialogProps} {...forwardedProps}>
       {children}
-      <DialogContent className="w-[600px] p-4">
+      <DialogContent className="w-[600px] p-4 sm:p-6">
         <div className="space-y-6">
-          <header className="pt-4">
+          <header>
             <m.div
               transition={{
                 delay: 0.2,
@@ -150,7 +150,13 @@ export function PayWallDialog({ children, ...forwardedProps }: DialogProps) {
                 i18nKey="cancelAnytime"
                 defaults="Cancel anytime from your <a>billing page</a>."
                 components={{
-                  a: <Link className="text-link" href="/settings/billing" />,
+                  a: (
+                    <Link
+                      onClick={() => dialog.dismiss()}
+                      className="text-link"
+                      href="/settings/billing"
+                    />
+                  ),
                 }}
               />
             </p>

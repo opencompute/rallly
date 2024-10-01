@@ -3,7 +3,7 @@
   "links": "Links",
   "blog": "Blog",
   "discussions": "Diskussion",
-  "footerCredit": "Entwickelt von <a>@imlukevella</a>",
+  "footerCredit": "Entwickelt von <a>@kinpalai</a>",
   "footerSponsor": "Dieses Projekt wird von Nutzern finanziert. Bitte unterstütze es durch eine <a>Spende</a>.",
   "language": "Sprache",
   "poweredBy": "Unterstützt durch",
@@ -19,10 +19,11 @@
   "pricing": "Preise",
   "bestDoodleAlternative": "Beste Doodle Alternative",
   "freeSchedulingPoll": "Kostenlose Umfrage zur Terminplanung",
-  "findATime": "Zeit finden",
   "getStarted": "Los geht's",
   "availabilityPoll": "Verfügbarkeitsumfrage",
   "solutions": "Anwendungen",
   "howItWorks": "So funktioniert's",
-  "status": "Status"
+  "status": "Status",
+  "when2MeetAlternative": "When2Meet Alternative",
+  "meetingPoll": "Meetingumfrage"
 }

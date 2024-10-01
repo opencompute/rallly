@@ -3,7 +3,7 @@
   "links": "Links",
   "blog": "Blog",
   "discussions": "Discussions",
-  "footerCredit": "Made by <a>@imlukevella</a>",
+  "footerCredit": "Made by <a>@kinpalai</a>",
   "footerSponsor": "This project is user-funded. Please consider supporting it by <a>donating</a>.",
   "language": "Language",
   "poweredBy": "Powered by",
@@ -19,11 +19,11 @@
   "pricing": "Pricing",
   "bestDoodleAlternative": "Best Doodle Alternative",
   "freeSchedulingPoll": "Free Scheduling Poll",
-  "findATime": "Find a Time",
   "getStarted": "Get started",
   "availabilityPoll": "Availability Poll",
   "solutions": "Solutions",
   "howItWorks": "How it Works",
   "status": "Status",
-  "when2MeetAlternative": "When2Meet Alternative"
+  "when2MeetAlternative": "When2Meet Alternative",
+  "meetingPoll": "Meeting Poll"
 }

@@ -5,10 +5,10 @@ import React, { useState } from "react";
 import { z } from "zod";
 
 import { useTranslation } from "@/app/i18n/client";
-import { CurrentUserAvatar } from "@/components/current-user-avatar";
+import { OptimizedAvatarImage } from "@/components/optimized-avatar-image";
 import { Trans } from "@/components/trans";
 import { useUser } from "@/components/user-provider";
-import { useAvatarsEnabled } from "@/features/avatars";
+import { IfCloudHosted } from "@/contexts/environment";
 import { usePostHog } from "@/utils/posthog";
 import { trpc } from "@/utils/trpc/client";
 
@@ -152,13 +152,8 @@ function RemoveAvatarButton({ onSuccess }: { onSuccess?: () => void }) {
 
 function Upload() {
   const { user, refresh } = useUser();
-  const isAvatarsEnabled = useAvatarsEnabled();
 
   const posthog = usePostHog();
-
-  if (!isAvatarsEnabled) {
-    return null;
-  }
 
   return (
     <div className="flex flex-col gap-y-2">
@@ -189,10 +184,17 @@ function Upload() {
 }
 
 export function ProfilePicture() {
+  const { user } = useUser();
   return (
     <div className="flex items-center gap-x-4">
-      <CurrentUserAvatar size={56} />
-      <Upload />
+      <OptimizedAvatarImage
+        src={user.image ?? undefined}
+        name={user.name}
+        size="lg"
+      />
+      <IfCloudHosted>
+        <Upload />
+      </IfCloudHosted>
     </div>
   );
 }

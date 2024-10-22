@@ -3,6 +3,9 @@
     "source.fixAll": "explicit"
   },
   "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "cSpell.words": ["Kinpal", "Vella"]
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "cSpell.words": ["Kinpal", "Vella"],
+  "jestrunner.codeLensSelector": "",
+  "vitest.filesWatcherInclude": "**/*.test.ts",
+  "biome.enabled": false
 }

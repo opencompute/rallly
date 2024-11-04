@@ -1,5 +1,5 @@
-import { Params } from "@/app/[locale]/types";
-import { getTranslation } from "@/app/i18n";
+import type { Params } from "@/app/[locale]/types";
+import { getTranslation } from "@/i18n/server";
 
 import { PreferencesPage } from "./preferences-page";
 

@@ -1,5 +1,5 @@
 import allLanguages from "@rallly/languages";
-import { InitOptions } from "i18next";
+import type { InitOptions } from "i18next";
 
 export const fallbackLng = "en";
 export const languages = Object.keys(allLanguages);
@@ -10,7 +10,6 @@ export function getOptions(
   ns: string | string[] = defaultNS,
 ): InitOptions {
   return {
-    // debug: true,
     supportedLngs: languages,
     fallbackLng,
     lng,

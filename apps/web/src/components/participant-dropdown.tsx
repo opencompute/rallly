@@ -30,16 +30,17 @@ import { Input } from "@rallly/ui/input";
 import { PencilIcon, TagIcon, TrashIcon } from "lucide-react";
 import { useTranslation } from "next-i18next";
 import React from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
+import type { SubmitHandler} from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useMount } from "react-use";
 import { z } from "zod";
 
 import { OptimizedAvatarImage } from "@/components/optimized-avatar-image";
 import { useDeleteParticipantMutation } from "@/components/poll/mutations";
 import { Trans } from "@/components/trans";
+import { trpc } from "@/trpc/client";
 import { useFormValidation } from "@/utils/form-validation";
 import { usePostHog } from "@/utils/posthog";
-import { trpc } from "@/utils/trpc/client";
 
 export const ParticipantDropdown = ({
   participant,

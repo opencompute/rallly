@@ -1,7 +1,7 @@
 import { BarChart2Icon } from "lucide-react";
 
 import { UserPolls } from "@/app/[locale]/(admin)/polls/user-polls";
-import { Params } from "@/app/[locale]/types";
+import type { Params } from "@/app/[locale]/types";
 import {
   PageContainer,
   PageContent,
@@ -9,7 +9,7 @@ import {
   PageIcon,
   PageTitle,
 } from "@/app/components/page-layout";
-import { getTranslation } from "@/app/i18n";
+import { getTranslation } from "@/i18n/server";
 
 export default async function Page({
   params,

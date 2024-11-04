@@ -6,11 +6,11 @@ import { domMax, LazyMotion } from "framer-motion";
 import { SessionProvider } from "next-auth/react";
 import { useState } from "react";
 
-import { I18nProvider } from "@/app/i18n/client";
 import { UserProvider } from "@/components/user-provider";
-import { AppRouter } from "@/trpc/routers";
+import { I18nProvider } from "@/i18n/client";
+import { trpcConfig } from "@/trpc/client/config";
+import type { AppRouter } from "@/trpc/routers";
 import { ConnectedDayjsProvider } from "@/utils/dayjs";
-import { trpcConfig } from "@/utils/trpc/config";
 
 export const trpc = createTRPCReact<AppRouter>({
   unstable_overrides: {

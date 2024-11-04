@@ -1,12 +1,12 @@
 import { UserScheduledEvents } from "@/app/[locale]/(admin)/events/user-scheduled-events";
-import { Params } from "@/app/[locale]/types";
+import type { Params } from "@/app/[locale]/types";
 import {
   PageContainer,
   PageContent,
   PageHeader,
   PageTitle,
 } from "@/app/components/page-layout";
-import { getTranslation } from "@/app/i18n";
+import { getTranslation } from "@/i18n/server";
 
 export default async function Page({ params }: { params: Params }) {
   const { t } = await getTranslation(params.locale);

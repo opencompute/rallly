@@ -4,20 +4,20 @@ import "../style.css";
 
 import { TooltipProvider } from "@rallly/ui/tooltip";
 import { domMax, LazyMotion } from "framer-motion";
-import { NextPage } from "next";
-import { AppProps } from "next/app";
+import type { NextPage } from "next";
+import type { AppProps } from "next/app";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import { SessionProvider, signIn, useSession } from "next-auth/react";
 import React from "react";
 
-import { I18nProvider } from "@/app/i18n/client";
 import Maintenance from "@/components/maintenance";
 import { UserProvider } from "@/components/user-provider";
+import { I18nProvider } from "@/i18n/client";
+import { trpc } from "@/trpc/client";
 import { ConnectedDayjsProvider } from "@/utils/dayjs";
-import { trpc } from "@/utils/trpc/client";
 
-import { NextPageWithLayout } from "../types";
+import type { NextPageWithLayout } from "../types";
 
 const inter = Inter({
   subsets: ["latin"],

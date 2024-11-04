@@ -1,8 +1,8 @@
 import { usePoll } from "@/components/poll-context";
+import { trpc } from "@/trpc/client";
 import { usePostHog } from "@/utils/posthog";
-import { trpc } from "@/utils/trpc/client";
 
-import { ParticipantForm } from "./types";
+import type { ParticipantForm } from "./types";
 
 export const normalizeVotes = (
   optionIds: string[],

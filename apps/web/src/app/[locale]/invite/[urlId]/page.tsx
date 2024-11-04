@@ -1,10 +1,9 @@
 import { prisma } from "@rallly/database";
-import { Metadata } from "next";
+import { absoluteUrl } from "@rallly/utils/absolute-url";
 import { notFound } from "next/navigation";
 
 import { InvitePage } from "@/app/[locale]/invite/[urlId]/invite-page";
-import { getTranslation } from "@/app/i18n";
-import { absoluteUrl } from "@/utils/absolute-url";
+import { getTranslation } from "@/i18n/server";
 
 export default async function Page() {
   return <InvitePage />;
@@ -70,5 +69,5 @@ export async function generateMetadata({
         },
       ],
     },
-  } satisfies Metadata;
+  };
 }

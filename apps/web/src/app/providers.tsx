@@ -1,9 +1,9 @@
 "use client";
+import { PostHogProvider } from "@rallly/posthog/client";
 import { TooltipProvider } from "@rallly/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createTRPCReact } from "@trpc/react-query";
 import { domMax, LazyMotion } from "framer-motion";
-import { SessionProvider } from "next-auth/react";
 import { useState } from "react";
 
 import { UserProvider } from "@/components/user-provider";
@@ -11,6 +11,8 @@ import { I18nProvider } from "@/i18n/client";
 import { trpcConfig } from "@/trpc/client/config";
 import type { AppRouter } from "@/trpc/routers";
 import { ConnectedDayjsProvider } from "@/utils/dayjs";
+
+import { PostHogPageView } from "./posthog-page-view";
 
 export const trpc = createTRPCReact<AppRouter>({
   unstable_overrides: {
@@ -32,13 +34,14 @@ export function Providers(props: { children: React.ReactNode }) {
         <QueryClientProvider client={queryClient}>
           <I18nProvider>
             <TooltipProvider>
-              <SessionProvider>
+              <PostHogProvider>
+                <PostHogPageView />
                 <UserProvider>
                   <ConnectedDayjsProvider>
                     {props.children}
                   </ConnectedDayjsProvider>
                 </UserProvider>
-              </SessionProvider>
+              </PostHogProvider>
             </TooltipProvider>
           </I18nProvider>
         </QueryClientProvider>

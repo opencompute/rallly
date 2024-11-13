@@ -1,7 +1,7 @@
 "use client";
+import { usePostHog } from "@rallly/posthog/client";
 import { Button } from "@rallly/ui/button";
-import type {
-  DialogProps} from "@rallly/ui/dialog";
+import type { DialogProps } from "@rallly/ui/dialog";
 import {
   Dialog,
   DialogClose,
@@ -19,7 +19,6 @@ import { useForm } from "react-hook-form";
 import { Trans } from "@/components/trans";
 import { useTranslation } from "@/i18n/client";
 import { trpc } from "@/trpc/client";
-import { usePostHog } from "@/utils/posthog";
 
 export function DeleteAccountDialog({
   email,

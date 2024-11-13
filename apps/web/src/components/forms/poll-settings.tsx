@@ -1,3 +1,4 @@
+import { usePostHog } from "@rallly/posthog/client";
 import { cn } from "@rallly/ui";
 import {
   Card,
@@ -17,7 +18,6 @@ import { Trans } from "react-i18next";
 import { PayWallDialog } from "@/components/pay-wall-dialog";
 import { ProFeatureBadge } from "@/components/pro-feature-badge";
 import { usePlan } from "@/contexts/plan";
-import { usePostHog } from "@/utils/posthog";
 
 export type PollSettingsFormData = {
   requireParticipantEmail: boolean;
@@ -54,7 +54,7 @@ const Setting = ({ children }: React.PropsWithChildren) => {
     <label
       className={cn(
         "cursor-pointer bg-white hover:bg-gray-50 active:bg-gray-100",
-        "flex select-none justify-between gap-x-4 gap-y-2.5 rounded-md border p-3 sm:flex-row ",
+        "flex select-none justify-between gap-x-4 gap-y-2.5 rounded-md border p-3 sm:flex-row",
       )}
     >
       {children}

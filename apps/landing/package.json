@@ -9,8 +9,7 @@
     "start": "next start",
     "lint": "eslint .",
     "type-check": "tsc --pretty --noEmit",
-    "i18n:scan": "i18next-scanner --config i18next-scanner.config.js",
-    "prettier": "prettier --write ./src"
+    "i18n:scan": "i18next-scanner --config i18next-scanner.config.js"
   },
   "dependencies": {
     "@rallly/billing": "*",
@@ -28,7 +27,7 @@
     "i18next-icu": "^2.3.0",
     "intl-messageformat": "^10.3.4",
     "lodash": "^4.17.21",
-    "nanoid": "^4.0.0",
+    "nanoid": "^5.0.8",
     "next-i18next": "^13.0.3",
     "next-mdx-remote": "^5.0.0",
     "next-seo": "^6.1.0",

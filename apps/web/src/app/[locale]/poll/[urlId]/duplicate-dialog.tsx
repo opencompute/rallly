@@ -1,7 +1,7 @@
 "use client";
+import { usePostHog } from "@rallly/posthog/client";
 import { Button } from "@rallly/ui/button";
-import type {
-  DialogProps} from "@rallly/ui/dialog";
+import type { DialogProps } from "@rallly/ui/dialog";
 import {
   Dialog,
   DialogClose,
@@ -16,7 +16,6 @@ import { useRouter } from "next/navigation";
 import { DuplicateForm } from "@/app/[locale]/poll/[urlId]/duplicate-form";
 import { trpc } from "@/app/providers";
 import { Trans } from "@/components/trans";
-import { usePostHog } from "@/utils/posthog";
 
 const formName = "duplicate-form";
 export function DuplicateDialog({

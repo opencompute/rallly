@@ -2,3 +2,4 @@ User-agent: *
 Disallow: /api
 Disallow: /locales
 Allow: /api/og-image
+Sitemap: https://kinpal.com/sitemap.xml

@@ -1,6 +1,7 @@
 import "tailwindcss/tailwind.css";
 import "../../style.css";
 
+import { GoogleAnalytics } from '@next/third-parties/google';
 import languages from "@rallly/languages";
 import {
   DropdownMenu,
@@ -43,6 +44,7 @@ export default async function Root({
   params: { locale: string };
 }) {
   const { t } = await getTranslation(locale, "common");
+  const ga = process.env.GA_MEASUREMENT_ID || "";
   return (
     <html lang={locale} className={sans.className}>
       <body>
@@ -154,6 +156,7 @@ export default async function Root({
         </I18nProvider>
         <Analytics />
       </body>
+      <GoogleAnalytics gaId={ga} />
     </html>
   );
 }

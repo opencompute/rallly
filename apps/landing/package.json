@@ -12,6 +12,7 @@
     "i18n:scan": "i18next-scanner --config i18next-scanner.config.js"
   },
   "dependencies": {
+    "@next/third-parties": "^15.0.3",
     "@rallly/billing": "*",
     "@rallly/icons": "*",
     "@rallly/languages": "*",

@@ -5,23 +5,10 @@ import { waitUntil } from "@vercel/functions";
 import type { Transporter } from "nodemailer";
 import { createTransport } from "nodemailer";
 import type Mail from "nodemailer/lib/mailer";
-import React from "react";
 
 import { i18nDefaultConfig, i18nInstance } from "./i18n";
-import * as templates from "./templates";
-import type { EmailContext } from "./types";
-
-type Templates = typeof templates;
-
-type TemplateName = keyof typeof templates;
-
-type TemplateProps<T extends TemplateName> = Omit<
-  React.ComponentProps<TemplateComponent<T>>,
-  "ctx"
->;
-type TemplateComponent<T extends TemplateName> = Templates[T] & {
-  getSubject?: (props: TemplateProps<T>, ctx: EmailContext) => string;
-};
+import { templates } from "./templates";
+import type { TemplateComponent, TemplateName, TemplateProps } from "./types";
 
 type SendEmailOptions<T extends TemplateName> = {
   to: string;
@@ -81,11 +68,8 @@ export class EmailClient {
     templateName: T,
     options: SendEmailOptions<T>,
   ) {
-    return waitUntil(
-      (async () => {
-        this.sendTemplate(templateName, options);
-      })(),
-    );
+    const promise = this.sendTemplate(templateName, options);
+    waitUntil(promise);
   }
 
   async sendTemplate<T extends TemplateName>(

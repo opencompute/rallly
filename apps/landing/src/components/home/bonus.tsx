@@ -1,4 +1,4 @@
-import { prisma } from "@rallly/database";
+//import { prisma } from "@rallly/database";
 import type { TFunction } from "i18next";
 import {
   CalendarCheck2Icon,
@@ -11,7 +11,7 @@ import { Trans } from "react-i18next/TransWithoutContext";
 import { BonusItem } from "@/components/home/bonus-item";
 
 export async function Bonus({ t }: { t: TFunction }) {
-  const userCount = await prisma.user.count();
+  //const userCount = await prisma.user.count();
   return (
     <div className="mx-auto flex flex-wrap justify-center gap-2 whitespace-nowrap text-center sm:grid-cols-4 sm:gap-4 sm:gap-x-8">
       <BonusItem
@@ -23,7 +23,7 @@ export async function Bonus({ t }: { t: TFunction }) {
           i18nKey="statsUsersRegistered"
           ns="home"
           defaults="{count, number, ::compact-short} registered users"
-          values={{ count: userCount }}
+          values={{ count: 80 * 1000 }}
         />
       </BonusItem>
       <BonusItem

@@ -7,5 +7,5 @@
   "cSpell.words": ["Kinpal", "Vella"],
   "jestrunner.codeLensSelector": "",
   "vitest.filesWatcherInclude": "**/*.test.ts",
-  "biome.enabled": false
+  "editor.formatOnSave": true
 }

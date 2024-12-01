@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
       const checkoutSession = event.data.object as Stripe.Checkout.Session;
 
       if (checkoutSession.subscription === null) {
-        // This is a one-time payment (probably for Rallly Self-Hosted)
+        // This is a one-time payment (probably for Kinpal Self-Hosted)
         break;
       }
 

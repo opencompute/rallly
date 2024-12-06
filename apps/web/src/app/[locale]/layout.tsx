@@ -31,6 +31,7 @@ export default async function Root({
   params: { locale: string };
 }) {
   const session = await getServerSession();
+
   return (
     <html lang={locale} className={inter.className}>
       <body>

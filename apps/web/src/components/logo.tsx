@@ -11,14 +11,24 @@ const sizes = {
   },
 };
 
-export const Logo = ({ size = "md" }: { size?: keyof typeof sizes }) => {
+export const Logo = ({
+  className,
+  size = "md",
+}: {
+  className?: string;
+  size?: keyof typeof sizes;
+}) => {
   return (
     <Image
       priority={true}
-      className="mx"
+      className={className}
       src="/static/logo.svg"
-      width={sizes[size].width}
-      height={sizes[size].height}
+      style={{
+        width: sizes[size].width,
+        height: "auto",
+      }}
+      width={0}
+      height={0}
       alt="Kinpal"
     />
   );

@@ -160,6 +160,7 @@ if (
 ) {
   providers.push(
     AzureADProvider({
+      name: "Microsoft",
       tenantId: process.env.MICROSOFT_TENANT_ID,
       clientId: process.env.MICROSOFT_CLIENT_ID,
       clientSecret: process.env.MICROSOFT_CLIENT_SECRET,
@@ -197,6 +198,7 @@ const getAuthOptions = (...args: GetServerSessionParams) =>
     providers: providers,
     pages: {
       signIn: "/login",
+      verifyRequest: "/login/verify",
       error: "/auth/error",
     },
     events: {

@@ -4,21 +4,25 @@ import { LogInIcon } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { QuickStartWidget } from "@/features/quick-create/quick-create-widget";
-import { isSelfHosted } from "@/utils/constants";
+import {
+  isQuickCreateEnabled,
+  QuickCreateWidget,
+} from "@/features/quick-create";
+import { getTranslation } from "@/i18n/server";
 
 export default async function QuickCreatePage() {
-  if (isSelfHosted) {
-    // self hosted users should not see this page
+  if (!isQuickCreateEnabled) {
     notFound();
   }
+
+  const { t } = await getTranslation();
   return (
     <div className="flex min-h-screen p-2">
       <div className="flex flex-1 flex-col gap-6 rounded-xl border bg-white p-6">
         <div className="mx-auto w-full max-w-md flex-1">
           <div className="space-y-8">
             <div className="flex-1">
-              <QuickStartWidget />
+              <QuickCreateWidget />
             </div>
           </div>
         </div>
@@ -28,7 +32,7 @@ export default async function QuickCreatePage() {
               <Icon>
                 <LogInIcon />
               </Icon>
-              Login
+              {t("login")}
             </Link>
           </Button>
         </div>

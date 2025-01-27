@@ -3,7 +3,7 @@ import { withPostHog } from "@rallly/posthog/next/middleware";
 import { NextResponse } from "next/server";
 import withAuth from "next-auth/middleware";
 
-import { getLocaleFromHeader, initGuest } from "@/app/guest";
+import { getLocaleFromHeader } from "@/app/guest";
 import { isSelfHosted } from "@/utils/constants";
 
 const supportedLocales = Object.keys(languages);
@@ -12,11 +12,13 @@ const publicRoutes = [
   "/login",
   "/register",
   "/invite/",
-  "/new",
   "/poll/",
-  "/quick-create",
   "/auth/login",
 ];
+
+if (process.env.QUICK_CREATE_ENABLED === "true") {
+  publicRoutes.push("/quick-create", "/new");
+}
 
 export const middleware = withAuth(
   async function middleware(req) {
@@ -55,10 +57,9 @@ export const middleware = withAuth(
 
     const res = NextResponse.rewrite(newUrl);
     res.headers.set("x-pathname", newUrl.pathname);
-    const jwt = await initGuest(req, res);
 
-    if (jwt?.sub) {
-      await withPostHog(res, { distinctID: jwt.sub });
+    if (req.nextauth.token) {
+      await withPostHog(res, { distinctID: req.nextauth.token.sub });
     }
 
     return res;

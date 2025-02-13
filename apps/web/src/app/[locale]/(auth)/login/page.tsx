@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Trans } from "react-i18next/TransWithoutContext";
 
+import { GithubProvider } from "@/auth/providers/github";
 import { GoogleProvider } from "@/auth/providers/google";
 import { MicrosoftProvider } from "@/auth/providers/microsoft";
 import { OIDCProvider } from "@/auth/providers/oidc";
@@ -30,7 +31,7 @@ export default async function LoginPage({
   const { t } = await getTranslation();
 
   const oidcProvider = OIDCProvider();
-  const socialProviders = [GoogleProvider(), MicrosoftProvider()];
+  const socialProviders = [GoogleProvider(), MicrosoftProvider(), GithubProvider()];
   const hasAlternateLoginMethods = socialProviders.length > 0 || !!oidcProvider;
 
   return (

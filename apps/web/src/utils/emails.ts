@@ -18,7 +18,9 @@ export const getEmailClient = (locale?: string) => {
       },
     },
     config: {
-      logoUrl: absoluteUrl("/logo.png"),
+      logoUrl: isSelfHosted
+      ? absoluteUrl("/logo.png")
+      : "https://d1vc0q3r9a4nkh.cloudfront.net/kinpal.png",
       baseUrl: absoluteUrl(),
       domain: absoluteUrl().replace(/(^\w+:|^)\/\//, ""),
       supportEmail: env.SUPPORT_EMAIL,

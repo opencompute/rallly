@@ -7,7 +7,7 @@ i18nInstance.init({
 });
 
 export const previewEmailContext: EmailContext = {
-  logoUrl: "https://kinpal.com/logo.png",
+  logoUrl: "https://d1vc0q3r9a4nkh.cloudfront.net/kinpal.png",
   baseUrl: "https://kinpal.com",
   domain: "kinpal.com",
   supportEmail: "support@kinpal.com",

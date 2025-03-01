@@ -10,6 +10,7 @@ const schema = z.object({
 });
 
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 const regularFont = fetch(
   new URL("/public/static/fonts/inter-regular.ttf", import.meta.url),

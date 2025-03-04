@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
-import { Trans } from "@/components/trans";
+import { Trans } from "@/i18n/client/trans";
 
 // export const UsedBy = () => {
 //   return (

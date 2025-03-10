@@ -12,6 +12,7 @@ export async function decodeLegacyJWT(token: string): Promise<JWT | null> {
   const { payload } = await jwtDecrypt(token, encryptionSecret, {
     clockTolerance: 15,
   });
+
   return payload;
 }
 

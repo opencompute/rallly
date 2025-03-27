@@ -1,9 +1,5 @@
-"use client";
-
 import { Badge } from "@rallly/ui/badge";
 import { z } from "zod";
-
-import { Trans } from "@/components/trans";
 
 const brandLabels = {
   visa: "Visa",
@@ -56,11 +52,9 @@ export function PaymentMethod({ type, data }: { type: string; data: unknown }) {
     }
     case "link":
       return "Link";
+    case "paypal":
+      return "PayPal";
     default:
-      return (
-        <Badge>
-          <Trans i18nKey="paymentMethodUnknown" defaults="Unknown" />
-        </Badge>
-      );
+      return <Badge>{type}</Badge>;
   }
 }

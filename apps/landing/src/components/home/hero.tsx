@@ -1,8 +1,8 @@
 "use client";
 import { cn } from "@rallly/ui";
 import { Button } from "@rallly/ui/button";
-import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
+import * as m from "motion/react-m";
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
@@ -16,7 +16,7 @@ const Screenshot = () => {
 
   return (
     <>
-      <motion.div
+      <m.div
         transition={{
           delay: 0.5,
           type: "spring",
@@ -41,8 +41,8 @@ const Screenshot = () => {
         <span className="absolute left-1/2 top-full z-10 h-8 w-px -translate-x-1/2 bg-gray-800" />
         <span className="absolute -bottom-12 left-1/2 z-10 inline-block size-3 origin-right -translate-x-1/2 rounded-full bg-gray-800 ring-1 ring-gray-800 ring-offset-2" />
         <span className="absolute -bottom-12 left-1/2 z-10 inline-block size-3 origin-right -translate-x-1/2 animate-ping rounded-full bg-gray-800 ring-1 ring-gray-800 ring-offset-2" />
-      </motion.div>
-      <motion.div
+      </m.div>
+      <m.div
         transition={{
           type: "spring",
           duration: 1,
@@ -66,7 +66,7 @@ const Screenshot = () => {
             setIsLoaded(true);
           }}
         />
-      </motion.div>
+      </m.div>
     </>
   );
 };
@@ -92,7 +92,7 @@ export const MarketingHero = ({
         <div className="mt-8 flex flex-col items-center justify-center gap-4">
           <Button
             size="lg"
-            className="group rounded-full hover:shadow-md active:shadow-sm"
+            className="group rounded-full px-5 hover:shadow-md active:shadow-sm"
             variant="primary"
             asChild
           >
@@ -103,7 +103,7 @@ export const MarketingHero = ({
           </Button>
           <p
             className={cn(
-              "whitespace-nowrap text-center text-sm text-gray-600",
+              "whitespace-nowrap text-center text-xs text-gray-600",
               handwritten.className,
               "decoration underline decoration-gray-300 decoration-2 underline-offset-8",
               "skew-x-[-10deg]",

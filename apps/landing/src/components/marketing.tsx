@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import * as m from "motion/react-m";
 import Image from "next/image";
 import React from "react";
 
@@ -155,7 +155,7 @@ const Mention = ({
   delay?: number;
 }>) => {
   return (
-    <motion.div
+    <m.div
       transition={{
         delay,
         type: "spring",
@@ -168,7 +168,7 @@ const Mention = ({
     >
       <div className="flex items-start justify-between">{logo}</div>
       <p className="grow text-center text-base">{children}</p>
-    </motion.div>
+    </m.div>
   );
 };
 

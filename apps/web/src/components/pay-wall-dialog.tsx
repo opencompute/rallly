@@ -5,7 +5,7 @@ import { Badge } from "@rallly/ui/badge";
 import type { DialogProps } from "@rallly/ui/dialog";
 import { Dialog, DialogContent, useDialog } from "@rallly/ui/dialog";
 import { RadioGroup, RadioGroupItem } from "@rallly/ui/radio-group";
-import { CheckIcon } from "lucide-react";
+import { CheckIcon, SparklesIcon } from "lucide-react";
 import * as m from "motion/react-m";
 import Link from "next/link";
 import React from "react";
@@ -27,30 +27,35 @@ const monthlyPriceAnnualRate = (pricingData.yearly.amount / 100 / 12).toFixed(
 
 export function PayWallDialog({ children, ...forwardedProps }: DialogProps) {
   const dialog = useDialog();
-  const [period, setPeriod] = React.useState("yearly");
+  const [period, setPeriod] = React.useState("monthly");
 
   return (
     <Dialog {...dialog.dialogProps} {...forwardedProps}>
       {children}
-      <DialogContent className="w-[600px] p-4 sm:p-6">
+      <DialogContent className="w-[600px] overflow-hidden bg-gray-50 p-4 sm:p-6">
+        <SparklesIcon className="absolute -top-4 left-4 size-32 text-gray-500/10" />
         <div className="space-y-6">
           <header>
-            <m.div
-              transition={{
-                delay: 0.2,
-                duration: 0.4,
-                type: "spring",
-                bounce: 0.5,
-              }}
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center"
-              aria-hidden="true"
-            >
-              <Badge size="lg" variant="primary">
-                <Trans i18nKey="planPro" />
-              </Badge>
-            </m.div>
+            <div className="flex justify-center">
+              <div className="inline-flex size-14 items-center justify-center">
+                <m.div
+                  transition={{
+                    delay: 0.2,
+                    duration: 0.4,
+                    type: "spring",
+                    bounce: 0.5,
+                  }}
+                  initial={{ opacity: 0, y: -50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-center"
+                  aria-hidden="true"
+                >
+                  <Badge size="lg" variant="primary">
+                    <Trans i18nKey="planPro" />
+                  </Badge>
+                </m.div>
+              </div>
+            </div>
             <h1 className="mb-2 mt-4 text-center text-xl font-bold">
               <Trans defaults="Upgrade to Pro" i18nKey="upgradePromptTitle" />
             </h1>
@@ -90,23 +95,44 @@ export function PayWallDialog({ children, ...forwardedProps }: DialogProps) {
           </header>
           <section>
             <RadioGroup value={period} onValueChange={setPeriod}>
-              <li className="focus-within:ring-primary relative flex items-center justify-between rounded-lg border bg-gray-50 p-4 focus-within:ring-2">
+              <li className="relative flex items-center justify-between rounded-lg border bg-gray-50 p-4 focus-within:bg-gray-100 focus-within:ring-gray-300 hover:bg-gray-100">
+                <div className="flex items-center gap-4">
+                  <RadioGroupItem id="monthly" value="monthly" />
+                  <label className="text-base font-semibold" htmlFor="monthly">
+                    <span role="presentation" className="absolute inset-0" />
+                    <Trans defaults="1 month" i18nKey="1month" />
+                  </label>
+                </div>
+                <p className="flex items-baseline gap-1">
+                  <span className="text-xl font-semibold">${monthlyPrice}</span>
+                  <span className="text-muted-foreground text-sm">/ mo</span>
+                </p>
+              </li>
+              <li className="relative flex items-center justify-between rounded-lg border bg-gray-50 p-4 focus-within:bg-gray-100 focus-within:ring-gray-300 hover:bg-gray-100">
                 <div className="space-y-1">
                   <div className="flex items-center gap-4">
                     <RadioGroupItem id="yearly" value="yearly" />
-                    <label className="text-base font-semibold" htmlFor="yearly">
-                      <span role="presentation" className="absolute inset-0" />
-                      <Trans defaults="12 months" i18nKey="12months" />
-                    </label>
-                    <Badge variant="green">
-                      <Trans
-                        defaults="Save {percentage}%"
-                        i18nKey="savePercentage"
-                        values={{ percentage: annualSavingsPercentage }}
-                      />
-                    </Badge>
+                    <div className="flex items-center gap-2">
+                      <label
+                        className="text-base font-semibold"
+                        htmlFor="yearly"
+                      >
+                        <span
+                          role="presentation"
+                          className="absolute inset-0"
+                        />
+                        <Trans defaults="12 months" i18nKey="12months" />
+                      </label>
+                      <Badge variant="secondary">
+                        <Trans
+                          defaults="Save {percentage}%"
+                          i18nKey="savePercentage"
+                          values={{ percentage: annualSavingsPercentage }}
+                        />
+                      </Badge>
+                    </div>
                   </div>
-                  <p className="text-muted-foreground flex items-baseline gap-1.5 pl-8 text-sm">
+                  <p className="text-muted-foreground pointer-events-none flex items-baseline gap-1.5 pl-8 text-sm">
                     <span>${yearlyPrice}</span>
                     <span className="line-through opacity-50">
                       ${((pricingData.monthly.amount * 12) / 100).toFixed(2)}
@@ -120,25 +146,12 @@ export function PayWallDialog({ children, ...forwardedProps }: DialogProps) {
                   <span className="text-muted-foreground text-sm">/ mo</span>
                 </p>
               </li>
-              <li className="focus-within:ring-primary relative flex items-center justify-between rounded-lg border bg-gray-50 p-4 focus-within:ring-2">
-                <div className="flex items-center gap-4">
-                  <RadioGroupItem id="monthly" value="monthly" />
-                  <label className="text-base font-semibold" htmlFor="monthly">
-                    <span role="presentation" className="absolute inset-0" />
-                    <Trans defaults="1 month" i18nKey="1month" />
-                  </label>
-                </div>
-                <p className="flex items-baseline gap-1">
-                  <span className="text-xl font-semibold">${monthlyPrice}</span>
-                  <span className="text-muted-foreground text-sm">/ mo</span>
-                </p>
-              </li>
             </RadioGroup>
           </section>
           <footer className="space-y-4">
             <div className="grid gap-2">
               <UpgradeButton large annual={period === "yearly"}>
-                <Trans i18nKey="subscribe" defaults="Subscribe" />
+                <Trans i18nKey="upgrade" defaults="Upgrade" />
               </UpgradeButton>
             </div>
             <p className="text-muted-foreground text-center text-sm">

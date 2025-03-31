@@ -2,6 +2,7 @@
 
 import { usePostHog } from "@rallly/posthog/client";
 import { cn } from "@rallly/ui";
+import { Badge } from "@rallly/ui/badge";
 import { Button } from "@rallly/ui/button";
 import { DialogTrigger } from "@rallly/ui/dialog";
 import { Icon } from "@rallly/ui/icon";
@@ -22,7 +23,6 @@ import { usePathname } from "next/navigation";
 
 import { OptimizedAvatarImage } from "@/components/optimized-avatar-image";
 import { PayWallDialog } from "@/components/pay-wall-dialog";
-import { ProBadge } from "@/components/pro-badge";
 import { Trans } from "@/components/trans";
 import { IfGuest, useUser } from "@/components/user-provider";
 import { IfFreeUser } from "@/contexts/plan";
@@ -108,24 +108,30 @@ export function Sidebar() {
               <li>
                 <PayWallDialog>
                   <DialogTrigger
-                    className="mb-4 flex w-full flex-col rounded-md border bg-gray-50 px-4 py-3 text-left focus:border-gray-300 focus:bg-gray-200"
+                    className="relative mb-4 flex w-full items-center gap-4 overflow-hidden rounded-md border bg-gray-200/50 px-4 py-3 text-left ring-gray-200 hover:bg-gray-200 focus-visible:border-gray-300"
                     onClick={() =>
                       posthog?.capture("trigger paywall", { from: "sidebar" })
                     }
                   >
-                    <span className="mb-2 flex items-center gap-x-2">
-                      <SparklesIcon className="size-5 text-gray-400" />
-                      <span className="text-sm font-bold">
+                    <SparklesIcon className="pointer-events-none absolute -left-2 -top-2 size-20 text-gray-500/10" />
+                    <div>
+                      <div className="inline-flex size-12 items-center justify-center rounded-md duration-500">
+                        <Badge variant="primary">
+                          <Trans i18nKey="planPro" />
+                        </Badge>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="mb-0.5 text-sm font-bold">
                         <Trans i18nKey="upgrade" />
-                      </span>
-                      <ProBadge />
-                    </span>
-                    <span className="text-sm leading-relaxed text-gray-500">
-                      <Trans
-                        i18nKey="unlockFeatures"
-                        defaults="Unlock all Pro features."
-                      />
-                    </span>
+                      </div>
+                      <div className="text-sm leading-relaxed text-gray-500">
+                        <Trans
+                          i18nKey="unlockFeatures"
+                          defaults="Unlock all Pro features."
+                        />
+                      </div>
+                    </div>
                   </DialogTrigger>
                 </PayWallDialog>
               </li>

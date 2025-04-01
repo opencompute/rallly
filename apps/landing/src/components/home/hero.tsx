@@ -102,7 +102,6 @@ export const MarketingHero = ({
               "whitespace-nowrap text-center text-xs text-gray-600",
               handwritten.className,
               "decoration underline decoration-gray-300 decoration-2 underline-offset-8",
-              "skew-x-[-10deg]",
             )}
           >
             <Trans

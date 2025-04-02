@@ -25,6 +25,7 @@
     "@hookform/resolvers": "^3.3.1",
     "@next/bundle-analyzer": "^12.3.4",
     "@panva/hkdf": "^1.2.1",
+    "@radix-ui/react-radio-group": "^1.2.3",
     "@radix-ui/react-slot": "^1.1.2",
     "@radix-ui/react-switch": "^1.0.2",
     "@rallly/billing": "*",

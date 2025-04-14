@@ -210,7 +210,7 @@ const requireUser = async () => {
   if (!session?.user) {
     redirect("/login");
   }
-  return session?.user;
+  return { userId: session.user.id };
 };
 
 /**

@@ -8,10 +8,6 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
-require("dotenv").config({
-  path: "../../.env",
-});
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output:
@@ -19,7 +15,6 @@ const nextConfig = {
   productionBrowserSourceMaps: true,
   transpilePackages: [
     "@rallly/database",
-    "@rallly/icons",
     "@rallly/ui",
     "@rallly/tailwind-config",
     "@rallly/posthog",
@@ -100,9 +95,10 @@ const sentryWebpackPluginOptions = {
 };
 
 const withBundleAnalyzerConfig = withBundleAnalyzer(nextConfig);
+
 // Make sure adding Sentry options is the last code to run before exporting, to
 // ensure that your source maps include changes from all other Webpack plugins
-module.exports = withSentryConfig(
-  withBundleAnalyzerConfig,
-  sentryWebpackPluginOptions,
-);
+module.exports =
+  process.env.NEXT_PUBLIC_SELF_HOSTED === "true"
+    ? withBundleAnalyzerConfig
+    : withSentryConfig(withBundleAnalyzerConfig, sentryWebpackPluginOptions);

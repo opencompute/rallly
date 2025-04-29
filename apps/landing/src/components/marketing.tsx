@@ -1,7 +1,8 @@
 "use client";
 import * as m from "motion/react-m";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import type React from "react";
 
 import { Trans } from "@/i18n/client/trans";
 

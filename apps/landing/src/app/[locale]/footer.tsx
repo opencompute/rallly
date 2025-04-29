@@ -12,7 +12,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import * as React from "react";
+import type * as React from "react";
 
 import DiscordIcon from "@/assets/discord.svg";
 import GithubIcon from "@/assets/github.svg";
@@ -68,34 +68,38 @@ export const Footer: React.FunctionComponent = () => {
             alt="Kinpal"
           />
           <div className="flex items-center space-x-6">
-            <Link
+            <a
               target="_blank"
               href="https://twitter.com/kinpalai"
               className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
+              rel="noreferrer noopener"
             >
               <TwitterIcon className="size-5" />
-            </Link>
-            <Link
+            </a>
+            <a
               target="_blank"
               href="https://discord.gg/ZRZKqJf3tY"
               className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
+              rel="noreferrer noopener"
             >
               <DiscordIcon className="size-5" />
-            </Link>
-            <Link
+            </a>
+            <a
               target="_blank"
               href="https://www.linkedin.com/company/kinpal"
               className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
+              rel="noreferrer noopener"
             >
               <LinkedinIcon className="size-5" />
-            </Link>
-            <Link
+            </a>
+            <a
               target="_blank"
               href="https://github.com/kinpalai"
               className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
+              rel="noreferrer noopener"
             >
               <GithubIcon className="size-5" />
-            </Link>
+            </a>
           </div>
         </div>
         <div className="lg:w-1/6">
@@ -250,6 +254,7 @@ export const Footer: React.FunctionComponent = () => {
                 target="_blank"
                 href="https://vercel.com?utm_source=kinpal&utm_campaign=oss"
                 className="inline-block text-white"
+                rel="noreferrer noopener"
               >
                 <Image
                   src="/static/images/partners/vercel-logotype-dark.svg"

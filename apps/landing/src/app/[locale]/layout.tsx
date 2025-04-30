@@ -1,4 +1,3 @@
-import "tailwindcss/tailwind.css";
 import "../../style.css";
 
 import { GoogleAnalytics } from '@next/third-parties/google';
@@ -38,13 +37,16 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-export default async function Root({
-  children,
-  params: { locale },
-}: {
+export default async function Root(props: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const params = await props.params;
+
+  const { locale } = params;
+
+  const { children } = props;
+
   const { t } = await getTranslation(locale, "common");
   const ga = process.env.GA_MEASUREMENT_ID || "";
   return (

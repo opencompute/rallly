@@ -121,11 +121,10 @@ function PollsEmptyState() {
   );
 }
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
+export default async function Page(props: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
+  const searchParams = await props.searchParams;
   const { t } = await getTranslation();
   const { userId } = await requireUser();
 
@@ -168,13 +167,13 @@ export default async function Page({
         </div>
       </div>
       <PageContent className="space-y-4">
+        <SearchInput
+          placeholder={t("searchPollsPlaceholder", {
+            defaultValue: "Search polls by title...",
+          })}
+        />
         <PollsTabbedView>
           <div className="space-y-4">
-            <SearchInput
-              placeholder={t("searchPollsPlaceholder", {
-                defaultValue: "Search polls by title...",
-              })}
-            />
             {polls.length === 0 ? (
               <PollsEmptyState />
             ) : (

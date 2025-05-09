@@ -37,7 +37,7 @@ export async function generateMetadata(props: {
   const { t } = await getTranslation(params.locale, "home");
   return {
     title: t("metaTitle", {
-      defaultValue: "Kinpal: Group Scheduling Tool",
+      defaultValue: "Kinpal",
       ns: "home",
     }),
     description: t("metaDescription", {

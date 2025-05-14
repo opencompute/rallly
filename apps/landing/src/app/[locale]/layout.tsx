@@ -57,13 +57,13 @@ export default async function Root(props: {
             <div className="mx-auto flex min-h-full w-full max-w-7xl flex-col space-y-12 p-4 sm:p-8">
               <header className="flex w-full items-center">
                 <div className="flex grow items-center gap-x-12">
-                  <Link className="inline-block rounded" href="/">
+                  <Link className="flex rounded items-center gap-1 font-semibold text-primary-600" href="/">
                     <Image
                       src="/logo.svg"
                       width={32}
                       height={32}
                       alt="kinpal.com"
-                    />
+                    /> Kinpal
                   </Link>
                   <nav className="hidden items-center gap-2 lg:flex">
                     <NavLink href="https://support.kinpal.com/workflow/create">

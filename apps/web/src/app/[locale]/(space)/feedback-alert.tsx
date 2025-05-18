@@ -43,7 +43,7 @@ export function FeedbackAlert() {
         </Button>
         <Button variant="primary" asChild>
           <Link
-            href="https://senja.io/p/rallly/r/uwwiXJ"
+            href="https://senja.io/p/kinpal/r/w1R9yJ"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -70,7 +70,7 @@ export const Footer: React.FunctionComponent = () => {
           <div className="flex items-center space-x-6">
             <a
               target="_blank"
-              href="https://twitter.com/kinpalai"
+              href="https://x.com/kinpalai"
               className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
               rel="noreferrer noopener"
             >

@@ -47,7 +47,7 @@ export default async function Page(props: {
             <div>
               <Link
                 className="text-muted-foreground hover:text-primary text-sm"
-                href="https://twitter.com/kinpalai"
+                href="https://x.com/kinpalai"
               >
                 @kinpalai
               </Link>

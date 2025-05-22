@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@next/third-parties": "^15.3.1",
-    "@prisma/client": "^6.4.1",
+    "@prisma/client": "^6.8.2",
     "@rallly/billing": "workspace:*",
     "@rallly/database": "workspace:*",
     "@rallly/languages": "workspace:*",

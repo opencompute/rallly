@@ -30,7 +30,9 @@ export default async function LoginPage(props: {
   const { t } = await getTranslation();
 
   const oidcProvider = OIDCProvider();
-  const socialProviders = [GoogleProvider(), MicrosoftProvider(), GithubProvider()];
+  const socialProviders = [GoogleProvider(), MicrosoftProvider(), GithubProvider()].filter(
+    Boolean,
+  );
   const hasAlternateLoginMethods = socialProviders.length > 0 || !!oidcProvider;
 
   return (

@@ -7,8 +7,8 @@ export default function LicensingThankYouPage() {
     <main className="p-4 sm:p-16 h-dvh flex flex-col sm:justify-center relative">
       <div className="w-full relative z-10 max-w-2xl mx-auto space-y-6">
         <div className="py-4">
-          <Link className="inline-block rounded" href="/">
-            <Image src="/logo.svg" width={30} height={30} alt="kinpal.com" />
+          <Link className="flex rounded items-center gap-1 font-semibold text-primary-600" href="/">
+            <Image src="/logo.svg" width={28} height={28} alt="kinpal.com" /> Kinpal
           </Link>
         </div>
         <div className="space-y-4">

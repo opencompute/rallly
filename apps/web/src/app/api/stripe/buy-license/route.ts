@@ -51,12 +51,16 @@ export async function GET(request: NextRequest) {
 
   const { type, seats, promoCode } = mapProductToLicenseType[product];
 
-  const promotionCodes = await stripe.promotionCodes.list({
-    code: promoCode,
-    active: true,
-  });
+  let promoCodeId: string | undefined;
 
-  const promoCodeId = promotionCodes.data[0]?.id;
+  if (promoCode) {
+    const promotionCodes = await stripe.promotionCodes.list({
+      code: promoCode,
+      active: true,
+    });
+
+    promoCodeId = promotionCodes.data[0]?.id;
+  }
 
   try {
     const session = await stripe.checkout.sessions.create({
@@ -68,7 +72,9 @@ export async function GET(request: NextRequest) {
       ],
       mode: "payment",
       success_url: "https://kinpal.com/licensing/thank-you",
-      ...(promoCodeId ? { discounts: [{ promotion_code: promoCodeId }] } : {}),
+      ...(promoCodeId
+        ? { discounts: [{ promotion_code: promoCodeId }] }
+        : { allow_promotion_codes: true }),
       metadata: {
         licenseType: type,
         version: 4,

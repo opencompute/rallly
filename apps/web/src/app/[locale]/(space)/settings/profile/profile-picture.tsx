@@ -9,7 +9,7 @@ import { z } from "zod";
 import { OptimizedAvatarImage } from "@/components/optimized-avatar-image";
 import { Trans } from "@/components/trans";
 import { useUser } from "@/components/user-provider";
-import { isStorageEnabled } from "@/features/storage";
+import { useFeatureFlag } from "@/features/feature-flags/client";
 import { useTranslation } from "@/i18n/client";
 import { trpc } from "@/trpc/client";
 
@@ -178,6 +178,7 @@ export function ProfilePicture({
   name: string;
   image?: string;
 }) {
+  const isStorageEnabled = useFeatureFlag("storage");
   return (
     <div className="flex items-center gap-x-4">
       <OptimizedAvatarImage src={image} name={name} size="lg" />

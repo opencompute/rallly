@@ -10,8 +10,8 @@ export function LogoLink() {
       <Image
         src="/logo-mark.svg"
         alt="Kinpal"
-        width={32}
-        height={32}
+        width={28}
+        height={28}
         priority={true}
         className="inline-block shrink-0"
       /> Kinpal

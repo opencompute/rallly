@@ -85,10 +85,18 @@ export default async function Root(props: {
                   </Icon>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-48" align="end" sideOffset={16}>
+              <DropdownMenuContent
+                className="w-48"
+                align="end"
+                sideOffset={16}
+              >
                 <DropdownMenuItem asChild>
                   <Link href="https://support.kinpal.com/workflow/create">
-                    <Trans t={t} i18nKey="howItWorks" defaults="How it Works" />
+                    <Trans
+                      t={t}
+                      i18nKey="howItWorks"
+                      defaults="How it Works"
+                    />
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>

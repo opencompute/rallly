@@ -42,7 +42,7 @@ export default async function Root(props: {
 
   const { t } = await getTranslation(locale, "common");
   return (
-    <div className="mx-auto flex min-h-full w-full max-w-7xl flex-col space-y-8 p-4 sm:p-8">
+    <div className="mx-auto relative z-10 flex min-h-full w-full max-w-7xl flex-col space-y-8 p-4 sm:p-8">
       <header className="flex w-full items-center">
         <div className="flex grow items-center gap-x-12">
           <Link className="flex rounded items-center gap-1 font-semibold text-primary-600" href="/">
@@ -85,18 +85,10 @@ export default async function Root(props: {
                   </Icon>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent
-                className="w-48"
-                align="end"
-                sideOffset={16}
-              >
+              <DropdownMenuContent className="w-48" align="end" sideOffset={16}>
                 <DropdownMenuItem asChild>
                   <Link href="https://support.kinpal.com/workflow/create">
-                    <Trans
-                      t={t}
-                      i18nKey="howItWorks"
-                      defaults="How it Works"
-                    />
+                    <Trans t={t} i18nKey="howItWorks" defaults="How it Works" />
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>

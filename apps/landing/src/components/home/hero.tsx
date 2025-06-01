@@ -81,7 +81,7 @@ export const MarketingHero = ({
 }) => {
   return (
     <article className="max-w-full space-y-12 text-center">
-      <header className="sm:p-6">
+      <header className="sm:p-8">
         <h1 className="mb-2 mt-6 text-pretty text-2xl font-bold tracking-tight sm:mb-4 sm:text-5xl">
           {title}
         </h1>

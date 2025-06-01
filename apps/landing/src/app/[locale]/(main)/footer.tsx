@@ -15,7 +15,6 @@ import { usePathname, useRouter } from "next/navigation";
 import type * as React from "react";
 
 import DiscordIcon from "@/assets/discord.svg";
-import GithubIcon from "@/assets/github.svg";
 import LinkedinIcon from "@/assets/linkedin.svg";
 import TwitterIcon from "@/assets/twitter.svg";
 import { Trans } from "@/i18n/client/trans";
@@ -71,7 +70,7 @@ export const Footer: React.FunctionComponent = () => {
             <a
               target="_blank"
               href="https://x.com/kinpalai"
-              className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
+              className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline ml-8"
               rel="noreferrer noopener"
             >
               <TwitterIcon className="size-5" />
@@ -91,14 +90,6 @@ export const Footer: React.FunctionComponent = () => {
               rel="noreferrer noopener"
             >
               <LinkedinIcon className="size-5" />
-            </a>
-            <a
-              target="_blank"
-              href="https://github.com/kinpalai"
-              className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
-              rel="noreferrer noopener"
-            >
-              <GithubIcon className="size-5" />
             </a>
           </div>
         </div>
@@ -131,14 +122,6 @@ export const Footer: React.FunctionComponent = () => {
                 <Trans ns="common" i18nKey="support" defaults="Support" />
               </Link>
             </li>
-            <li>
-              <Link
-                href="https://kinpal.openstatus.dev"
-                className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
-              >
-                <Trans ns="common" i18nKey="status" defaults="Status" />
-              </Link>
-            </li>
           </ul>
         </div>
         <div className="lg:w-1/6">
@@ -149,7 +132,7 @@ export const Footer: React.FunctionComponent = () => {
             <li>
               <Link
                 className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
-                href="/best-doodle-alternative"
+                href="/support"
               >
                 <Trans
                   ns="common"
@@ -161,7 +144,7 @@ export const Footer: React.FunctionComponent = () => {
             <li>
               <Link
                 className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
-                href="/when2meet-alternative"
+                href="/support"
               >
                 <Trans
                   ns="common"
@@ -173,36 +156,12 @@ export const Footer: React.FunctionComponent = () => {
             <li>
               <Link
                 className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
-                href="/free-scheduling-poll"
+                href="/new"
               >
                 <Trans
                   ns="common"
                   i18nKey="freeSchedulingPoll"
                   defaults="Free Scheduling Poll"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
-                href="/meeting-poll"
-              >
-                <Trans
-                  ns="common"
-                  i18nKey="meetingPoll"
-                  defaults="Meeting Poll"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
-                href="/availability-poll"
-              >
-                <Trans
-                  ns="common"
-                  i18nKey="availabilityPoll"
-                  defaults="Availability Poll"
                 />
               </Link>
             </li>

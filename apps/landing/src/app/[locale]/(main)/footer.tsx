@@ -64,6 +64,7 @@ export const Footer: React.FunctionComponent = () => {
             src="/logo-grayscale.svg"
             width={120}
             height={120}
+            className="border-l-1 !border-l !border-gray-400"
             alt="Kinpal"
           />
           <div className="flex items-center space-x-4">

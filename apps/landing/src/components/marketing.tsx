@@ -1,4 +1,5 @@
 "use client";
+import { ArrowUpRight } from "lucide-react";
 import * as m from "motion/react-m";
 import Image from "next/image";
 import Link from "next/link";
@@ -251,6 +252,65 @@ export const MentionedBy = () => {
         </Mention>
       </div>
     </div>
+  );
+};
+
+export const BigTestimonial = () => {
+  return (
+    <m.div
+      transition={{
+        duration: 1,
+        type: "spring",
+        bounce: 0.3,
+      }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: "all" }}
+      className="flex flex-col items-center gap-y-8"
+    >
+      <Image
+        src="/static/images/stars-5.svg"
+        width={120}
+        height={30}
+        alt="5 stars"
+      />
+      <div className="text-center">
+        <p className="max-w-xl text-center font-medium text-lg leading-normal">
+          <Trans
+            i18nKey="home:ericQuote"
+            defaults="“If your scheduling workflow lives in emails, I strongly encourage you to try and let Kinpal simplify your scheduling tasks for a more organized and less stressful workday.”"
+          />
+        </p>
+        <p className="mt-1">
+          <Link
+            target="_blank"
+            className="text-gray-500 text-sm hover:underline"
+            href="https://www.trustpilot.com/reviews/645e1d1976733924e89d8203"
+          >
+            <Trans i18nKey="home:viaTrustpilot" defaults="via Trustpilot" />
+            <ArrowUpRight className="ml-1 inline size-3" />
+          </Link>
+        </p>
+      </div>
+      <div className="flex gap-x-4">
+        <Image
+          className="rounded-full"
+          src="/static/images/eric.png"
+          width={48}
+          height={48}
+          alt="Eric Fletcher"
+        />
+        <div>
+          <div className="font-semibold">Eric Fletcher</div>
+          <div className="text-gray-500 text-sm">
+            <Trans
+              i18nKey="home:ericJobTitle"
+              defaults="Executive Assistant at MIT"
+            />
+          </div>
+        </div>
+      </div>
+    </m.div>
   );
 };
 

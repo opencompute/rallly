@@ -35,11 +35,11 @@ export const PreferencesProvider = ({
 }) => {
   const { user } = useUser();
   const [preferredTimezone, setPreferredTimezone] = useLocalStorage(
-    "rallly.preferredTimezone",
+    "kinpal.preferredTimezone",
     initialValue.timeZone,
   );
   const [preferredTimeFormat, setPreferredTimeFormat] = useLocalStorage(
-    "rallly.preferredTimeFormat",
+    "kinpal.preferredTimeFormat",
     initialValue.timeFormat,
     {
       raw: false,
@@ -48,7 +48,7 @@ export const PreferencesProvider = ({
     },
   );
   const [preferredWeekStart, setPreferredWeekStart] = useLocalStorage(
-    "rallly.preferredWeekStart",
+    "kinpal.preferredWeekStart",
     initialValue.weekStart,
   );
   const updatePreferences = trpc.user.updatePreferences.useMutation();

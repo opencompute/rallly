@@ -59,18 +59,18 @@ export const Footer: React.FunctionComponent = () => {
   return (
     <div className="mx-auto space-y-8">
       <div className="space-y-16 lg:flex lg:space-x-8 lg:space-y-0">
-        <div className="lg:w-2/6">
+        <div className="lg:w-1/4">
           <Image
             src="/logo-grayscale.svg"
-            width={140}
-            height={140}
+            width={120}
+            height={120}
             alt="Kinpal"
           />
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-4">
             <a
               target="_blank"
               href="https://x.com/kinpalai"
-              className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline ml-8"
+              className="text-gray-500 text-sm hover:text-primary-600 hover:no-underline ml-7"
               rel="noreferrer noopener"
             >
               <TwitterIcon className="size-5" />
@@ -78,7 +78,7 @@ export const Footer: React.FunctionComponent = () => {
             <a
               target="_blank"
               href="https://discord.gg/ZRZKqJf3tY"
-              className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
+              className="text-gray-500 text-sm hover:text-primary-600 hover:no-underline"
               rel="noreferrer noopener"
             >
               <DiscordIcon className="size-5" />
@@ -86,14 +86,14 @@ export const Footer: React.FunctionComponent = () => {
             <a
               target="_blank"
               href="https://www.linkedin.com/company/kinpal"
-              className="hover:text-primary-600 text-sm text-gray-500 hover:no-underline"
+              className="text-gray-500 text-sm hover:text-primary-600 hover:no-underline"
               rel="noreferrer noopener"
             >
               <LinkedinIcon className="size-5" />
             </a>
           </div>
         </div>
-        <div className="lg:w-1/6">
+        <div className="lg:w-1/4">
           <div className="mb-8 font-medium">
             <Trans ns="common" i18nKey="links" defaults="Links" />
           </div>
@@ -124,7 +124,7 @@ export const Footer: React.FunctionComponent = () => {
             </li>
           </ul>
         </div>
-        <div className="lg:w-1/6">
+        <div className="lg:w-1/4">
           <div className="mb-8 font-medium">
             <Trans i18nKey="solutions" defaults="Solutions" />
           </div>
@@ -132,7 +132,7 @@ export const Footer: React.FunctionComponent = () => {
             <li>
               <Link
                 className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
-                href="/support"
+                href="/best-doodle-alternative"
               >
                 <Trans
                   ns="common"
@@ -144,19 +144,7 @@ export const Footer: React.FunctionComponent = () => {
             <li>
               <Link
                 className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
-                href="/support"
-              >
-                <Trans
-                  ns="common"
-                  i18nKey="when2MeetAlternative"
-                  defaults="When2Meet Alternative"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
-                href="/new"
+                href="/free-scheduling-poll"
               >
                 <Trans
                   ns="common"
@@ -165,9 +153,21 @@ export const Footer: React.FunctionComponent = () => {
                 />
               </Link>
             </li>
+            <li>
+              <Link
+                className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
+                href="/availability-poll"
+              >
+                <Trans
+                  ns="common"
+                  i18nKey="availabilityPoll"
+                  defaults="Availability Poll"
+                />
+              </Link>
+            </li>
           </ul>
         </div>
-        <div className="lg:w-2/6">
+        <div className="lg:w-1/4">
           <div className="mb-8 font-medium">
             <Trans ns="common" i18nKey="language" defaults="Language" />
           </div>

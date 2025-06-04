@@ -2,7 +2,7 @@ export default function TermsOfUse() {
   return (
     <div className="prose mx-auto max-w-3xl">
       <h1>Terms of Use</h1>
-      <p>Last updated: 4 July 2023</p>
+      <p>Last updated: July 4, 2023</p>
       <p>
         {`This website is operated by Kinpal Inc. References made to "we",
           "us" or "our" pertain directly and exclusively to Kinpal Inc. We

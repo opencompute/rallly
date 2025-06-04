@@ -3,7 +3,7 @@ export default function PrivacyPolicy() {
     <>
       <div className="prose mx-auto max-w-3xl">
         <h1>Privacy Policy</h1>
-        <p>Last updated: 1 August 2023</p>
+        <p>Last updated: August 1, 2023</p>
         <p>
           At kinpal.com, we take your privacy seriously. This privacy policy
           explains how we collect, use, and disclose your personal data, and

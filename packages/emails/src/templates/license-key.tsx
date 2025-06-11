@@ -110,7 +110,7 @@ export const LicenseKeyEmail = ({
             a: (
               <Link
                 className="text-link"
-                href="https://docs.kinpal.com/self-hosted"
+                href="https://support.kinpal.com/self-hosting/licensing#activating-your-license"
               />
             ),
           }}

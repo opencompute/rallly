@@ -2,7 +2,7 @@ import { absoluteUrl } from "@rallly/utils/absolute-url";
 
 export const sessionConfig = {
   password: process.env.SECRET_PASSWORD ?? "",
-  cookieName: "rallly-session",
+  cookieName: "kinpal-session",
   cookieOptions: {
     secure: absoluteUrl().startsWith("https://") ?? false,
   },

@@ -82,9 +82,9 @@ import { Trans } from "@/i18n/client/trans";
 //       <h2 className="mb-12 text-center">Testimonials</h2>
 //       <div className="">
 //         {/* <Testimonial author="Dan">
-//           {`Rallly is the only service that meets all my needs and is 100%
+//           {`Kinpal is the only service that meets all my needs and is 100%
 //         free. It's incredibly easy to use, no sign-in even required. And I
-//         trust rallly.co because the entire project is open source.`}
+//         trust kinpal.com because the entire project is open source.`}
 //         </Testimonial>
 //         <Testimonial author="Robert">
 //           I was looking for something simple and clean (without tons of ads)
@@ -100,7 +100,7 @@ import { Trans } from "@/i18n/client/trans";
 //         <Button className="rounded-full px-6" asChild>
 //           <Link
 //             target="_blank"
-//             href="https://www.trustpilot.com/evaluate/rallly.co"
+//             href="https://www.trustpilot.com/evaluate/kinpal.com"
 //           >
 //             <span>Share your experience</span>
 //             <ArrowRight className="size-4" />
@@ -278,7 +278,7 @@ export const BigTestimonial = () => {
         <p className="max-w-xl text-center font-medium text-lg leading-normal">
           <Trans
             i18nKey="home:ericQuote"
-            defaults="“If your scheduling workflow lives in emails, I strongly encourage you to try and let Rallly simplify your scheduling tasks for a more organized and less stressful workday.”"
+            defaults="“If your scheduling workflow lives in emails, I strongly encourage you to try and let Kinpal simplify your scheduling tasks for a more organized and less stressful workday.”"
           />
         </p>
         <p className="mt-1">

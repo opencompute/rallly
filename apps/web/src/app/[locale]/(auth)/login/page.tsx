@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Trans } from "react-i18next/TransWithoutContext";
 
+import { GithubProvider } from "@/auth/providers/github";
 import { GoogleProvider } from "@/auth/providers/google";
 import { MicrosoftProvider } from "@/auth/providers/microsoft";
 import { OIDCProvider } from "@/auth/providers/oidc";
@@ -42,7 +43,7 @@ export default async function LoginPage(props: {
 
   const { instanceSettings, t } = await loadData();
   const oidcProvider = OIDCProvider();
-  const socialProviders = [GoogleProvider(), MicrosoftProvider()].filter(
+  const socialProviders = [GoogleProvider(), MicrosoftProvider(), GithubProvider()].filter(
     Boolean,
   );
   const hasAlternateLoginMethods = [...socialProviders, oidcProvider].some(

@@ -3,7 +3,7 @@ import { prisma } from "@rallly/database";
 import { deleteAllMessages } from "./mailpit/mailpit";
 import { createUserInDb, loginWithEmail } from "./test-utils";
 
-const INITIAL_ADMIN_TEST_EMAIL = "initial.admin@rallly.co";
+const INITIAL_ADMIN_TEST_EMAIL = "initial.admin@kinpal.com";
 const REGULAR_USER_EMAIL = "user@example.com";
 const SUBSEQUENT_ADMIN_EMAIL = "admin2@example.com";
 const OTHER_USER_EMAIL = "other.user@example.com";

@@ -4,12 +4,12 @@ import dayjs from "dayjs";
 export async function seedUsers() {
   console.info("Seeding users...");
   const freeUser = await prisma.user.upsert({
-    where: { email: "dev@rallly.co" },
+    where: { email: "dev@kinpal.com" },
     update: {},
     create: {
       id: "free-user",
       name: "Dev User",
-      email: "dev@rallly.co",
+      email: "dev@kinpal.com",
       timeZone: "America/New_York",
       spaces: {
         create: {
@@ -29,12 +29,12 @@ export async function seedUsers() {
   });
 
   const proUser = await prisma.user.upsert({
-    where: { email: "dev+pro@rallly.co" },
+    where: { email: "dev+pro@kinpal.com" },
     update: {},
     create: {
       id: "pro-user",
       name: "Pro User",
-      email: "dev+pro@rallly.co",
+      email: "dev+pro@kinpal.com",
       spaces: {
         create: {
           id: "space-2",

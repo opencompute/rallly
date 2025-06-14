@@ -64,7 +64,7 @@ export const env = createEnv({
      */
     SUPPORT_EMAIL: z.email(),
     NOREPLY_EMAIL: z.email().optional(),
-    NOREPLY_EMAIL_NAME: z.string().default("Rallly"),
+    NOREPLY_EMAIL_NAME: z.string().default("Kinpal"),
 
     /**
      * S3 Configuration
@@ -104,9 +104,15 @@ export const env = createEnv({
     MICROSOFT_CLIENT_SECRET: z.string().optional(),
 
     /**
+     * Github Integration
+     */
+    GITHUB_CLIENT_ID: z.string().optional(),
+    GITHUB_CLIENT_SECRET: z.string().optional(),
+
+    /**
      * App name
      */
-    APP_NAME: z.string().optional().default("Rallly"),
+    APP_NAME: z.string().optional().default("Kinpal"),
     /**
      * Primary color for theming (hex format, e.g., "#4f46e5")
      */
@@ -187,6 +193,8 @@ export const env = createEnv({
     MICROSOFT_TENANT_ID: process.env.MICROSOFT_TENANT_ID,
     MICROSOFT_CLIENT_ID: process.env.MICROSOFT_CLIENT_ID,
     MICROSOFT_CLIENT_SECRET: process.env.MICROSOFT_CLIENT_SECRET,
+    GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
+    GITHUB_CLIENT_SECRET: process.env.GITHUB_CLIENT_SECRET,
     PRIMARY_COLOR: process.env.PRIMARY_COLOR,
     LOGO_URL: process.env.LOGO_URL,
     LOGO_ICON_URL: process.env.LOGO_ICON_URL,

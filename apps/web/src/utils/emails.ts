@@ -19,7 +19,7 @@ export const getEmailClient = (locale?: string) => {
     config: {
       logoUrl: env.LOGO_ICON_URL
         ? env.LOGO_ICON_URL
-        : "https://d39ixtfgglw55o.cloudfront.net/images/rallly-logo-mark.png",
+        : "https://d1vc0q3r9a4nkh.cloudfront.net/kinpal.png",
       baseUrl: absoluteUrl(),
       domain: absoluteUrl().replace(/(^\w+:|^)\/\//, ""),
       supportEmail: env.SUPPORT_EMAIL,

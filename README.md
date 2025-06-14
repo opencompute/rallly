@@ -1,16 +1,16 @@
 <div align="center">
   
-<img src="./assets/images/logo-color.svg" width="200px" alt="Rallly" />
+<img src="./assets/images/logo-color.svg" width="30px" alt="Kinpal" />
 
 </div>
 <br />
 <div align="center">
   
-[![Actions Status](https://github.com/lukevella/rallly/actions/workflows/ci.yml/badge.svg)](https://github.com/lukevella/rallly/actions)
+[![Actions Status](https://github.com/opencompute/rallly/actions/workflows/ci.yml/badge.svg)](https://github.com/opencompute/rallly/actions)
 [![Crowdin](https://badges.crowdin.net/rallly/localized.svg)](https://crowdin.com/project/rallly)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-orange.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Discord](https://img.shields.io/badge/-Join%20Chat-7289DA?logo=discord&logoColor=white)](https://discord.gg/uzg4ZcHbuM)
-[![Donate](https://img.shields.io/badge/-Donate%20with%20Paypal-blue?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=7QXP2CUBLY88E)
+[![Discord](https://img.shields.io/badge/-Join%20Chat-7289DA?logo=discord&logoColor=white)](https://discord.gg/ZRZKqJf3tY)
+[![Donate](https://img.shields.io/badge/-Donate%20with%20Paypal-white?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=7QXP2CUBLY88E)
 
 </div>
 
@@ -22,7 +22,7 @@ Built with [Next.js](https://github.com/vercel/next.js/), [Prisma](https://githu
 
 ## Self-hosting
 
-Check out the [self-hosting docs](https://support.rallly.co/self-hosting) for more information on running your own instance of Rallly.
+Check out the [self-hosting docs](https://support.kinpal.com/self-hosting) for more information on running your own instance of Kinpal.
 
 ## Local Installation
 
@@ -31,7 +31,7 @@ The following instructions are for running the project locally for development.
 1. Clone the repository and switch to the project directory
 
    ```bash
-   git clone https://github.com/lukevella/rallly.git
+   git clone https://github.com/opencompute/rallly.git
    cd rallly
    ```
 
@@ -43,7 +43,7 @@ The following instructions are for running the project locally for development.
 
 3. Setup environment variables
 
-   Create a `.env` file by copying `.env.development`. This will be were you can set your [configuration options](https://support.rallly.co/self-hosting/configuration-options).
+   Create a `.env` file by copying `.env.development`. This will be where you can set your [configuration options](https://support.kinpal.com/self-hosting/configuration-options).
 
    ```bash
    cp .env.development .env
@@ -91,11 +91,11 @@ Please read our [contributing guide](CONTRIBUTING.md) to learn about how to cont
 
 ### Translators 🌐
 
-You can help translate Rallly to another language by following our [guide for translators](https://support.rallly.co/contribute/translations).
+You can help translate Kinpal to another language by following our [guide for translators](https://support.kinpal.com/contribute/translations).
 
 ## License
 
-Rallly is open-source under the GNU Affero General Public License Version 3 (AGPLv3) or any later version. See [LICENSE](LICENSE) for more detail.
+Kinpal is open-source under the GNU Affero General Public License Version 3 (AGPLv3) or any later version. See [LICENSE](LICENSE) for more detail.
 
 ## Sponsors
 

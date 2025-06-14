@@ -32,7 +32,7 @@ export function OpenSourceBanner() {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://github.com/lukevella/rallly"
+        href="https://github.com/opencompute/rallly"
         className="absolute inset-0 flex items-center justify-center gap-3 px-4"
       >
         <GithubIcon className="size-4" />

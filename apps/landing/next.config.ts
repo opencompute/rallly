@@ -53,7 +53,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/support",
-        destination: "https://support.rallly.co",
+        destination: "https://support.kinpal.com",
         permanent: true,
       },
       // Ad-Blockers block the DigitalOcean logo, when we use our referral link

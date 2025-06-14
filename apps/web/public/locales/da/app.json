@@ -94,7 +94,7 @@
   "polls": "Afstemninger",
   "timeZoneSelect__noOption": "Ingen valgmulighed fundet",
   "timeZoneSelect__inputPlaceholder": "Søg…",
-  "poweredByRallly": "Drevet af <a>{name}</a>",
+  "poweredByKinpal": "Drevet af <a>{name}</a>",
   "participants": "Deltagere",
   "language": "Sprog",
   "languageDescription": "Vælg dit foretrukne sprog",

@@ -94,7 +94,7 @@
   "polls": "Szavazások",
   "timeZoneSelect__noOption": "Nem található lehetőség",
   "timeZoneSelect__inputPlaceholder": "Keresés…",
-  "poweredByRallly": "Működteti a <a>{name}</a>",
+  "poweredByKinpal": "Működteti a <a>{name}</a>",
   "participants": "Résztvevők",
   "language": "Nyelv",
   "languageDescription": "Válaszd ki a preferált nyelved",

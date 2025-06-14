@@ -92,7 +92,7 @@
   "polls": "Anketler",
   "timeZoneSelect__noOption": "Seçenek bulunamadı",
   "timeZoneSelect__inputPlaceholder": "Ara…",
-  "poweredByRallly": "<a>{name}</a> Tarafından desteklenmektedir",
+  "poweredByKinpal": "<a>{name}</a> Tarafından desteklenmektedir",
   "participants": "Katılımcılar",
   "language": "Dil",
   "languageDescription": "Tercih edilen dilinizi değiştirin",

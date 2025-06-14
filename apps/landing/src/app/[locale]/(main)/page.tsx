@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Bonus from "@/components/home/bonus";
 import { MarketingHero } from "@/components/home/hero";
-import { BigTestimonial, Marketing, MentionedBy } from "@/components/marketing";
+import { Marketing, MentionedBy } from "@/components/marketing";
 import { getTranslation } from "@/i18n/server";
 
 export default async function Page(props: {
@@ -26,7 +26,6 @@ export default async function Page(props: {
         })}
       />
       <Bonus locale={locale} />
-      <BigTestimonial />
       <MentionedBy />
     </Marketing>
   );
@@ -39,7 +38,7 @@ export async function generateMetadata(props: {
   const { t } = await getTranslation(locale, "home");
   return {
     title: t("metaTitle", {
-      defaultValue: "Rallly: Group Scheduling Tool",
+      defaultValue: "Kinpal",
       ns: "home",
     }),
     description: t("metaDescription", {

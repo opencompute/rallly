@@ -177,6 +177,13 @@ export const authLib = betterAuth({
             redirectURI: absoluteUrl("/api/auth/callback/microsoft-entra-id"),
           }
         : undefined,
+    github:
+      env.GITHUB_CLIENT_ID && env.GITHUB_CLIENT_SECRET
+        ? {
+            clientId: env.GITHUB_CLIENT_ID,
+            clientSecret: env.GITHUB_CLIENT_SECRET,
+          }
+        : undefined,
   },
   user: {
     additionalFields: {

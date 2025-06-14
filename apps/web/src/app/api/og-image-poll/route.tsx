@@ -9,7 +9,8 @@ const schema = z.object({
   author: z.string().nullish(),
 });
 
-export const runtime = "edge";
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 const regularFont = fetch(
   new URL("/public/static/fonts/inter-regular.ttf", import.meta.url),
@@ -36,7 +37,7 @@ export async function GET(req: NextRequest) {
     <div tw="flex relative flex-col bg-gray-100 w-full h-full px-[80px] py-[70px] items-start justify-center">
       <div tw="h-full flex flex-col w-full justify-start">
         <div tw="flex justify-between items-center w-full">
-          <Logo height={81} width={370} />
+          <Logo height={64} width={64} />
           <div tw="flex text-gray-800 text-3xl tracking-tight font-bold">
             <span tw="bg-gray-200 px-6 py-3 rounded-full">Invite</span>
           </div>

@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { GoogleAnalytics } from '@next/third-parties/google';
 import languages from "@rallly/languages";
 import { PostHogProvider } from "@rallly/posthog/client";
 import { Analytics } from "@vercel/analytics/react";
@@ -29,6 +30,7 @@ export default async function Root(props: {
 
   const { i18n } = await getTranslation(locale);
   const translations = i18n.store.data;
+  const ga = process.env.GA_MEASUREMENT_ID || "";
 
   return (
     <html lang={i18n.resolvedLanguage} className={sans.className}>
@@ -48,6 +50,7 @@ export default async function Root(props: {
         </LazyMotion>
         <Analytics />
       </body>
+      <GoogleAnalytics gaId={ga} />
     </html>
   );
 }

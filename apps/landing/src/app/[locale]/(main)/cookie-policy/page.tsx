@@ -2,11 +2,12 @@ export default function CookiePolicy() {
   return (
     <div className="prose mx-auto max-w-3xl">
       <h1>Cookie Policy</h1>
-      <p>Last updated: 19 April 2023</p>
+      <p>Last updated: May 19, 2023</p>
       <p>
         This Policy explains how we use cookies and other similar technologies
         on our website, and your options to control them.
       </p>
+
 
       <h2>What are cookies?</h2>
       <p>
@@ -43,7 +44,7 @@ export default function CookiePolicy() {
 
 export function generateMetadata() {
   return {
-    title: "Rallly: Cookie Policy",
-    description: "The cookie policy for Rallly.",
+    title: "Kinpal: Cookie Policy",
+    description: "The cookie policy for Kinpal.",
   };
 }

@@ -53,11 +53,11 @@ export async function generateMetadata(props: {
   return {
     title: t("blogTitle", {
       ns: "blog",
-      defaultValue: "Rallly - Blog",
+      defaultValue: "Kinpal - Blog",
     }),
     description: t("blogDescription", {
       ns: "blog",
-      defaultValue: "News, updates and announcement about Rallly.",
+      defaultValue: "News, updates and announcement about Kinpal.",
     }),
   };
 }

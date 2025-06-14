@@ -6,8 +6,8 @@ function NewCommentEmailPreview() {
     <NewCommentEmail
       title="Untitled Poll"
       authorName="Someone"
-      pollUrl="https://rallly.co"
-      disableNotificationsUrl="https://rallly.co"
+      pollUrl="https://kinpal.com"
+      disableNotificationsUrl="https://kinpal.com"
       ctx={previewEmailContext}
     />
   );

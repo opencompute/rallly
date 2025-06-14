@@ -94,7 +94,7 @@
   "polls": "Encuestas",
   "timeZoneSelect__noOption": "No se encontraron opciones",
   "timeZoneSelect__inputPlaceholder": "Buscar…",
-  "poweredByRallly": "Con tecnología de <a>{name}</a>",
+  "poweredByKinpal": "Con tecnología de <a>{name}</a>",
   "participants": "Participantes",
   "language": "Idioma",
   "languageDescription": "Cambia tu idioma preferido",

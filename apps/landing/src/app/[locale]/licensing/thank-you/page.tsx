@@ -12,8 +12,8 @@ export default async function LicensingThankYouPage(props: {
     <main className="relative flex h-dvh flex-col p-4 sm:justify-center sm:p-16">
       <div className="relative z-10 mx-auto w-full max-w-2xl space-y-6">
         <div className="py-4">
-          <LinkBase className="inline-block rounded-sm" href="/">
-            <Image src="/logo.svg" width={150} height={30} alt="rallly.co" />
+          <LinkBase className="inline-block rounded" href="/">
+            <Image src="/logo.svg" width={28} height={28} alt="kinpal.com" /> Kinpal
           </LinkBase>
         </div>
         <div className="space-y-4">
@@ -28,7 +28,7 @@ export default async function LicensingThankYouPage(props: {
             <Trans
               t={t}
               i18nKey="licensingThankYouSubtitle"
-              defaults="Your Rallly self-hosted license is confirmed. We're excited to have you on board!"
+              defaults="Your Kinpal self-hosted license is confirmed. We're excited to have you on board!"
             />
           </p>
         </div>
@@ -53,7 +53,7 @@ export default async function LicensingThankYouPage(props: {
             <li>
               <a
                 className="text-link"
-                href="https://support.rallly.co/self-hosting/installation/docker"
+                href="https://support.kinpal.com/self-hosting/installation/docker"
               >
                 <Trans
                   t={t}
@@ -65,7 +65,7 @@ export default async function LicensingThankYouPage(props: {
             <li>
               <a
                 className="text-link"
-                href="https://support.rallly.co/self-hosting/licensing#activating-your-license"
+                href="https://support.kinpal.com/self-hosting/licensing#activating-your-license"
               >
                 <Trans
                   t={t}
@@ -86,12 +86,12 @@ export default async function LicensingThankYouPage(props: {
               components={[
                 <a
                   key="self-hosted-docs"
-                  href="https://support.rallly.co"
+                  href="https://support.kinpal.com"
                   className="underline"
                 />,
                 <a
                   key="contact-us"
-                  href="mailto:support@rallly.co"
+                  href="mailto:support@kinpal.com"
                   className="underline"
                 />,
               ]}

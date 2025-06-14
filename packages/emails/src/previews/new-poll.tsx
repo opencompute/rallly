@@ -6,8 +6,8 @@ export default function NewPollPreview() {
     <NewPollEmail
       title="Untitled Poll"
       name="John Doe"
-      adminLink="https://rallly.co"
-      participantLink="https://rallly.co/invite/abc123"
+      adminLink="https://kinpal.com"
+      participantLink="https://kinpal.com/invite/abc123"
       ctx={previewEmailContext}
     />
   );

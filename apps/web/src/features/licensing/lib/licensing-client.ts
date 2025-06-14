@@ -10,7 +10,7 @@ export class LicensingClient {
   authToken?: string;
 
   constructor({
-    apiUrl = "https://licensing.rallly.co/api/licensing/v1",
+    apiUrl = "https://licensing.kinpal.com/api/licensing/v1",
     authToken,
   }: {
     apiUrl?: string;

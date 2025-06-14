@@ -33,7 +33,7 @@ const ErrorPage: React.FunctionComponent<ComponentProps> = ({
           </Button>
           <Button asChild>
             <Link
-              href="https://support.rallly.co"
+              href="https://support.kinpal.com"
               passHref={true}
               className="btn-default"
             >

@@ -5,7 +5,7 @@ export default function NewParticipantConfirmationPreview() {
   return (
     <NewParticipantConfirmationEmail
       title="Untitled Poll"
-      editSubmissionUrl="https://rallly.co"
+      editSubmissionUrl="https://kinpal.com"
       ctx={previewEmailContext}
     />
   );

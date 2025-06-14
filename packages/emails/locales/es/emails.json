@@ -56,7 +56,7 @@
   "changeEmailRequest_text1": "Hemos recibido una solicitud para cambiar la dirección de correo electrónico de tu cuenta de <b>{fromEmail}</b> a <b>{toEmail}</b>.",
   "abandoned_checkout_name": "Hola, {name},",
   "abandoned_checkout_noname": "Hola,",
-  "abandoned_checkout_content": "Noté que querías adquirir <b>Rallly Pro</b> antes. Quería comunicarme contigo para ver si tenías alguna pregunta o si necesitabas ayuda con algo.",
+  "abandoned_checkout_content": "Noté que querías adquirir <b>Kinpal Pro</b> antes. Quería comunicarme contigo para ver si tenías alguna pregunta o si necesitabas ayuda con algo.",
   "abandoned_checkout_offer": "Para ayudarte a empezar, puedes obtener un <b>descuento del {discount}%</b> por tu primer año. Simplemente usa el código de abajo cuando realices la compra:",
   "abandoned_checkout_button": "Mejora a Rallly Pro",
   "abandoned_checkout_support": "Si tienes alguna pregunta acerca de Rallly Pro o necesitas ayuda con cualquier cosa, simplemente responde a este correo. ¡Estoy aquí para ayudar!",

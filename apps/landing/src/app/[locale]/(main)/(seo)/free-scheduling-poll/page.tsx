@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Trans } from "react-i18next/TransWithoutContext";
 import Bonus from "@/components/home/bonus";
 import { MarketingHero } from "@/components/home/hero";
-import { BigTestimonial, Marketing, MentionedBy } from "@/components/marketing";
+import { Marketing, MentionedBy } from "@/components/marketing";
 import { getTranslation } from "@/i18n/server";
 
 export default async function Page() {
@@ -19,7 +19,6 @@ export default async function Page() {
         callToAction={<Trans t={t} ns="home" i18nKey="createASchedulingPoll" />}
       />
       <Bonus />
-      <BigTestimonial />
       <MentionedBy />
     </Marketing>
   );

@@ -54,8 +54,8 @@ export async function onCheckoutSessionExpired(event: Stripe.Event) {
       {
         to: email,
         from: {
-          name: "Luke from Rallly",
-          address: "luke@rallly.co",
+          name: "Kinpal",
+          address: "support@kinpal.com",
         },
         props: {
           name: session.customer_details?.name ?? undefined,

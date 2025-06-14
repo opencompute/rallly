@@ -1,1 +1,1 @@
-export const isSpacesEnabled = process.env.NODE_ENV === "development";
+export const isSpacesEnabled = process.env.SPACE_ENABLED === "true";

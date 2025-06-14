@@ -69,7 +69,7 @@ export async function seedUsers() {
   const freeUser = await createUser({
     id: "free-user",
     name: "Dev User",
-    email: "dev@rallly.co",
+    email: "dev@kinpal.com",
     timeZone: "America/New_York",
     space: {
       id: "space-1",
@@ -81,7 +81,7 @@ export async function seedUsers() {
   const proUser = await createUser({
     id: "pro-user",
     name: "Pro User",
-    email: "dev+pro@rallly.co",
+    email: "dev+pro@kinpal.com",
     timeZone: "America/New_York",
     space: {
       id: "space-2",

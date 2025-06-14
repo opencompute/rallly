@@ -3,9 +3,9 @@ export default function PrivacyPolicy() {
     <>
       <div className="prose mx-auto max-w-3xl">
         <h1>Privacy Policy</h1>
-        <p>Last updated: 1 August 2023</p>
+        <p>Last updated: August 1, 2023</p>
         <p>
-          At rallly.co, we take your privacy seriously. This privacy policy
+          At kinpal.com, we take your privacy seriously. This privacy policy
           explains how we collect, use, and disclose your personal data, and
           your rights in relation to your personal data under the General Data
           Protection Regulation (GDPR).
@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
 
         <p>
           We store personal data (names and email addresses) on
-          DigitalOcean&apos;s servers, which are located in the United States.
+          Supabase&apos;s servers, which are located in the United States.
           The reason for storing data in the US is to improve performance for
           users by having the data stored closer to where our compute services
           are running. By using our services, you acknowledge that your personal
@@ -108,7 +108,7 @@ export default function PrivacyPolicy() {
 
         <p>
           To exercise any of these rights, please contact us at{" "}
-          <a href="mailto:support@rallly.co">support@rallly.co</a>.
+          <a href="mailto:support@kinpal.com">support@kinpal.com</a>.
         </p>
 
         <h2>Contact</h2>
@@ -116,7 +116,7 @@ export default function PrivacyPolicy() {
         <p>
           If you have any questions or concerns about our privacy policy or our
           practices with regards to your personal data, please contact us at{" "}
-          <a href="mailto:support@rallly.co">support@rallly.co</a>.
+          <a href="mailto:support@kinpal.com">support@kinpal.com</a>.
         </p>
       </div>
     </>
@@ -125,7 +125,7 @@ export default function PrivacyPolicy() {
 
 export function generateMetadata() {
   return {
-    title: "Rallly: Privacy Policy",
-    description: "The privacy policy for Rallly.",
+    title: "Kinpal: Privacy Policy",
+    description: "The privacy policy for Kinpal.",
   };
 }

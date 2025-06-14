@@ -26,7 +26,7 @@ export function FeedbackAlert() {
         <p className="mt-1.5 opacity-75">
           <Trans
             i18nKey="helpUsImproveDesc"
-            defaults="Take a few minutes to share your feedback and help us shape the future of Rallly."
+            defaults="Take a few minutes to share your feedback and help us shape the future of Kinpal."
           />
         </p>
       </div>
@@ -42,7 +42,7 @@ export function FeedbackAlert() {
         </Button>
         <Button variant="primary" asChild>
           <Link
-            href="https://senja.io/p/rallly/r/uwwiXJ"
+            href="https://senja.io/p/kinpal/r/w1R9yJ"
             target="_blank"
             rel="noopener noreferrer"
           >

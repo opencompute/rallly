@@ -19,7 +19,7 @@ export const submitFeedback = async (formData: Feedback) => {
   try {
     const { content } = feedbackSchema.parse(formData);
     getEmailClient().sendEmail({
-      to: "feedback@rallly.co",
+      to: "feedback@kinpal.com",
       subject: "Feedback",
       text: `User: ${user.name} (${user.email})\n\n${content}`,
     });

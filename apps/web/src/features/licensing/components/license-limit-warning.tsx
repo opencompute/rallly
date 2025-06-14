@@ -29,7 +29,7 @@ export async function LicenseLimitWarning() {
           a: (
             <Link
               prefetch={false}
-              href="https://support.rallly.co/self-hosting/licensing"
+              href="https://support.kinpal.com/self-hosting/licensing"
               target="_blank"
               className="text-link"
               rel="noopener noreferrer"

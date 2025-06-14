@@ -6,7 +6,7 @@ export default function ChangeEmailRequestPreview() {
     <ChangeEmailRequest
       fromEmail="john@example.com"
       toEmail="jane@example.com"
-      verificationUrl="https://rallly.co/verify-email-change?token=1234567890"
+      verificationUrl="https://kinpal.com/verify-email-change?token=1234567890"
       ctx={previewEmailContext}
     />
   );

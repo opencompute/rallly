@@ -59,12 +59,12 @@ export const EmailLayout = ({
                   i18nKey="common_poweredBy"
                   ns="emails"
                   defaults="Powered by <a>{domain}</a>"
-                  values={{ domain: "rallly.co" }}
+                  values={{ domain: "kinpal.com" }}
                   components={{
                     a: (
                       <Link
                         color={ctx.primaryColor}
-                        href="https://rallly.co?utm_source=email&utm_medium=transactional"
+                        href="https://kinpal.com?utm_source=email&utm_medium=transactional"
                       />
                     ),
                   }}

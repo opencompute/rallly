@@ -18,7 +18,7 @@ export const submitFeedbackAction = authActionClient
       const { content } = parsedInput;
       const emailClient = await getEmailClient();
       emailClient.sendEmail({
-        to: "feedback@rallly.co",
+        to: "feedback@kinpal.com",
         subject: "Feedback",
         text: `User: ${ctx.user.name} (${ctx.user.email})\n\n${content}`,
       });

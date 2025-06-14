@@ -7,6 +7,7 @@
     "dev:emails": "turbo dev --filter=@rallly/emails",
     "dev:landing": "dotenv -c development turbo dev --filter=@rallly/landing",
     "start": "turbo run start --filter=@rallly/web",
+    "start:landing": "turbo run start --filter=@rallly/landing",
     "build": "dotenv -c -- turbo run build --filter=@rallly/web",
     "build:web": "NEXT_PUBLIC_APP_VERSION=$(node scripts/inject-version.js) turbo run build --filter=@rallly/web",
     "build:landing": "turbo run build --filter=@rallly/landing",
@@ -30,10 +31,15 @@
     "sherif": "pnpx sherif@latest",
     "sherif:fix": "pnpx sherif@latest --fix"
   },
+  "prisma": {
+    "seed": "pnpm --filter @rallly/database db:seed",
+    "schema": "./packages/database/prisma/models"
+  },
   "devDependencies": {
     "@biomejs/biome": "^2.3.11",
     "@playwright/test": "^1.57.0",
     "dotenv-cli": "^8.0.0",
+    "next": "^15.3.1",
     "prettier": "^3.5.3",
     "prisma": "^7.3.0",
     "turbo": "^2.6.3",

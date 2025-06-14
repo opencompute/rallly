@@ -94,7 +94,7 @@
   "polls": "Kyselyt",
   "timeZoneSelect__noOption": "Vaihtoehtoja ei löytynyt",
   "timeZoneSelect__inputPlaceholder": "Hae…",
-  "poweredByRallly": "Palvelun tarjoaa <a>{name}</a>",
+  "poweredByKinpal": "Palvelun tarjoaa <a>{name}</a>",
   "participants": "Osallistujat",
   "language": "Kieli",
   "languageDescription": "Vaihda ensisijainen kieli",

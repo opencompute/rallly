@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const space = await requireSpace();
   return {
     title: {
-      template: `%s | ${space.name} | Rallly`,
+      template: `%s | ${space.name} | Kinpal`,
       default: space.name,
     },
   };

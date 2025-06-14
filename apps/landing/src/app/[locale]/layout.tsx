@@ -1,5 +1,6 @@
 import "../../style.css";
 
+import { GoogleAnalytics } from '@next/third-parties/google';
 import languages from "@rallly/languages";
 import { PostHogProvider } from "@rallly/posthog/client";
 import { Analytics } from "@vercel/analytics/react";
@@ -28,6 +29,7 @@ export default async function Root(props: {
 
   const { children } = props;
 
+  const ga = process.env.GA_MEASUREMENT_ID || "";
   return (
     <html lang={locale} className={sans.className}>
       <body>
@@ -41,6 +43,7 @@ export default async function Root(props: {
         </LazyMotion>
         <Analytics />
       </body>
+      <GoogleAnalytics gaId={ga} />
     </html>
   );
 }

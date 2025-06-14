@@ -92,7 +92,7 @@
   "polls": "Avstemninger",
   "timeZoneSelect__noOption": "Intet alternativ funnet",
   "timeZoneSelect__inputPlaceholder": "Søk …",
-  "poweredByRallly": "Drevet av <a>{name}</a>",
+  "poweredByKinpal": "Drevet av <a>{name}</a>",
   "participants": "Deltakere",
   "language": "Språk",
   "languageDescription": "Endre foretrukket språk",

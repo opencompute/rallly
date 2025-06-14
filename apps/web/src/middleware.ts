@@ -10,7 +10,7 @@ export const middleware = withAuth(async (req) => {
 
   const isLoggedIn = req.auth?.user?.email;
   // if the user is already logged in, don't let them access the login page
-  if (/^\/(login)/.test(pathname) && isLoggedIn) {
+  if (/^\/(login|register)/.test(pathname) && isLoggedIn) {
     newUrl.pathname = "/";
     return NextResponse.redirect(newUrl);
   }

@@ -102,7 +102,7 @@ export const UserDropdown = ({
         <DropdownMenuItem asChild={true}>
           <Link
             target="_blank"
-            href="https://support.rallly.co"
+            href="https://support.kinpal.com"
             className="flex items-center gap-x-2"
           >
             <LifeBuoyIcon className="size-4 text-muted-foreground" />

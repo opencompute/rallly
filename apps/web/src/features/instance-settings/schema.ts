@@ -48,7 +48,7 @@ export const FOOTER_LINK_MAX_HREF_LENGTH = 2048;
  * control characters and tolerate case and whitespace variants, so `jAvA\tscript:`
  * is one scheme to a browser and several to a regex.
  *
- * Absolute http(s) only. Relative paths were considered and rejected: Rallly
+ * Absolute http(s) only. Relative paths were considered and rejected: Kinpal
  * does not serve legal pages itself, so a path only resolves behind a reverse
  * proxy fronting another app on the same host — a narrow setup whose admin can
  * as easily paste the full URL. A leading slash is now far likelier to be a

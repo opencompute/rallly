@@ -200,7 +200,7 @@ export default async function Page(props: {
               t={t}
               ns="home"
               i18nKey="pressKitDescription"
-              defaults="Writing about Rallly? Here you'll find logos, screenshots, and product information that you can use in articles and blog posts."
+              defaults="Writing about Kinpal? Here you'll find logos, screenshots, and product information that you can use in articles and blog posts."
             />
           </SectionDescription>
         </SectionHeading>
@@ -227,7 +227,7 @@ export default async function Page(props: {
               t={t}
               ns="home"
               i18nKey="pressKitAboutTitle"
-              defaults="About Rallly"
+              defaults="About Kinpal"
             />
           </SectionTitle>
         </SectionHeading>
@@ -246,7 +246,7 @@ export default async function Page(props: {
                 t={t}
                 ns="home"
                 i18nKey="pressKitOneLiner"
-                defaults="Rallly is an open-source meeting scheduling tool that helps you find the best time to meet, without the back and forth."
+                defaults="Kinpal is an open-source meeting scheduling tool that helps you find the best time to meet, without the back and forth."
               />
             </p>
           </div>
@@ -264,7 +264,7 @@ export default async function Page(props: {
                 t={t}
                 ns="home"
                 i18nKey="pressKitAboutText"
-                defaults="Rallly is an open-source meeting scheduling tool that helps groups find the best time to meet, without the back and forth. Organizers create a poll with proposed times and share a link, participants vote on the times that work for them, and the best time wins. Polls can be created and voted on without an account, which makes Rallly a popular choice for scheduling with people outside your organization."
+                defaults="Kinpal is an open-source meeting scheduling tool that helps groups find the best time to meet, without the back and forth. Organizers create a poll with proposed times and share a link, participants vote on the times that work for them, and the best time wins. Polls can be created and voted on without an account, which makes Kinpal a popular choice for scheduling with people outside your organization."
               />
             </p>
           </div>
@@ -283,7 +283,7 @@ export default async function Page(props: {
                 t={t}
                 ns="home"
                 i18nKey="pressKitFactNameValue"
-                defaults="Rallly, spelled with three L's and pronounced like “rally”"
+                defaults="Kinpal, spelled with three L's and pronounced like “rally”"
               />
             </Fact>
             <Fact
@@ -296,7 +296,7 @@ export default async function Page(props: {
                 />
               }
             >
-              Luke Vella
+              Kinpal
             </Fact>
             <Fact
               label={
@@ -308,8 +308,8 @@ export default async function Page(props: {
                 />
               }
             >
-              <a href="https://rallly.co" className="hover:underline">
-                rallly.co
+              <a href="https://kinpal.com" className="hover:underline">
+                kinpal.com
               </a>
             </Fact>
             <Fact
@@ -499,12 +499,12 @@ export default async function Page(props: {
               t={t}
               ns="home"
               i18nKey="pressKitContactDescription"
-              defaults="For interview requests or any other questions, email us at <0>support@rallly.co</0>."
+              defaults="For interview requests or any other questions, email us at <0>support@kinpal.com</0>."
               components={[
                 <a
                   key="email"
                   className="text-gray-800 underline underline-offset-2 hover:text-gray-600"
-                  href="mailto:support@rallly.co"
+                  href="mailto:support@kinpal.com"
                 />,
               ]}
             />
@@ -530,7 +530,7 @@ export async function generateMetadata(props: {
     description: t("pressKitMetaDescription", {
       ns: "home",
       defaultValue:
-        "Download Rallly logos, screenshots, and product information for use in articles and blog posts.",
+        "Download Kinpal logos, screenshots, and product information for use in articles and blog posts.",
     }),
   };
 }

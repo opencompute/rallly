@@ -9,7 +9,7 @@ export function ContactSupportLink() {
   return (
     <div className="flex flex-col items-start gap-3">
       <a
-        href="mailto:support@rallly.co"
+        href="mailto:support@kinpal.com"
         className={buttonVariants()}
         onClick={() => {
           posthog?.capture("space_billing:support_button_click");
@@ -21,11 +21,11 @@ export function ContactSupportLink() {
       <p className="text-muted-foreground text-sm">
         <Trans
           i18nKey="contactSupportEmail"
-          defaults="Or email us at <0>support@rallly.co</0>"
+          defaults="Or email us at <0>support@kinpal.com</0>"
           components={[
             <a
               key="email"
-              href="mailto:support@rallly.co"
+              href="mailto:support@kinpal.com"
               className="select-all font-medium text-foreground"
             />,
           ]}

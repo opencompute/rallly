@@ -264,7 +264,7 @@ async function buildOpenApiSpec() {
   const spec = await generateSpecs(app, {
     documentation: {
       info: {
-        title: "Rallly API",
+        title: "Kinpal API",
         version: "1.0.0",
         description: [
           "## Versioning",

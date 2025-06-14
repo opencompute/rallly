@@ -577,7 +577,7 @@ const MonthCalendar: React.FunctionComponent<DateTimePickerProps> = ({
                         //   <CompactButton
                         //     icon={XIcon}
                         //     onClick={() => {
-                        //       // TODO (Luke Vella) [2022-03-19]: Find cleaner way to manage this state
+                        //       // TODO (Kinpal) [2022-03-19]: Find cleaner way to manage this state
                         //       // Quite tedious right now to remove a single element
                         //       onChange(
                         //         removeAllOptionsForDay(options, selectedDate),

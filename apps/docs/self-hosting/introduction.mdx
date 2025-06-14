@@ -1,18 +1,19 @@
 ---
 icon: "house"
 title: "Introduction"
-description: "Self-host Rallly on your own infrastructure."
+description: "Self-host Kinpal on your own infrastructure."
 ---
 
-Self-hosting Rallly gives you full control over your instance and your data. The self-hosted distribution is designed to be easy to install and maintain on a single server — everything you need is bundled into one Docker Compose stack.
+Self-hosting Kinpal gives you full control over your instance and your data. The self-hosted distribution is designed to be easy to install and maintain on a single server — everything you need is bundled into one Docker Compose stack.
 
-## Rallly Cloud vs Rallly Self-Hosted
+## Kinpal Cloud vs Kinpal Self-Hosted
 
-Rallly comes in two flavours built from the same codebase.
+The primary and **officially supported method** for self-hosting Kinpal is by using our **official Docker image**. This image contains a build specifically optimized for self-hosting, with features like billing automatically disabled and no feature-gating.
+Kinpal comes in two flavours built from the same codebase.
 
-**[Rallly Cloud](https://rallly.co)** is the hosted service we run. It is designed to scale horizontally across distributed infrastructure and serve a large number of users. It is the fastest way to get started and is maintained by us.
+**[Kinpal Cloud](https://kinpal.com)** is the hosted service we run. It is designed to scale horizontally across distributed infrastructure and serve a large number of users. It is the fastest way to get started and is maintained by us.
 
-**Rallly Self-Hosted** is optimised for simplicity of deployment. Out of the box, the application, database, object storage, and TLS termination all run on a single machine via Docker Compose — you own the data, you own the server, and updates are a single command. If you already run a managed Postgres or S3-compatible service, you can point Rallly at those instead and the bundled containers are skipped automatically.
+**Kinpal Self-Hosted** is optimised for simplicity of deployment. Out of the box, the application, database, object storage, and TLS termination all run on a single machine via Docker Compose — you own the data, you own the server, and updates are a single command. If you already run a managed Postgres or S3-compatible service, you can point Kinpal at those instead and the bundled containers are skipped automatically.
 
 <Note>
   Some Cloud features (billing, metered quotas) are compiled out of the self-hosted image. Licensing for multi-user self-hosted instances is covered on the [Licensing page](/self-hosting/licensing).
@@ -23,7 +24,7 @@ Rallly comes in two flavours built from the same codebase.
 A self-hosted install is a batteries-included stack. You do not need to provision these services separately.
 
 - **Traefik** — reverse proxy with automatic HTTPS via Let's Encrypt
-- **Rallly** — the web application
+- **Kinpal** — the web application
 - **PostgreSQL** — primary database
 - **Garage** — S3-compatible object storage for file uploads
 
@@ -31,10 +32,10 @@ Only Traefik binds to host ports (80 and 443). Everything else is isolated on th
 
 ## Next steps
 
-- **[Installation](/self-hosting/installation/docker)** — set up Rallly on your server.
+- **[Installation](/self-hosting/installation/docker)** — set up Kinpal on your server.
 - **[Configuration](/self-hosting/configuration)** — environment variables reference.
 - **[Management](/self-hosting/management)** — update, back up, and operate your instance.
 - **[Control Panel](/self-hosting/control-panel)** — manage users and instance settings.
 - **[Licensing](/self-hosting/licensing)** — when a license is needed and how to apply one.
 
-If you would rather not run a server, use [Rallly Cloud](https://rallly.co).
+If you would rather not run a server, use [Kinpal Cloud](https://kinpal.com).

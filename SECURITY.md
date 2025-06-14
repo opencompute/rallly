@@ -2,12 +2,12 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in Rallly, please report it
+If you discover a security vulnerability in Kinpal, please report it
 privately. **Do not open a public GitHub issue.**
 
 - Use GitHub's private vulnerability reporting: go to the **Security**
   tab of this repository and click **Report a vulnerability**.
-- Or email support@rallly.co.
+- Or email support@kinpal.com.
 
 Please include enough detail to reproduce the issue: affected version
 or commit, steps, and impact.
@@ -19,19 +19,19 @@ the latest version before reporting.
 
 ## Scope
 
-This policy covers the Rallly source code in this repository.
+This policy covers the Kinpal source code in this repository.
 
 Testing must be done against **your own local or self-hosted
-deployment**. Do **not** test against rallly.co, app.rallly.co, or any hosted instance
+deployment**. Do **not** test against kinpal.com, app.kinpal.com, or any hosted instance
 you do not own — this affects other users and is not authorized.
 
-Issues in third-party services used by rallly.co (Stripe, PostHog, the
+Issues in third-party services used by kinpal.com (Stripe, PostHog, the
 hosting provider, etc.) are out of scope here. Report those to the
 respective vendor.
 
 For self-hosted deployments, securing the environment is the operator's
 responsibility. Exposed secrets, weak `SECRET_PASSWORD` values, public
-databases, and similar misconfigurations are not Rallly vulnerabilities.
+databases, and similar misconfigurations are not Kinpal vulnerabilities.
 
 ## Out of Scope
 
@@ -66,6 +66,6 @@ scope, ask first.
 
 ## Response
 
-Rallly is a small open-source project. Reports will be acknowledged as
+Kinpal is a small open-source project. Reports will be acknowledged as
 soon as reasonably possible, with status updates as work progresses.
 Valid reporters will be credited unless you prefer otherwise.

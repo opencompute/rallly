@@ -106,8 +106,8 @@ describe("isUnsymbolicatedMinifiedException", () => {
     }) as unknown as CaptureResult;
 
   const documentFrames = [
-    { filename: "https://app.rallly.co/", function: "?" },
-    { filename: "https://app.rallly.co/", function: "?" },
+    { filename: "https://app.kinpal.com/", function: "?" },
+    { filename: "https://app.kinpal.com/", function: "?" },
   ];
 
   it("matches a minified identifier with no /_next/static frame", () => {
@@ -132,7 +132,7 @@ describe("isUnsymbolicatedMinifiedException", () => {
             stacktrace: {
               frames: [
                 ...documentFrames,
-                { filename: "https://app.rallly.co/_next/static/chunk.js" },
+                { filename: "https://app.kinpal.com/_next/static/chunk.js" },
               ],
             },
           },

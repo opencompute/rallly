@@ -32,13 +32,13 @@ test("emits one-click unsubscribe headers when a URL is given", async () => {
     to: "user@example.com",
     subject: "Hello",
     text: "Hi",
-    listUnsubscribeUrl: "https://rallly.co/api/unsubscribe/token",
+    listUnsubscribeUrl: "https://kinpal.com/api/unsubscribe/token",
   });
 
   expect(sendMail).toHaveBeenCalledTimes(1);
   expect(sendMail.mock.calls[0][0]).toMatchObject({
     headers: {
-      "List-Unsubscribe": "<https://rallly.co/api/unsubscribe/token>",
+      "List-Unsubscribe": "<https://kinpal.com/api/unsubscribe/token>",
       "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
     },
   });

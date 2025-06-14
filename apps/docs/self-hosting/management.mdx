@@ -1,10 +1,10 @@
 ---
 icon: terminal
 title: Management
-description: Operate a self-hosted Rallly instance with the Rallly CLI.
+description: Operate a self-hosted Kinpal instance with the Kinpal CLI.
 ---
 
-The **Rallly CLI** (`rallly.sh`) is the single entry point for day-to-day operations on a self-hosted instance. It ships with the [self-hosted stack](https://github.com/lukevella/rallly-selfhosted) and should be run from the stack directory (e.g. `/opt/rallly` for installer-based setups).
+The **Kinpal CLI** (`rallly.sh`) is the single entry point for day-to-day operations on a self-hosted instance. It ships with the [self-hosted stack](https://github.com/lukevella/kinpal-selfhosted) and should be run from the stack directory (e.g. `/opt/rallly` for installer-based setups).
 
 ## Commands
 
@@ -68,7 +68,7 @@ docker compose exec -T db psql -U postgres -d postgres -c "DROP DATABASE IF EXIS
 docker compose exec -T db psql -U postgres -d postgres -c "CREATE DATABASE rallly;"
 
 # Restore — ON_ERROR_STOP=1 fails fast on the first error instead of continuing silently
-gunzip < backups/rallly_20260101_120000.sql.gz | docker compose exec -T db psql -v ON_ERROR_STOP=1 -U postgres rallly
+gunzip < backups/kinpal_20260101_120000.sql.gz | docker compose exec -T db psql -v ON_ERROR_STOP=1 -U postgres rallly
 
 # Bring the app back up
 ./rallly.sh start

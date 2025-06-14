@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 import { prisma } from "@rallly/database";
 import { createTestPoll, createUserInDb } from "./test-utils";
 
-const HOST_EMAIL = "space-branding-host@rallly.co";
+const HOST_EMAIL = "space-branding-host@kinpal.com";
 const POLL_ID = "space-branding-poll";
 const STORED_COLOR = "#dc2626";
 

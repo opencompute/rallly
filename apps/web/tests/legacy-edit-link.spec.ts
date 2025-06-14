@@ -9,7 +9,7 @@ import { createTestPoll, createUserInDb } from "./test-utils";
  * to a seal of the guest's user id. Those links stay valid.
  */
 
-const GUEST_EMAIL = "legacy-edit-link-guest@rallly.co";
+const GUEST_EMAIL = "legacy-edit-link-guest@kinpal.com";
 const POLL_ID = "legacy-edit-link-poll";
 
 async function cleanup() {

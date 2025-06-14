@@ -1,13 +1,13 @@
 ---
 icon: gear
 title: Configuration Options
-description: Environment variables for a self-hosted Rallly instance.
+description: Environment variables for a self-hosted Kinpal instance.
 ---
 
 All configuration lives in the `.env` file at the root of your self-hosted stack. The [installer](/self-hosting/installation/docker) writes a starter `.env` for you; edit it directly to change any value. After edits, apply them with `./rallly.sh restart`.
 
 <Note>
-  When using the Rallly CLI, internal wiring (database URL, S3 endpoint, `NEXT_PUBLIC_BASE_URL`) is handled by the Compose stack and derived from the values below — you do not need to set them yourself. If you're running the Rallly Docker image without the CLI, see [Running the image directly](#running-the-image-directly).
+  When using the Kinpal CLI, internal wiring (database URL, S3 endpoint, `NEXT_PUBLIC_BASE_URL`) is handled by the Compose stack and derived from the values below — you do not need to set them yourself. If you're running the Kinpal Docker image without the CLI, see [Running the image directly](#running-the-image-directly).
 </Note>
 
 ## General
@@ -32,7 +32,7 @@ All configuration lives in the `.env` file at the root of your self-hosted stack
   Sender address for all transactional emails. Falls back to `SUPPORT_EMAIL` if not set.
 </ParamField>
 
-<ParamField path="NOREPLY_EMAIL_NAME" default="Rallly">
+<ParamField path="NOREPLY_EMAIL_NAME" default="Kinpal">
   Sender name for all transactional emails.
 </ParamField>
 
@@ -112,7 +112,7 @@ Customise the look of your instance. These settings can also be changed from the
   Available from v4.6.0 and later. Requires an Enterprise license with the white-label add-on.
 </Note>
 
-<ParamField path="APP_NAME" default="Rallly">
+<ParamField path="APP_NAME" default="Kinpal">
   Application name. Appears in page titles, navigation, and emails.
 </ParamField>
 
@@ -125,7 +125,7 @@ Customise the look of your instance. These settings can also be changed from the
 </ParamField>
 
 <ParamField path="LOGO_URL">
-  Absolute URL to your logo for light mode. SVG recommended. Defaults to the Rallly logo.
+  Absolute URL to your logo for light mode. SVG recommended. Defaults to the Kinpal logo.
 </ParamField>
 
 <ParamField path="LOGO_URL_DARK">
@@ -133,22 +133,22 @@ Customise the look of your instance. These settings can also be changed from the
 </ParamField>
 
 <ParamField path="LOGO_ICON_URL">
-  Absolute URL to your logo icon, shown at the top of emails. Defaults to the Rallly logo mark. Use a raster format, as SVG rendering is unreliable across mail clients.
+  Absolute URL to your logo icon, shown at the top of emails. Defaults to the Kinpal logo mark. Use a raster format, as SVG rendering is unreliable across mail clients.
 </ParamField>
 
 <ParamField path="HIDE_ATTRIBUTION" default="false">
-  Set to `true` to hide "Powered by Rallly" attribution in polls and emails.
+  Set to `true` to hide "Powered by Kinpal" attribution in polls and emails.
 </ParamField>
 
 ## Advanced
 
 <ParamField path="RALLLY_IMAGE" default="lukevella/rallly:4">
-  Override the Rallly Docker image. Pin a major version (e.g. `lukevella/rallly:4`) to avoid pulling in breaking changes. See the [releases](https://github.com/lukevella/rallly/releases) for available versions.
+  Override the Kinpal Docker image. Pin a major version (e.g. `lukevella/rallly:4`) to avoid pulling in breaking changes. See the [releases](https://github.com/lukevella/rallly/releases) for available versions.
 </ParamField>
 
 ### External reverse proxy
 
-The stack bundles Traefik for TLS termination. To put Rallly behind your own reverse proxy (Nginx, Caddy, Cloudflare Tunnel, etc.), set `PROXY_MODE=external` — the bundled `traefik` container is skipped and the `web` container is published on a host port your proxy can route to. See [External reverse proxy](/self-hosting/installation/docker#external-reverse-proxy) in the installation guide for the full setup.
+The stack bundles Traefik for TLS termination. To put Kinpal behind your own reverse proxy (Nginx, Caddy, Cloudflare Tunnel, etc.), set `PROXY_MODE=external` — the bundled `traefik` container is skipped and the `web` container is published on a host port your proxy can route to. See [External reverse proxy](/self-hosting/installation/docker#external-reverse-proxy) in the installation guide for the full setup.
 
 <ParamField path="PROXY_MODE" default="bundled">
   Set to `external` to disable the bundled Traefik reverse proxy and publish the `web` container on a host port instead. Your external proxy is responsible for TLS termination.
@@ -196,7 +196,7 @@ If outbound traffic from your server must pass through a proxy, or your network 
 
 ## Running the image directly
 
-If you're running the Rallly Docker image without the [Rallly CLI](/self-hosting/installation/docker), a few variables that the CLI normally supplies or derives become your responsibility.
+If you're running the Kinpal Docker image without the [Kinpal CLI](/self-hosting/installation/docker), a few variables that the CLI normally supplies or derives become your responsibility.
 
 <ParamField path="NEXT_PUBLIC_BASE_URL" required>
   Fully qualified public URL of your instance, including scheme. Example: `https://rallly.example.com`. The CLI generates this from `DOMAIN`; without the CLI, you must set it explicitly.

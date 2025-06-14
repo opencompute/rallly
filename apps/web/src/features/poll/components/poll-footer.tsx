@@ -35,14 +35,14 @@ export function PollFooter({
         <div>
           <Trans
             defaults="Powered by <a>{name}</a>"
-            i18nKey="poweredByRallly"
-            values={{ name: "rallly.co" }}
+            i18nKey="poweredByKinpal"
+            values={{ name: "kinpal.com" }}
             components={{
               a: (
                 <Link
                   prefetch={false}
                   className="hover:underline"
-                  href="https://rallly.co?utm_source=rallly&utm_medium=poll&utm_campaign=powered_by"
+                  href="https://kinpal.com?utm_source=kinpal&utm_medium=poll&utm_campaign=powered_by"
                   onClick={() => {
                     posthog?.capture("poll_footer:powered_by_link_click", {
                       pollId: poll.id,

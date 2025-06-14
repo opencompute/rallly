@@ -73,7 +73,7 @@ export default async function AdminSetupPage() {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://support.rallly.co/self-hosting/control-panel"
+                href="https://support.kinpal.com/self-hosting/control-panel"
                 className={buttonVariants({ variant: "primary" })}
               >
                 <Trans i18nKey="learnMore" defaults="Learn more" />

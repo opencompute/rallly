@@ -1,6 +1,6 @@
 import { languages } from "@/i18n/settings";
 
-// Cross-domain referrers don't survive the hop from rallly.co to the app, so
+// Cross-domain referrers don't survive the hop from kinpal.com to the app, so
 // CTA links carry the originating page as a ?ref=<slug> query param instead.
 // The slug is always a locale-independent page path — never personal data.
 export function getRefSlug(pathname: string) {

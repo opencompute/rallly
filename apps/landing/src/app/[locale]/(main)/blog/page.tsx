@@ -29,7 +29,7 @@ export default async function Page(props: {
         title={t("blog", { ns: "common", defaultValue: "Blog" })}
         description={t("blogDescription", {
           ns: "blog",
-          defaultValue: "News, updates and announcements about Rallly.",
+          defaultValue: "News, updates and announcements about Kinpal.",
         })}
       />
       <SectionContent>
@@ -58,11 +58,11 @@ export async function generateMetadata(props: {
     alternates: getAlternates({ locale, path: "/blog" }),
     title: t("blogTitle", {
       ns: "blog",
-      defaultValue: "Blog",
+      defaultValue: "Kinpal - Blog",
     }),
     description: t("blogDescription", {
       ns: "blog",
-      defaultValue: "News, updates and announcements about Rallly.",
+      defaultValue: "News, updates and announcements about Kinpal.",
     }),
   };
 }

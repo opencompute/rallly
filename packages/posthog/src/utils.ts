@@ -89,7 +89,7 @@ export function isResizeObserverLoopError(event: CaptureResult) {
 /**
  * An iOS-only throw reaches error tracking with a bare minified identifier as
  * its message (`fa`, `ga`, `Ba`, `Ca`, ...) and a stack whose every frame
- * resolves to the HTML document (`filename: https://app.rallly.co/`,
+ * resolves to the HTML document (`filename: https://app.kinpal.com/`,
  * `function: "?"`) instead of a `/_next/static` chunk. Only chunk files ship
  * source maps (`productionBrowserSourceMaps` in next.config.ts), so an inline
  * document script can never be symbolicated and the stack stays useless. The

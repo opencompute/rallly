@@ -25,12 +25,12 @@ export async function PoweredBy({
         ns="emails"
         i18nKey="common_poweredBy"
         defaults="Powered by <a>{domain}</a>"
-        values={{ domain: "Rallly" }}
+        values={{ domain: "Kinpal" }}
         components={{
           a: (
             <Link
               color={chrome.primaryColor}
-              href="https://rallly.co?utm_source=rallly&utm_medium=email&utm_campaign=powered_by"
+              href="https://kinpal.com?utm_source=rallly&utm_medium=email&utm_campaign=powered_by"
             />
           ),
         }}

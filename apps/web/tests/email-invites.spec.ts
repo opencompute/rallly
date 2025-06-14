@@ -17,10 +17,10 @@ import {
  * emailed link keeps granting the invitee edit access to their response.
  */
 
-const PRO_HOST = "email-invites-pro@rallly.co";
-const FREE_HOST = "email-invites-free@rallly.co";
-const CLEAN_URL_HOST = "email-invites-clean-url@rallly.co";
-const INVITEE = "email-invitee@rallly.co";
+const PRO_HOST = "email-invites-pro@kinpal.com";
+const FREE_HOST = "email-invites-free@kinpal.com";
+const CLEAN_URL_HOST = "email-invites-clean-url@kinpal.com";
+const INVITEE = "email-invitee@kinpal.com";
 const POLL_TITLE = "Email Invites Poll";
 
 test.describe.configure({ mode: "serial" });

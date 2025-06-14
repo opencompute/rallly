@@ -32,7 +32,7 @@ const ErrorPage: React.FunctionComponent<ComponentProps> = ({
           <LinkBase href="/" className={buttonVariants({ variant: "primary" })}>
             {t("goToHome")}
           </LinkBase>
-          <a href="https://support.rallly.co" className={buttonVariants()}>
+          <a href="https://support.kinpal.com" className={buttonVariants()}>
             {t("support")}
           </a>
         </div>

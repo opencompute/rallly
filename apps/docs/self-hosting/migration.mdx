@@ -3,7 +3,7 @@ title: Migrate to the new Docker stack
 description: Move an existing self-hosted instance onto the new Docker stack.
 ---
 
-Starting with **v4.10**, Rallly Self-Hosted ships as a managed Docker Compose stack with an installer, the **Rallly CLI** (`rallly.sh`), bundled reverse proxy (Traefik), and bundled object storage (Garage). If you set up Rallly before v4.10 — with a hand-edited `docker-compose.yml`, your own reverse proxy, or a `config.env` file — this guide walks you through the upgrade.
+Starting with **v4.10**, Kinpal Self-Hosted ships as a managed Docker Compose stack with an installer, the **Kinpal CLI** (`rallly.sh`), bundled reverse proxy (Traefik), and bundled object storage (Garage). If you set up Kinpal before v4.10 — with a hand-edited `docker-compose.yml`, your own reverse proxy, or a `config.env` file — this guide walks you through the upgrade.
 
 <Warning>
   This guide assumes you will tear down the old stack and run the new stack on the same server. Read every step before starting. A database backup is mandatory.
@@ -36,13 +36,13 @@ Your domain (previously in `NEXT_PUBLIC_BASE_URL`) becomes `DOMAIN` in the new s
 From your existing stack directory, with the old stack running:
 
 ```sh
-docker compose exec -T rallly_db pg_dump -U postgres rallly | gzip > rallly-backup.sql.gz
+docker compose exec -T kinpal_db pg_dump -U postgres rallly | gzip > kinpal-backup.sql.gz
 ```
 
-Copy `rallly-backup.sql.gz` off the server (e.g. `scp` to your laptop). Do not skip this.
+Copy `kinpal-backup.sql.gz` off the server (e.g. `scp` to your laptop). Do not skip this.
 
 <Note>
-  `rallly_db` is the Postgres service name in the official legacy `docker-compose.yml`. If you renamed it or authored your own compose file, replace it with whatever yours is called (run `docker compose ps` to check).
+  `kinpal_db` is the Postgres service name in the official legacy `docker-compose.yml`. If you renamed it or authored your own compose file, replace it with whatever yours is called (run `docker compose ps` to check).
 </Note>
 
 ## Step 3 — Stop the old stack
@@ -53,7 +53,7 @@ From the old stack directory:
 docker compose down
 ```
 
-If you were running an external reverse proxy (Nginx, Caddy, Apache) in front of Rallly, **stop and disable it now** — Traefik needs ports 80 and 443.
+If you were running an external reverse proxy (Nginx, Caddy, Apache) in front of Kinpal, **stop and disable it now** — Traefik needs ports 80 and 443.
 
 ```sh
 # Examples, adjust to your setup
@@ -72,7 +72,7 @@ Should return nothing.
 ## Step 4 — Install the new stack
 
 ```sh
-curl -fsSL https://get.rallly.co | bash
+curl -fsSL https://get.kinpal.com | bash
 ```
 
 When prompted, **use the same `DOMAIN` as before**. For `SUPPORT_EMAIL`, SMTP settings, etc., paste in the values you saved in Step 1.
@@ -108,7 +108,7 @@ docker compose exec -T db psql -U postgres -d postgres -c "DROP DATABASE IF EXIS
 docker compose exec -T db psql -U postgres -d postgres -c "CREATE DATABASE rallly;"
 
 # Restore — ON_ERROR_STOP=1 fails fast on the first error instead of continuing silently
-gunzip < /path/to/rallly-backup.sql.gz | docker compose exec -T db psql -v ON_ERROR_STOP=1 -U postgres rallly
+gunzip < /path/to/kinpal-backup.sql.gz | docker compose exec -T db psql -v ON_ERROR_STOP=1 -U postgres rallly
 ```
 
 Start the app so it picks up the restored schema:
@@ -133,7 +133,7 @@ Once you're satisfied the new stack is working:
 
 ```sh
 # Remove the old stack directory
-rm -rf /path/to/old/rallly-selfhosted
+rm -rf /path/to/old/kinpal-selfhosted
 
 # Remove orphaned Docker volumes from the old stack
 docker volume ls

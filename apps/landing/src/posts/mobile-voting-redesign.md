@@ -5,7 +5,7 @@ category: Product
 excerpt: We redesigned the mobile voting experience so that choosing your availability is obvious at a glance.
 ---
 
-Most people who respond to a Rallly poll do it from their phone, often within minutes of receiving the invite link. That moment is the heart of the product, so when we hear that it causes confusion, we listen.
+Most people who respond to a Kinpal poll do it from their phone, often within minutes of receiving the invite link. That moment is the heart of the product, so when we hear that it causes confusion, we listen.
 
 And we did hear it. Some of you told us that the old voting interface wasn't obvious enough. The small "?" button next to each time was easy to miss, and a few participants pressed Continue expecting to choose their times on the next page, only to find they had accidentally answered "no" to everything.
 
@@ -31,4 +31,4 @@ The new controls meet Apple's recommended touch target sizes, and we removed the
 
 Nothing about your existing polls or responses has changed. This is purely a better way to do the same thing.
 
-As always, if something feels off or you have an idea to make voting even smoother, [let us know](mailto:support@rallly.co). This update started with feedback from users like you.
+As always, if something feels off or you have an idea to make voting even smoother, [let us know](mailto:support@kinpal.com). This update started with feedback from users like you.

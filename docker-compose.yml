@@ -1,5 +1,5 @@
 services:
-  rallly_db:
+  kinpal_db:
     image: postgres:18-alpine
     restart: always
     ports:
@@ -15,7 +15,7 @@ services:
       timeout: 5s
       retries: 5
 
-  rallly_selfhosted:
+  kinpal_selfhosted:
     build:
       args:
         - SELF_HOSTED=true
@@ -23,12 +23,12 @@ services:
       dockerfile: ./apps/web/Dockerfile
     restart: always
     depends_on:
-      rallly_db:
+      kinpal_db:
         condition: service_healthy
     ports:
       - 3000:3000
     environment:
-      - DATABASE_URL=postgres://postgres:postgres@rallly_db/rallly
+      - DATABASE_URL=postgres://postgres:postgres@kinpal_db/rallly
     env_file:
       - path: apps/web/.env
         required: false

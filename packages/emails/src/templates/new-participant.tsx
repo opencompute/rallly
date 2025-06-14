@@ -161,9 +161,9 @@ NewParticipantEmail.PreviewProps = {
   note: "I can only make it after 2pm on Tuesday.\nLooking forward to it!",
   canReply: true,
   title: "Untitled Poll",
-  pollUrl: "https://rallly.co",
-  unsubscribeUrl: "https://rallly.co",
-  disableNotificationsUrl: "https://rallly.co",
+  pollUrl: "https://kinpal.com",
+  unsubscribeUrl: "https://kinpal.com",
+  disableNotificationsUrl: "https://kinpal.com",
   locale: "en",
   chrome: previewChrome,
 } as NewParticipantEmailProps;

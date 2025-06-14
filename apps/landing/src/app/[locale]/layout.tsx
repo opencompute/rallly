@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { GoogleAnalytics } from '@next/third-parties/google';
 import languages from "@rallly/languages";
 import { PostHogInit } from "@rallly/posthog/client";
 import { cn } from "@rallly/ui";
@@ -32,6 +33,7 @@ export default async function Root(props: {
 
   const { i18n } = await getTranslation(locale);
   const translations = i18n.store.data;
+  const ga = process.env.GA_MEASUREMENT_ID || "";
 
   return (
     <html
@@ -48,12 +50,13 @@ export default async function Root(props: {
           </I18nProvider>
         </LazyMotion>
       </body>
+      <GoogleAnalytics gaId={ga} />
     </html>
   );
 }
 
 export const metadata: Metadata = {
-  title: { template: "%s | Rallly", default: "Rallly" },
+  title: { template: "%s | Kinpal", default: "Kinpal" },
   metadataBase: process.env.NEXT_PUBLIC_BASE_URL
     ? new URL(process.env.NEXT_PUBLIC_BASE_URL)
     : undefined,

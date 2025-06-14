@@ -140,7 +140,7 @@ const proBenefitsList = [
     description: (
       <Trans
         i18nKey="removeAttributionBenefitDescription"
-        defaults='Hide "Powered by Rallly" from your participants'
+        defaults='Hide "Powered by Kinpal" from your participants'
       />
     ),
   },

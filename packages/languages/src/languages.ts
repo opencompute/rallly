@@ -16,4 +16,5 @@ export const languages = {
   fi: "Suomi",
   sv: "Svenska",
   zh: "简体中文",
+  "zh-Hant": "繁體中文"
 };

@@ -6,7 +6,7 @@ import { DefaultLogo } from "@/features/branding/components/default-logo";
 import { getTranslation } from "@/i18n/server";
 
 export default async function NotFoundPage() {
-  // TODO (Luke Vella) [2023-11-03]: not-found doesn't have access to params right now
+  // TODO (Kinpal) [2023-11-03]: not-found doesn't have access to params right now
   // See: https://github.com/vercel/next.js/discussions/43179
   const { t } = await getTranslation("en");
 
@@ -45,7 +45,7 @@ export default async function NotFoundPage() {
         })}
       />
       <ErrorPageLinkItem
-        href="https://support.rallly.co"
+        href="https://support.kinpal.com"
         icon={<LifeBuoyIcon className="size-4 text-muted-foreground" />}
         title={t("errorLinkSupport", { defaultValue: "Support" })}
         description={t("errorLinkSupportDescription", {
@@ -53,7 +53,7 @@ export default async function NotFoundPage() {
         })}
       />
       <ErrorPageLinkItem
-        href="https://github.com/lukevella/rallly"
+        href="https://github.com/opencompute/rallly"
         icon={<GithubIcon className="size-4 text-muted-foreground" />}
         title={t("errorLinkGithub", { defaultValue: "GitHub" })}
         description={t("errorLinkGithubDescription", {

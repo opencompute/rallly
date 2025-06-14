@@ -2,31 +2,30 @@
 
 import type { Metadata } from "next";
 import { cacheLife } from "next/cache";
-import { LegalPageLayout } from "@/components/legal-page-layout";
 import { Section } from "@/components/section";
-import { LinkBase } from "@/i18n/client/link";
 
 export default async function DataProcessingAgreement() {
   cacheLife("max");
   return (
     <Section>
-      <LegalPageLayout
-        title="Data processing agreement"
-        lastUpdated="2026-08-29"
-      >
+      <h1 className="max-w-2xl text-balance font-medium text-3xl text-gray-800 tracking-tight sm:text-4xl">
+        Data processing agreement
+      </h1>
+      <p className="mt-4 text-gray-500 text-sm">Last updated: 29 August 2026</p>
+      <div className="longform mt-8 max-w-2xl">
         <p>
           This Data Processing Agreement (&quot;DPA&quot;) forms part of the{" "}
-          <LinkBase href="/terms-of-use">Terms of Use</LinkBase> between Stack
-          Snap Ltd (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) and the
-          customer (&quot;you&quot;, &quot;your&quot;) and governs our
-          processing of personal data on your behalf when we provide the hosted
-          Rallly service at rallly.co.
+          <a href="/terms-of-use">Terms of Use</a> between Stack Snap Ltd
+          (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) and the customer
+          (&quot;you&quot;, &quot;your&quot;) and governs our processing of
+          personal data on your behalf when we provide the hosted Kinpal service
+          at kinpal.com.
         </p>
         <p>
           This DPA is incorporated into the Terms of Use by reference and
           applies automatically. No signature is required for it to take effect.
           If your procurement process requires a signed copy, email{" "}
-          <a href="mailto:support@rallly.co">support@rallly.co</a> and we will
+          <a href="mailto:support@kinpal.com">support@kinpal.com</a> and we will
           countersign an execution copy of this DPA.
         </p>
 
@@ -42,8 +41,8 @@ export default async function DataProcessingAgreement() {
             applicable, the EU GDPR (Regulation (EU) 2016/679).
           </li>
           <li>
-            <strong>&quot;Service&quot;</strong> means the hosted Rallly service
-            at rallly.co.
+            <strong>&quot;Service&quot;</strong> means the hosted Kinpal service
+            at kinpal.com.
           </li>
           <li>
             <strong>&quot;Customer Data&quot;</strong> means personal data that
@@ -78,7 +77,7 @@ export default async function DataProcessingAgreement() {
           personal data we process for our own purposes: managing accounts and
           billing, securing and improving the Service, and communicating with
           users. That processing is described in our{" "}
-          <LinkBase href="/privacy-policy">Privacy Policy</LinkBase>.
+          <a href="/privacy-policy">Privacy Policy</a>.
         </p>
         <p>
           2.3 This DPA applies for as long as we process Customer Data. If there
@@ -209,7 +208,7 @@ export default async function DataProcessingAgreement() {
           6.3 We will update Annex 2 on this page at least 30 days before a new
           or replacement Sub-processor first processes Customer Data. To receive
           Sub-processor change notices by email, send a request to{" "}
-          <a href="mailto:support@rallly.co">support@rallly.co</a> with
+          <a href="mailto:support@kinpal.com">support@kinpal.com</a> with
           &quot;Subprocessor notifications&quot; in the subject line and we will
           notify the address you provide of future changes.
         </p>
@@ -247,10 +246,10 @@ export default async function DataProcessingAgreement() {
           8.1 We will make available to you the information reasonably necessary
           to demonstrate compliance with this DPA. We support this primarily
           through documentation: this DPA, our{" "}
-          <LinkBase href="/security">security page</LinkBase>, our publicly
-          auditable source code, our public real-time status page, and the audit
-          reports and certifications of our Sub-processors, which are available
-          from each provider.
+          <a href="/security">security page</a>, our publicly auditable source
+          code, our public real-time status page, and the audit reports and
+          certifications of our Sub-processors, which are available from each
+          provider.
         </p>
         <p>
           8.2 Where that documentation is not sufficient to demonstrate
@@ -309,13 +308,10 @@ export default async function DataProcessingAgreement() {
 
         <hr />
 
-        <h2 id="annex-1" className="scroll-mt-24">
-          Annex 1: Technical and organizational measures
-        </h2>
+        <h2>Annex 1: Technical and organizational measures</h2>
         <p>
           The measures below describe how we protect Customer Data. Further
-          detail is published on our{" "}
-          <LinkBase href="/security">security page</LinkBase>.
+          detail is published on our <a href="/security">security page</a>.
         </p>
         <ul>
           <li>
@@ -375,9 +371,7 @@ export default async function DataProcessingAgreement() {
 
         <hr />
 
-        <h2 id="annex-2" className="scroll-mt-24">
-          Annex 2: Sub-processors
-        </h2>
+        <h2>Annex 2: Sub-processors</h2>
         <p>
           We use the following Sub-processors to provide the Service. Changes to
           this list are notified as set out in Section 6.
@@ -396,7 +390,7 @@ export default async function DataProcessingAgreement() {
               <tr>
                 <td>
                   <a
-                    href="https://security.vercel.com/"
+                    href="https://vercel.com/security"
                     target="_blank"
                     rel="noreferrer noopener"
                   >
@@ -513,7 +507,7 @@ export default async function DataProcessingAgreement() {
         <p>
           Questions about this DPA, requests for a countersigned copy, and
           Sub-processor notification requests can be sent to{" "}
-          <a href="mailto:support@rallly.co">support@rallly.co</a>.
+          <a href="mailto:support@kinpal.com">support@kinpal.com</a>.
         </p>
         <p>
           <strong>Post:</strong>
@@ -528,7 +522,7 @@ export default async function DataProcessingAgreement() {
           <br />
           United Kingdom
         </p>
-      </LegalPageLayout>
+      </div>
     </Section>
   );
 }
@@ -536,8 +530,8 @@ export default async function DataProcessingAgreement() {
 export async function generateMetadata(): Promise<Metadata> {
   cacheLife("max");
   return {
-    title: "Data Processing Agreement",
+    title: "Kinpal: Data Processing Agreement",
     description:
-      "The GDPR Article 28 Data Processing Agreement for the hosted Rallly service, including technical and organizational measures and the subprocessor list.",
+      "The GDPR Article 28 Data Processing Agreement for the hosted Kinpal service, including technical and organizational measures and the subprocessor list.",
   };
 }

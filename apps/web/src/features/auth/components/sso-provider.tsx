@@ -31,6 +31,12 @@ function SSOImage({ provider }: { provider: string }) {
     );
   }
 
+  if (provider === "github") {
+    return (
+      <Image src="/static/github.svg" width={16} alt="Github" height={16} />
+    );
+  }
+
   if (provider === "oidc") {
     return <UserIcon className="text-muted-foreground" />;
   }

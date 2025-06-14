@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { getTranslation } from "@/i18n/server";
 
-export const alt = "Rallly: Find the best time to meet";
+export const alt = "Kinpal: Find the best time to meet";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -113,7 +113,7 @@ export default async function Image(props: {
         }}
       >
         {/** biome-ignore lint/performance/noImgElement: satori renders plain img elements */}
-        <img alt="Rallly" src={logoSrc} height={64} />
+        <img alt="Kinpal" src={logoSrc} height={64} />
         <div
           style={{
             display: "flex",

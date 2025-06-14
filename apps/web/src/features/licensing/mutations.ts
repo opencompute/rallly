@@ -74,7 +74,7 @@ export class LicenseManager {
   authToken?: string;
 
   constructor({
-    apiUrl = "https://licensing.rallly.co/api/licensing/v1",
+    apiUrl = "https://licensing.kinpal.com/api/licensing/v1",
     authToken,
   }: {
     apiUrl?: string;
@@ -247,7 +247,7 @@ export async function createLicenseCheckoutSession({
         },
       ],
       mode: "payment",
-      success_url: "https://rallly.co/licensing/thank-you",
+      success_url: "https://kinpal.com/licensing/thank-you",
       allow_promotion_codes: true,
       billing_address_collection: "required",
       tax_id_collection: {

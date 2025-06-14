@@ -2,17 +2,25 @@
 
 import type { Metadata } from "next";
 import { cacheLife } from "next/cache";
+import Image from "next/image";
 import Link from "next/link";
 import { Trans } from "react-i18next/TransWithoutContext";
 import { PeopleBadge, PollsBadge } from "@/components/home/animated-number";
 import { Cta } from "@/components/home/cta";
-import { FaqItem, FaqSection } from "@/components/home/faq";
+import { Faq, FaqItem } from "@/components/home/faq";
 import { Hero } from "@/components/home/hero";
 import { HeroDemo } from "@/components/home/hero-demo/hero-demo";
 import { HowItWorks } from "@/components/home/how-it-works/how-it-works";
-import { SocialProof } from "@/components/home/social-proof";
+import { Mention, Mentions } from "@/components/home/mentions";
 import { Stats } from "@/components/home/stats";
-import { Section } from "@/components/section";
+import { Testimonial } from "@/components/home/testimonial";
+import {
+  Section,
+  SectionContent,
+  SectionDescription,
+  SectionHeading,
+  SectionTitle,
+} from "@/components/section";
 import { getTranslation } from "@/i18n/server";
 import { getAlternates } from "@/lib/alternates";
 import { getMonthlyPollCount, getMonthlyVoterCount } from "@/lib/data";
@@ -31,7 +39,6 @@ export default async function Page(props: {
     <div className="divide-y">
       <Section>
         <Hero
-          wideDescription
           title={t("sportsClubsTitle", {
             ns: "home",
             defaultValue: "Scheduling for sports clubs and teams",
@@ -59,136 +66,268 @@ export default async function Page(props: {
         </Stats>
       </Section>
       <HowItWorks locale={locale} />
-      <SocialProof locale={locale} />
-      <div className="divide-y">
-        <FaqSection
-          locale={locale}
+      <Section>
+        <Testimonial
+          logo={
+            <Image
+              src="/static/images/mit-logo.svg"
+              width={54}
+              height={28}
+              alt=""
+            />
+          }
+          avatar={
+            <Image
+              className="rounded-full"
+              src="/static/images/eric.png"
+              width={48}
+              height={48}
+              alt=""
+            />
+          }
+          name="Eric Fletcher"
           title={
             <Trans
               t={t}
               ns="home"
-              i18nKey="faqTitle"
-              defaults="Frequently asked questions"
+              i18nKey="ericJobTitle"
+              defaults="Executive Assistant at MIT"
             />
           }
         >
-          <FaqItem
-            question={
-              <Trans
-                t={t}
-                ns="home"
-                i18nKey="sportsClubsFaqSquadSize"
-                defaults="How many players can I include?"
-              />
+          <Trans
+            t={t}
+            ns="home"
+            i18nKey="ericQuote"
+            defaults="“If your scheduling workflow lives in emails, I strongly encourage you to try and let Kinpal simplify your scheduling tasks for a more organized and less stressful workday.”"
+          />
+        </Testimonial>
+      </Section>
+      <Section>
+        <Mentions locale={locale}>
+          <Mention
+            delay={0.25}
+            logo={
+              <div className="relative h-8 w-14">
+                <Image
+                  src="/static/images/pcmag-logo.svg"
+                  alt="PCMag"
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
             }
           >
             <Trans
               t={t}
               ns="home"
-              i18nKey="sportsClubsFaqSquadSizeAnswer"
-              defaults="There is no limit on how many people you invite, so a full squad, the coaching staff and reserves can all respond to the same poll. Every session shows a running count, so you can see immediately which nights you have the numbers for."
+              i18nKey="pcmagQuote"
+              defaults="“Set up a scheduling poll in as little time as possible.”"
             />
-          </FaqItem>
-          <FaqItem
-            question={
-              <Trans
-                t={t}
-                ns="home"
-                i18nKey="sportsClubsFaqParents"
-                defaults="Can parents respond on behalf of their child?"
-              />
+          </Mention>
+          <Mention
+            delay={0.5}
+            logo={
+              <div className="relative h-8 w-24">
+                <Image
+                  src="/static/images/hubspot-logo.svg"
+                  alt="HubSpot"
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
             }
           >
             <Trans
               t={t}
               ns="home"
-              i18nKey="sportsClubsFaqParentsAnswer"
-              defaults="Yes. Whoever opens the link enters a name and marks the sessions, so a parent can reply for their child, and one parent can respond for siblings by adding each of them separately. Nobody needs an account or an email address to take part."
+              i18nKey="hubspotQuote"
+              defaults="“The simplest choice for availability polling for large groups.”"
             />
-          </FaqItem>
-          <FaqItem
-            question={
-              <Trans
-                t={t}
-                ns="home"
-                i18nKey="sportsClubsFaqNoApp"
-                defaults="Do players need to download an app or sign up?"
-              />
+          </Mention>
+          <Mention
+            delay={0.75}
+            logo={
+              <div className="relative h-8 w-32">
+                <Image
+                  src="/static/images/goodfirms-logo.svg"
+                  alt="Goodfirms"
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
             }
           >
             <Trans
               t={t}
               ns="home"
-              i18nKey="sportsClubsFaqNoAppAnswer"
-              defaults="No. Anyone with the link can respond straight from their phone browser, which matters when you are sharing it into a team group chat. Only you, as the organizer, need an account, and creating one is free."
+              i18nKey="goodfirmsQuote"
+              defaults="“Unique in its simplicity and requires minimum interaction time.”"
             />
-          </FaqItem>
-          <FaqItem
-            question={
-              <Trans
-                t={t}
-                ns="home"
-                i18nKey="sportsClubsFaqRepeat"
-                defaults="Can I reuse it for next season or the next block?"
-              />
+          </Mention>
+          <Mention
+            delay={1}
+            logo={
+              <div className="relative h-8 w-20">
+                <Image
+                  src="/static/images/popsci-logo.svg"
+                  alt="PopSci"
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
             }
           >
             <Trans
               t={t}
               ns="home"
-              i18nKey="sportsClubsFaqRepeatAnswer"
-              defaults="Yes. Most clubs run a fresh poll for each block of sessions, offering the dates the pitch or hall is available and letting the squad pick. Each block is its own poll, so last season's replies never get confused with this one."
+              i18nKey="popsciQuote"
+              defaults="“The perfect pick if you want to keep your RSVPs simple.”"
             />
-          </FaqItem>
-          <FaqItem
-            question={
+          </Mention>
+        </Mentions>
+      </Section>
+      <div>
+        <Section>
+          <SectionHeading>
+            <SectionTitle>
               <Trans
                 t={t}
                 ns="home"
-                i18nKey="sportsClubsFaqBranding"
-                defaults="Can polls carry our club badge?"
+                i18nKey="faqTitle"
+                defaults="Frequently asked questions"
               />
-            }
-          >
-            <Trans
-              t={t}
-              ns="home"
-              i18nKey="sportsClubsFaqBrandingAnswer"
-              defaults="With <0>Rallly Pro</0> you can add your own logo and colours and remove Rallly attribution, so a poll you send out looks like it came from the club. Everything else is free to use."
-              components={[
-                <Link
-                  key="pricing"
-                  className="text-gray-800 underline underline-offset-2 hover:text-gray-600"
-                  href="/pricing"
-                />,
-              ]}
-            />
-          </FaqItem>
-          <FaqItem
-            question={
+            </SectionTitle>
+            <SectionDescription>
               <Trans
                 t={t}
                 ns="home"
-                i18nKey="faqPrivacy"
-                defaults="Is my data private?"
+                i18nKey="faqDescription"
+                defaults="Quick answers about how Kinpal works, pricing, and privacy."
               />
-            }
-          >
-            <Trans
-              t={t}
-              ns="home"
-              i18nKey="faqPrivacyAnswer"
-              defaults="Yes. Privacy is central to how we build Rallly. We do not show ads or sell your data, we collect only what we need to run the service, and polls on the free plan are deleted automatically once they become inactive. Rallly is also open source, so anyone can inspect how their data is handled. You can read the details in our <0>privacy policy</0>."
-              components={[
-                <Link
-                  key="privacy"
-                  className="text-gray-800 underline underline-offset-2 hover:text-gray-600"
-                  href="/privacy-policy"
-                />,
-              ]}
-            />
-          </FaqItem>
-        </FaqSection>
+            </SectionDescription>
+          </SectionHeading>
+          <SectionContent>
+            <Faq>
+              <FaqItem
+                question={
+                  <Trans
+                    t={t}
+                    ns="home"
+                    i18nKey="sportsClubsFaqSquadSize"
+                    defaults="How many players can I include?"
+                  />
+                }
+              >
+                <Trans
+                  t={t}
+                  ns="home"
+                  i18nKey="sportsClubsFaqSquadSizeAnswer"
+                  defaults="There is no limit on how many people you invite, so a full squad, the coaching staff and reserves can all respond to the same poll. Every session shows a running count, so you can see immediately which nights you have the numbers for."
+                />
+              </FaqItem>
+              <FaqItem
+                question={
+                  <Trans
+                    t={t}
+                    ns="home"
+                    i18nKey="sportsClubsFaqParents"
+                    defaults="Can parents respond on behalf of their child?"
+                  />
+                }
+              >
+                <Trans
+                  t={t}
+                  ns="home"
+                  i18nKey="sportsClubsFaqParentsAnswer"
+                  defaults="Yes. Whoever opens the link enters a name and marks the sessions, so a parent can reply for their child, and one parent can respond for siblings by adding each of them separately. Nobody needs an account or an email address to take part."
+                />
+              </FaqItem>
+              <FaqItem
+                question={
+                  <Trans
+                    t={t}
+                    ns="home"
+                    i18nKey="sportsClubsFaqNoApp"
+                    defaults="Do players need to download an app or sign up?"
+                  />
+                }
+              >
+                <Trans
+                  t={t}
+                  ns="home"
+                  i18nKey="sportsClubsFaqNoAppAnswer"
+                  defaults="No. Anyone with the link can respond straight from their phone browser, which matters when you are sharing it into a team group chat. Only you, as the organizer, need an account, and creating one is free."
+                />
+              </FaqItem>
+              <FaqItem
+                question={
+                  <Trans
+                    t={t}
+                    ns="home"
+                    i18nKey="sportsClubsFaqRepeat"
+                    defaults="Can I reuse it for next season or the next block?"
+                  />
+                }
+              >
+                <Trans
+                  t={t}
+                  ns="home"
+                  i18nKey="sportsClubsFaqRepeatAnswer"
+                  defaults="Yes. Most clubs run a fresh poll for each block of sessions, offering the dates the pitch or hall is available and letting the squad pick. Each block is its own poll, so last season's replies never get confused with this one."
+                />
+              </FaqItem>
+              <FaqItem
+                question={
+                  <Trans
+                    t={t}
+                    ns="home"
+                    i18nKey="sportsClubsFaqBranding"
+                    defaults="Can polls carry our club badge?"
+                  />
+                }
+              >
+                <Trans
+                  t={t}
+                  ns="home"
+                  i18nKey="sportsClubsFaqBrandingAnswer"
+                  defaults="With <0>Kinpal Pro</0> you can add your own logo and colours and remove Kinpal attribution, so a poll you send out looks like it came from the club. Everything else is free to use."
+                  components={[
+                    <Link
+                      key="pricing"
+                      className="text-gray-800 underline underline-offset-2 hover:text-gray-600"
+                      href="/pricing"
+                    />,
+                  ]}
+                />
+              </FaqItem>
+              <FaqItem
+                question={
+                  <Trans
+                    t={t}
+                    ns="home"
+                    i18nKey="faqPrivacy"
+                    defaults="Is my data private?"
+                  />
+                }
+              >
+                <Trans
+                  t={t}
+                  ns="home"
+                  i18nKey="faqPrivacyAnswer"
+                  defaults="Yes. Privacy is central to how we build Kinpal. We do not show ads or sell your data, we collect only what we need to run the service, and polls on the free plan are deleted automatically once they become inactive. Kinpal is also open source, so anyone can inspect how their data is handled. You can read the details in our <0>privacy policy</0>."
+                  components={[
+                    <Link
+                      key="privacy"
+                      className="text-gray-800 underline underline-offset-2 hover:text-gray-600"
+                      href="/privacy-policy"
+                    />,
+                  ]}
+                />
+              </FaqItem>
+            </Faq>
+          </SectionContent>
+        </Section>
         <Section className="sm:py-24">
           <Cta
             title={
@@ -240,12 +379,13 @@ export async function generateMetadata(props: {
     alternates: getAlternates({ locale, path: "/scheduling-for/sports-clubs" }),
     title: t("sportsClubsMetaTitle", {
       ns: "home",
-      defaultValue: "Scheduling for Sports Clubs and Teams",
+      defaultValue:
+        "Scheduling for Sports Clubs and Teams | Free Availability Poll",
     }),
     description: t("sportsClubsMetaDescription", {
       ns: "home",
       defaultValue:
-        "Rallly is a free scheduling tool for sports clubs, teams and coaches. Check squad availability for training and fixtures with one link. No account needed.",
+        "Kinpal is a free scheduling tool for sports clubs, teams and coaches. Check squad availability for training and fixtures with one link. No account needed.",
     }),
   };
 }

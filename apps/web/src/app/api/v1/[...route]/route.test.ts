@@ -1274,7 +1274,7 @@ describe("API v1 - /polls", () => {
 
       expect(res.status).toBe(200);
       const json = await res.json();
-      expect(json.info.title).toBe("Rallly API");
+      expect(json.info.title).toBe("Kinpal API");
       expect(json.info.version).toBe("1.0.0");
     });
 

@@ -131,7 +131,7 @@ async function onCheckoutSessionCompleted(event: Stripe.Event) {
 
     await sendLicenseKeyEmail({
       to: email,
-      from: { name: "Luke from Rallly", address: env.SUPPORT_EMAIL },
+      from: { name: "Kinpal", address: env.SUPPORT_EMAIL },
       branding: await getInstanceBranding(),
       props: {
         licenseKey: license.data.key,
@@ -175,7 +175,7 @@ async function onCheckoutSessionExpired(event: Stripe.Event) {
     return;
   }
 
-  // TODO (Luke Vella) [2025-08-04]: We may want to send the user an email to users who do not complete checkout
+  // TODO (Kinpal) [2025-08-04]: We may want to send the user an email to users who do not complete checkout
 }
 
 async function onCustomerCreated(event: Stripe.Event) {
@@ -337,14 +337,14 @@ async function onCustomerSubscriptionCreated(event: Stripe.Event) {
       if (user) {
         await sendRawEmail({
           to: user.email,
-          from: { name: "Luke from Rallly", address: env.SUPPORT_EMAIL },
-          subject: "Thanks for subscribing to Rallly Pro",
+          from: { name: "Kinpal", address: env.SUPPORT_EMAIL },
+          subject: "Thanks for subscribing to Kinpal Pro",
           text: [
             "Hey there,",
-            "Thanks so much for subscribing to Rallly Pro! I really appreciate your support.",
-            "I'd love to learn more about how you're using Rallly. What kind of events are you scheduling? Are there any features you wish Rallly had?",
+            "Thanks so much for subscribing to Kinpal Pro! I really appreciate your support.",
+            "I'd love to learn more about how you're using Kinpal. What kind of events are you scheduling? Are there any features you wish Kinpal had?",
             "Just hit reply and let me know. I read every response and it helps shape what we build next.",
-            "Luke\nFounder, Rallly",
+            "Kinpal",
           ].join("\n\n"),
         });
       }

@@ -16,8 +16,8 @@ Crowdin force pushes `l10n_main` on every sync. A fix that lands only on the PR 
 Token and project id live in the macOS Keychain:
 
 ```
-security find-generic-password -s rallly-billing.CROWDIN_PERSONAL_TOKEN -w
-security find-generic-password -s rallly-billing.CROWDIN_PROJECT_ID -w
+security find-generic-password -s kinpal-billing.CROWDIN_PERSONAL_TOKEN -w
+security find-generic-password -s kinpal-billing.CROWDIN_PROJECT_ID -w
 ```
 
 The token is the secret: retrieve it inline, never echo it. The project id is not secret — it is 527308 and appears in API paths below. Files are namespaced under Crowdin branch `main` (branchId 10).
@@ -54,8 +54,8 @@ Derive the affected languages from the touched file paths (the locale directory 
 **Primary: Crowdin CLI** (works since `preserve_hierarchy: true` landed in crowdin.yml, PR #2717). One run per affected language:
 
 ```
-CROWDIN_PERSONAL_TOKEN=$(security find-generic-password -s rallly-billing.CROWDIN_PERSONAL_TOKEN -w) \
-CROWDIN_PROJECT_ID=$(security find-generic-password -s rallly-billing.CROWDIN_PROJECT_ID -w) \
+CROWDIN_PERSONAL_TOKEN=$(security find-generic-password -s kinpal-billing.CROWDIN_PERSONAL_TOKEN -w) \
+CROWDIN_PROJECT_ID=$(security find-generic-password -s kinpal-billing.CROWDIN_PROJECT_ID -w) \
 npx -y @crowdin/cli@4 upload translations -b main -l <crowdin-lang-id> --auto-approve-imported --no-progress
 ```
 

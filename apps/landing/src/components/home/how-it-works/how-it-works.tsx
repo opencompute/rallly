@@ -101,7 +101,7 @@ export const HowItWorks = async ({ locale }: { locale: string }) => {
         </SectionDescription>
         <a
           className="inline-flex items-center gap-1.5 font-medium text-gray-800 text-sm hover:text-gray-600"
-          href="https://support.rallly.co/workflow/create"
+          href="https://support.kinpal.com/workflow/create"
         >
           <Trans
             t={t}

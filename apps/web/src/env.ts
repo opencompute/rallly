@@ -72,7 +72,7 @@ export const env = createEnv({
      */
     SUPPORT_EMAIL: z.email(),
     NOREPLY_EMAIL: z.email().optional(),
-    NOREPLY_EMAIL_NAME: z.string().default("Rallly"),
+    NOREPLY_EMAIL_NAME: z.string().default("Kinpal"),
 
     /**
      * S3 Configuration
@@ -116,9 +116,15 @@ export const env = createEnv({
     MICROSOFT_CLIENT_SECRET: z.string().optional(),
 
     /**
+     * Github Integration
+     */
+    GITHUB_CLIENT_ID: z.string().optional(),
+    GITHUB_CLIENT_SECRET: z.string().optional(),
+
+    /**
      * App name
      */
-    APP_NAME: z.string().optional().default("Rallly"),
+    APP_NAME: z.string().optional().default("Kinpal"),
     /**
      * Primary color for theming (hex format, e.g., "#4f46e5")
      */
@@ -173,7 +179,7 @@ export const env = createEnv({
      */
     TURNSTILE_SECRET_KEY: z.string().optional(),
     /**
-     * Base URL of the Rallly cloud API (e.g. https://api.rallly.co).
+     * Base URL of the Kinpal cloud API (e.g. https://api.rallly.co).
      * On the cloud deployment it names the host that serves `/v1` without
      * the app's `/api` prefix (see the rewrite in next.config.ts) and is
      * the `servers` entry of the OpenAPI document. The self-hosted Docker
@@ -214,7 +220,7 @@ export const env = createEnv({
     NEXT_PUBLIC_SHORT_BASE_URL: z.url().optional(),
     /**
      * Domain to attach to server-set cookies (auth session, locale).
-     * Set to a parent domain prefixed with a leading dot (e.g. `.rallly.co`)
+     * Set to a parent domain prefixed with a leading dot (e.g. `.kinpal.com`)
      * to make these cookies readable across subdomains. When unset, cookies
      * stay scoped to the exact request host. Must be a registrable DNS
      * domain: browsers ignore the Domain attribute for localhost, dotless
@@ -282,6 +288,8 @@ export const env = createEnv({
     MICROSOFT_TENANT_ID: process.env.MICROSOFT_TENANT_ID,
     MICROSOFT_CLIENT_ID: process.env.MICROSOFT_CLIENT_ID,
     MICROSOFT_CLIENT_SECRET: process.env.MICROSOFT_CLIENT_SECRET,
+    GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
+    GITHUB_CLIENT_SECRET: process.env.GITHUB_CLIENT_SECRET,
     PRIMARY_COLOR: process.env.PRIMARY_COLOR,
     PRIMARY_COLOR_DARK: process.env.PRIMARY_COLOR_DARK,
     LOGO_URL: process.env.LOGO_URL,

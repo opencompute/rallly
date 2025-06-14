@@ -78,9 +78,9 @@ ENV PORT=3000
 ENV HOSTNAME=0.0.0.0
 ENV LOG_LEVEL=warn
 
-# Rallly cloud API base URL. Set here so only self-hosted images phone home;
+# Kinpal cloud API base URL. Set here so only self-hosted images phone home;
 # local dev and cloud builds leave it unset and skip outbound calls entirely.
-ENV API_BASE_URL=https://api.rallly.co
+ENV API_BASE_URL=https://api.kinpal.com
 
 ARG SELF_HOSTED
 ENV NEXT_PUBLIC_SELF_HOSTED=$SELF_HOSTED

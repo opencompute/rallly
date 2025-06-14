@@ -1,15 +1,15 @@
 import type { NextRequest, NextResponse } from "next/server";
 
 // Landing CTAs append ?ref=<page-slug> because cross-domain referrers don't
-// survive the hop from rallly.co to the app. The proxy persists the slug in a
+// survive the hop from kinpal.com to the app. The proxy persists the slug in a
 // cookie so it is still available when registration completes requests later
 // (signup spans redirects and, for OAuth, a round trip to the provider).
-export const REF_COOKIE_NAME = "rallly_ref";
+export const REF_COOKIE_NAME = "kinpal_ref";
 
 // Which CTA on that page was clicked. Separate from ref so ref keeps meaning
 // exactly one thing (the page) — a page has several CTAs and pricing in
 // particular has both a free and a paid one, which ref alone cannot tell apart.
-export const CTA_COOKIE_NAME = "rallly_cta";
+export const CTA_COOKIE_NAME = "kinpal_cta";
 
 const REF_COOKIE_MAX_AGE = 60 * 60 * 24 * 30;
 

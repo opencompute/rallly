@@ -58,7 +58,7 @@ async function StorageNotConfiguredAlert() {
       </AlertDescription>
       <AlertAction>
         <a
-          href="https://support.rallly.co/self-hosting/configuration#external-object-storage"
+          href="https://support.kinpal.com/self-hosting/configuration#external-object-storage"
           target="_blank"
           className="underline"
           rel="noreferrer"
@@ -130,7 +130,7 @@ export async function BrandingSettings() {
           </AlertDescription>
           <AlertAction>
             <a
-              href="https://support.rallly.co/self-hosting/white-labeling"
+              href="https://support.kinpal.com/self-hosting/white-labeling"
               target="_blank"
               className="underline"
               rel="noreferrer"

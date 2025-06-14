@@ -114,7 +114,7 @@ export default function LocaleErrorBoundary({
         }
       />
       <ErrorPageLinkItem
-        href="https://support.rallly.co"
+        href="https://support.kinpal.com"
         icon={<LifeBuoyIcon className="size-4 text-muted-foreground" />}
         title={<Trans i18nKey="errorLinkSupport" defaults="Support" />}
         description={

@@ -4,7 +4,7 @@ import { cookieDomainSchema } from "./cookie-domain";
 
 describe("cookieDomainSchema", () => {
   it.each([
-    ".rallly.co",
+    ".kinpal.com",
     "rallly.example.com",
     ".rallly.example.com",
     "example.com",
@@ -55,7 +55,7 @@ describe("cookieDomainSchema", () => {
 
   // Dotted domains under an unlisted TLD (intranet setups) stay valid.
   it("accepts a dotted intranet domain", () => {
-    expect(cookieDomainSchema.safeParse(".rallly.corp.internal").success).toBe(
+    expect(cookieDomainSchema.safeParse(".kinpal.comrp.internal").success).toBe(
       true,
     );
   });

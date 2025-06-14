@@ -121,7 +121,7 @@ test.afterAll(async () => {
 });
 
 test("poll admin", async ({ page }) => {
-  await loginWithEmail(page, { email: "dev@rallly.co" });
+  await loginWithEmail(page, { email: "dev@kinpal.com" });
   await page.goto(`/poll/${pollId}`);
   await page.waitForLoadState("networkidle");
   await page.screenshot({

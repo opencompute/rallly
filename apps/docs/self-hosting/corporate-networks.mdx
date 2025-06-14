@@ -1,16 +1,16 @@
 ---
 icon: network-wired
 title: Corporate Networks
-description: Run Rallly behind a corporate proxy or TLS-intercepting firewall.
+description: Run Kinpal behind a corporate proxy or TLS-intercepting firewall.
 ---
 
-Corporate networks often restrict outbound traffic in two ways: all egress must pass through an explicit proxy, and/or outbound TLS is intercepted and re-signed with an internal root certificate authority that Node.js does not trust. Either one breaks Rallly's outbound HTTPS requests. [License activation](/self-hosting/licensing), which connects to `licensing.rallly.co` on port 443, is usually where you notice it first, but any outbound call is affected. Some networks require both fixes below together.
+Corporate networks often restrict outbound traffic in two ways: all egress must pass through an explicit proxy, and/or outbound TLS is intercepted and re-signed with an internal root certificate authority that Node.js does not trust. Either one breaks Kinpal's outbound HTTPS requests. [License activation](/self-hosting/licensing), which connects to `licensing.kinpal.com` on port 443, is usually where you notice it first, but any outbound call is affected. Some networks require both fixes below together.
 
 If your server can reach the internet directly and your network does not intercept TLS, none of this applies and you can skip this page.
 
 ## Routing traffic through a proxy
 
-Rallly honours the standard `HTTP_PROXY`, `HTTPS_PROXY`, and `NO_PROXY` environment variables for outbound requests. Set them in `.env`:
+Kinpal honours the standard `HTTP_PROXY`, `HTTPS_PROXY`, and `NO_PROXY` environment variables for outbound requests. Set them in `.env`:
 
 ```sh
 HTTPS_PROXY=http://proxy.internal.example.com:8080
@@ -31,7 +31,7 @@ Apply the change with `./rallly.sh restart`.
 
 ## Trusting a custom root CA
 
-If your network intercepts TLS, the proxy terminates each HTTPS connection and re-signs it with your organisation's internal root CA. Node.js only trusts its built-in certificate authorities, so these connections fail until you tell Rallly about the internal CA.
+If your network intercepts TLS, the proxy terminates each HTTPS connection and re-signs it with your organisation's internal root CA. Node.js only trusts its built-in certificate authorities, so these connections fail until you tell Kinpal about the internal CA.
 
 Set `CA_CERT_FILE` in `.env` to the absolute path of a PEM certificate file on the host:
 
@@ -50,7 +50,7 @@ Apply the change with `./rallly.sh restart`. Node reads the file once at startup
 To verify the certificate is mounted and readable inside the container:
 
 ```sh
-docker compose exec web openssl x509 -in /etc/ssl/certs/rallly-custom-ca.pem -noout -subject
+docker compose exec web openssl x509 -in /etc/ssl/certs/kinpal-custom-ca.pem -noout -subject
 ```
 
 Success prints the CA's subject line. `Unable to load certificate` means the file at `CA_CERT_FILE` is missing or not valid PEM.
@@ -70,7 +70,7 @@ openssl x509 -inform DER -in ca.crt -out ca.pem
 As a fallback, you can export a certificate from the chain the proxy presents. Run this **from the affected server**:
 
 ```sh
-openssl s_client -showcerts -connect licensing.rallly.co:443 </dev/null 2>/dev/null | openssl x509 -outform PEM > ca.pem
+openssl s_client -showcerts -connect licensing.kinpal.com:443 </dev/null 2>/dev/null | openssl x509 -outform PEM > ca.pem
 ```
 
 Note that `openssl` does not read the proxy environment variables. On a network with no direct egress, add `-proxy proxy.internal.example.com:8080` to the command so the connection goes through your proxy.
@@ -81,7 +81,7 @@ Two caveats: this writes only the leaf certificate, so it stops working when the
 openssl x509 -in ca.pem -noout -subject
 ```
 
-If the subject names your organisation instead of `licensing.rallly.co`, TLS interception is confirmed.
+If the subject names your organisation instead of `licensing.kinpal.com`, TLS interception is confirmed.
 
 ## Diagnosing failures
 
@@ -95,5 +95,5 @@ Watch the logs while triggering the failing request (for example, a license acti
 |:--------------|:------|:----|
 | `UNABLE_TO_VERIFY_LEAF_SIGNATURE`, `SELF_SIGNED_CERT_IN_CHAIN`, or `unable to get local issuer certificate` | TLS is intercepted and re-signed by an untrusted CA | Set [`CA_CERT_FILE`](#trusting-a-custom-root-ca) |
 | `ENOTFOUND` | DNS resolution for the host is blocked | Allow DNS for the host, or route through a proxy that resolves it |
-| `ETIMEDOUT` or `ECONNREFUSED` | No direct route to the host | Configure the [proxy variables](#routing-traffic-through-a-proxy) (v4.12.3+), or request a firewall exception for `licensing.rallly.co` on port 443 |
+| `ETIMEDOUT` or `ECONNREFUSED` | No direct route to the host | Configure the [proxy variables](#routing-traffic-through-a-proxy) (v4.12.3+), or request a firewall exception for `licensing.kinpal.com` on port 443 |
 | `EAI_AGAIN` with no connection attempts | Proxy-only network with no external DNS, on a version before v4.12.3 that ignores proxy variables | [Update](/self-hosting/management#updating) to v4.12.3 or later, then configure the proxy variables |

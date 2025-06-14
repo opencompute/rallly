@@ -120,7 +120,7 @@ export const UserDropdown = ({ className }: { className?: string }) => {
           render={
             <Link
               target="_blank"
-              href="https://support.rallly.co"
+              href="https://support.kinpal.com"
               className="flex items-center gap-x-2"
             />
           }

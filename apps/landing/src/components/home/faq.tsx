@@ -80,7 +80,7 @@ export async function FaqSection({
               <a
                 key="support"
                 className="text-gray-800 underline underline-offset-2 hover:text-gray-600"
-                href="mailto:support@rallly.co"
+                href="mailto:support@kinpal.com"
               >
                 Email us
               </a>,

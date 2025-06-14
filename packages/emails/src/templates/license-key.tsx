@@ -132,14 +132,14 @@ async function LicenseKeyEmail({
               ns="emails"
               i18nKey="license_key_activationSteps"
               defaults={
-                "Follow these <a>instructions</a> to activate your license on your Rallly Self-Hosted instance."
+                "Follow these <a>instructions</a> to activate your license on your Kinpal Self-Hosted instance."
               }
               components={{
                 a: (
                   <Link
                     color={chrome.primaryColor}
                     className="text-link"
-                    href="https://support.rallly.co/self-hosting/licensing#activating-your-license"
+                    href="https://support.kinpal.com/self-hosting/licensing#activating-your-license"
                   />
                 ),
               }}
@@ -181,7 +181,7 @@ async function LicenseKeyEmail({
               i18n={i18n}
               ns="emails"
               i18nKey="license_key_signoff"
-              defaults="Thank you for choosing Rallly!"
+              defaults="Thank you for choosing Kinpal!"
             />
           </Text>
         </Container>
@@ -211,7 +211,7 @@ export async function sendLicenseKeyEmail({
   await sendRenderedEmail({
     to,
     subject: t("license_key_subject", {
-      defaultValue: "Your Rallly Self-Hosted {tier} License",
+      defaultValue: "Your Kinpal Self-Hosted {tier} License",
       tier: props.tier,
     }),
     element: (

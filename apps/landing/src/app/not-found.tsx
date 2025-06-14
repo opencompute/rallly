@@ -5,7 +5,7 @@ import "./[locale]/globals.css";
 import { sans } from "@/fonts/sans";
 
 export const metadata: Metadata = {
-  title: "404 not found | Rallly",
+  title: "404 not found | Kinpal",
   description: "The page you are looking for does not exist.",
 };
 
@@ -30,7 +30,7 @@ export default function NotFound() {
               <a href="/" className={buttonVariants({ variant: "primary" })}>
                 Go to home
               </a>
-              <a href="https://support.rallly.co" className={buttonVariants()}>
+              <a href="https://support.kinpal.com" className={buttonVariants()}>
                 Support
               </a>
             </div>

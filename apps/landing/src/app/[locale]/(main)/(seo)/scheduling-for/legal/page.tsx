@@ -2,17 +2,25 @@
 
 import type { Metadata } from "next";
 import { cacheLife } from "next/cache";
+import Image from "next/image";
 import Link from "next/link";
 import { Trans } from "react-i18next/TransWithoutContext";
 import { PeopleBadge, PollsBadge } from "@/components/home/animated-number";
 import { Cta } from "@/components/home/cta";
-import { FaqItem, FaqSection } from "@/components/home/faq";
+import { Faq, FaqItem } from "@/components/home/faq";
 import { Hero } from "@/components/home/hero";
 import { HeroDemo } from "@/components/home/hero-demo/hero-demo";
 import { HowItWorks } from "@/components/home/how-it-works/how-it-works";
-import { SocialProof } from "@/components/home/social-proof";
+import { Mention, Mentions } from "@/components/home/mentions";
 import { Stats } from "@/components/home/stats";
-import { Section } from "@/components/section";
+import { Testimonial } from "@/components/home/testimonial";
+import {
+  Section,
+  SectionContent,
+  SectionDescription,
+  SectionHeading,
+  SectionTitle,
+} from "@/components/section";
 import { getTranslation } from "@/i18n/server";
 import { getAlternates } from "@/lib/alternates";
 import { getMonthlyPollCount, getMonthlyVoterCount } from "@/lib/data";
@@ -31,7 +39,6 @@ export default async function Page(props: {
     <div className="divide-y">
       <Section>
         <Hero
-          wideDescription
           title={t("legalTitle", {
             ns: "home",
             defaultValue: "Scheduling for law firms and mediators",
@@ -59,143 +66,275 @@ export default async function Page(props: {
         </Stats>
       </Section>
       <HowItWorks locale={locale} />
-      <SocialProof locale={locale} />
-      <div className="divide-y">
-        <FaqSection
-          locale={locale}
+      <Section>
+        <Testimonial
+          logo={
+            <Image
+              src="/static/images/mit-logo.svg"
+              width={54}
+              height={28}
+              alt=""
+            />
+          }
+          avatar={
+            <Image
+              className="rounded-full"
+              src="/static/images/eric.png"
+              width={48}
+              height={48}
+              alt=""
+            />
+          }
+          name="Eric Fletcher"
           title={
             <Trans
               t={t}
               ns="home"
-              i18nKey="faqTitle"
-              defaults="Frequently asked questions"
+              i18nKey="ericJobTitle"
+              defaults="Executive Assistant at MIT"
             />
           }
         >
-          <FaqItem
-            question={
-              <Trans
-                t={t}
-                ns="home"
-                i18nKey="legalFaqOpposingCounsel"
-                defaults="Can opposing counsel respond without signing up?"
-              />
+          <Trans
+            t={t}
+            ns="home"
+            i18nKey="ericQuote"
+            defaults="“If your scheduling workflow lives in emails, I strongly encourage you to try and let Kinpal simplify your scheduling tasks for a more organized and less stressful workday.”"
+          />
+        </Testimonial>
+      </Section>
+      <Section>
+        <Mentions locale={locale}>
+          <Mention
+            delay={0.25}
+            logo={
+              <div className="relative h-8 w-14">
+                <Image
+                  src="/static/images/pcmag-logo.svg"
+                  alt="PCMag"
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
             }
           >
             <Trans
               t={t}
               ns="home"
-              i18nKey="legalFaqOpposingCounselAnswer"
-              defaults="Yes. Anyone with the link can reply whether or not they use Rallly, and whichever system their own firm runs. That matters when you are coordinating across firms, because the other side has no reason to adopt a tool just to give you three dates."
+              i18nKey="pcmagQuote"
+              defaults="“Set up a scheduling poll in as little time as possible.”"
             />
-          </FaqItem>
-          <FaqItem
-            question={
-              <Trans
-                t={t}
-                ns="home"
-                i18nKey="legalFaqAllParties"
-                defaults="Everyone has to attend, not just a majority. Does that work?"
-              />
+          </Mention>
+          <Mention
+            delay={0.5}
+            logo={
+              <div className="relative h-8 w-24">
+                <Image
+                  src="/static/images/hubspot-logo.svg"
+                  alt="HubSpot"
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
             }
           >
             <Trans
               t={t}
               ns="home"
-              i18nKey="legalFaqAllPartiesAnswer"
-              defaults="Yes. Every slot shows exactly who can attend and who cannot, rather than only a total, so you can find the dates where counsel for both sides, the clients and the neutral are all free, and rule out the ones where a required party said no."
+              i18nKey="hubspotQuote"
+              defaults="“The simplest choice for availability polling for large groups.”"
             />
-          </FaqItem>
-          <FaqItem
-            question={
-              <Trans
-                t={t}
-                ns="home"
-                i18nKey="legalFaqConfidential"
-                defaults="Will the poll reveal our client or matter details?"
-              />
+          </Mention>
+          <Mention
+            delay={0.75}
+            logo={
+              <div className="relative h-8 w-32">
+                <Image
+                  src="/static/images/goodfirms-logo.svg"
+                  alt="Goodfirms"
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
             }
           >
             <Trans
               t={t}
               ns="home"
-              i18nKey="legalFaqConfidentialAnswer"
-              defaults="Only what you choose to put in it. Many firms title the poll by matter reference rather than by party name, and leave the description empty. With <0>Rallly Pro</0> you can also hide participant names, so one side cannot see who else was invited, and hide votes until someone has responded themselves."
-              components={[
-                <Link
-                  key="pricing"
-                  className="text-gray-800 underline underline-offset-2 hover:text-gray-600"
-                  href="/pricing"
-                />,
-              ]}
+              i18nKey="goodfirmsQuote"
+              defaults="“Unique in its simplicity and requires minimum interaction time.”"
             />
-          </FaqItem>
-          <FaqItem
-            question={
-              <Trans
-                t={t}
-                ns="home"
-                i18nKey="legalFaqTimeZones"
-                defaults="Does it handle parties in different jurisdictions?"
-              />
+          </Mention>
+          <Mention
+            delay={1}
+            logo={
+              <div className="relative h-8 w-20">
+                <Image
+                  src="/static/images/popsci-logo.svg"
+                  alt="PopSci"
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
             }
           >
             <Trans
               t={t}
               ns="home"
-              i18nKey="legalFaqTimeZonesAnswer"
-              defaults="Yes. Each participant sees the proposed slots in their own time zone automatically, so counsel in London and a client in New York are looking at the same slot without either of them converting anything by hand."
+              i18nKey="popsciQuote"
+              defaults="“The perfect pick if you want to keep your RSVPs simple.”"
             />
-          </FaqItem>
-          <FaqItem
-            question={
+          </Mention>
+        </Mentions>
+      </Section>
+      <div>
+        <Section>
+          <SectionHeading>
+            <SectionTitle>
               <Trans
                 t={t}
                 ns="home"
-                i18nKey="legalFaqBranding"
-                defaults="Can polls carry our firm branding?"
+                i18nKey="faqTitle"
+                defaults="Frequently asked questions"
               />
-            }
-          >
-            <Trans
-              t={t}
-              ns="home"
-              i18nKey="legalFaqBrandingAnswer"
-              defaults="With <0>Rallly Pro</0> you can add your own logo and colours and remove Rallly attribution, so a poll you send to another firm or a client looks like it came from your practice. Everything else is free to use."
-              components={[
-                <Link
-                  key="pricing"
-                  className="text-gray-800 underline underline-offset-2 hover:text-gray-600"
-                  href="/pricing"
-                />,
-              ]}
-            />
-          </FaqItem>
-          <FaqItem
-            question={
+            </SectionTitle>
+            <SectionDescription>
               <Trans
                 t={t}
                 ns="home"
-                i18nKey="faqPrivacy"
-                defaults="Is my data private?"
+                i18nKey="faqDescription"
+                defaults="Quick answers about how Kinpal works, pricing, and privacy."
               />
-            }
-          >
-            <Trans
-              t={t}
-              ns="home"
-              i18nKey="faqPrivacyAnswer"
-              defaults="Yes. Privacy is central to how we build Rallly. We do not show ads or sell your data, we collect only what we need to run the service, and polls on the free plan are deleted automatically once they become inactive. Rallly is also open source, so anyone can inspect how their data is handled. You can read the details in our <0>privacy policy</0>."
-              components={[
-                <Link
-                  key="privacy"
-                  className="text-gray-800 underline underline-offset-2 hover:text-gray-600"
-                  href="/privacy-policy"
-                />,
-              ]}
-            />
-          </FaqItem>
-        </FaqSection>
+            </SectionDescription>
+          </SectionHeading>
+          <SectionContent>
+            <Faq>
+              <FaqItem
+                question={
+                  <Trans
+                    t={t}
+                    ns="home"
+                    i18nKey="legalFaqOpposingCounsel"
+                    defaults="Can opposing counsel respond without signing up?"
+                  />
+                }
+              >
+                <Trans
+                  t={t}
+                  ns="home"
+                  i18nKey="legalFaqOpposingCounselAnswer"
+                  defaults="Yes. Anyone with the link can reply whether or not they use Kinpal, and whichever system their own firm runs. That matters when you are coordinating across firms, because the other side has no reason to adopt a tool just to give you three dates."
+                />
+              </FaqItem>
+              <FaqItem
+                question={
+                  <Trans
+                    t={t}
+                    ns="home"
+                    i18nKey="legalFaqAllParties"
+                    defaults="Everyone has to attend, not just a majority. Does that work?"
+                  />
+                }
+              >
+                <Trans
+                  t={t}
+                  ns="home"
+                  i18nKey="legalFaqAllPartiesAnswer"
+                  defaults="Yes. Every slot shows exactly who can attend and who cannot, rather than only a total, so you can find the dates where counsel for both sides, the clients and the neutral are all free, and rule out the ones where a required party said no."
+                />
+              </FaqItem>
+              <FaqItem
+                question={
+                  <Trans
+                    t={t}
+                    ns="home"
+                    i18nKey="legalFaqConfidential"
+                    defaults="Will the poll reveal our client or matter details?"
+                  />
+                }
+              >
+                <Trans
+                  t={t}
+                  ns="home"
+                  i18nKey="legalFaqConfidentialAnswer"
+                  defaults="Only what you choose to put in it. Many firms title the poll by matter reference rather than by party name, and leave the description empty. With <0>Kinpal Pro</0> you can also hide participant names, so one side cannot see who else was invited, and hide votes until someone has responded themselves."
+                  components={[
+                    <Link
+                      key="pricing"
+                      className="text-gray-800 underline underline-offset-2 hover:text-gray-600"
+                      href="/pricing"
+                    />,
+                  ]}
+                />
+              </FaqItem>
+              <FaqItem
+                question={
+                  <Trans
+                    t={t}
+                    ns="home"
+                    i18nKey="legalFaqTimeZones"
+                    defaults="Does it handle parties in different jurisdictions?"
+                  />
+                }
+              >
+                <Trans
+                  t={t}
+                  ns="home"
+                  i18nKey="legalFaqTimeZonesAnswer"
+                  defaults="Yes. Each participant sees the proposed slots in their own time zone automatically, so counsel in London and a client in New York are looking at the same slot without either of them converting anything by hand."
+                />
+              </FaqItem>
+              <FaqItem
+                question={
+                  <Trans
+                    t={t}
+                    ns="home"
+                    i18nKey="legalFaqBranding"
+                    defaults="Can polls carry our firm branding?"
+                  />
+                }
+              >
+                <Trans
+                  t={t}
+                  ns="home"
+                  i18nKey="legalFaqBrandingAnswer"
+                  defaults="With <0>Kinpal Pro</0> you can add your own logo and colours and remove Kinpal attribution, so a poll you send to another firm or a client looks like it came from your practice. Everything else is free to use."
+                  components={[
+                    <Link
+                      key="pricing"
+                      className="text-gray-800 underline underline-offset-2 hover:text-gray-600"
+                      href="/pricing"
+                    />,
+                  ]}
+                />
+              </FaqItem>
+              <FaqItem
+                question={
+                  <Trans
+                    t={t}
+                    ns="home"
+                    i18nKey="faqPrivacy"
+                    defaults="Is my data private?"
+                  />
+                }
+              >
+                <Trans
+                  t={t}
+                  ns="home"
+                  i18nKey="faqPrivacyAnswer"
+                  defaults="Yes. Privacy is central to how we build Kinpal. We do not show ads or sell your data, we collect only what we need to run the service, and polls on the free plan are deleted automatically once they become inactive. Kinpal is also open source, so anyone can inspect how their data is handled. You can read the details in our <0>privacy policy</0>."
+                  components={[
+                    <Link
+                      key="privacy"
+                      className="text-gray-800 underline underline-offset-2 hover:text-gray-600"
+                      href="/privacy-policy"
+                    />,
+                  ]}
+                />
+              </FaqItem>
+            </Faq>
+          </SectionContent>
+        </Section>
         <Section className="sm:py-24">
           <Cta
             title={
@@ -247,12 +386,13 @@ export async function generateMetadata(props: {
     alternates: getAlternates({ locale, path: "/scheduling-for/legal" }),
     title: t("legalMetaTitle", {
       ns: "home",
-      defaultValue: "Scheduling for Law Firms and Mediators",
+      defaultValue:
+        "Scheduling for Law Firms and Mediators | Free Availability Poll",
     }),
     description: t("legalMetaDescription", {
       ns: "home",
       defaultValue:
-        "Rallly is a free scheduling tool for mediations, hearings and client conferences. Find a date that works for both sides with one link. No account needed to respond.",
+        "Kinpal is a free scheduling tool for mediations, hearings and client conferences. Find a date that works for both sides with one link. No account needed to respond.",
     }),
   };
 }

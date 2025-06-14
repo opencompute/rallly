@@ -4,9 +4,9 @@ export const DEFAULT_PRIMARY_COLOR = "#4f46e5";
 export const DEFAULT_LOGO_URL = absoluteUrl("/static/logo.svg");
 export const DEFAULT_LOGO_URL_DARK = absoluteUrl("/static/logo-dark.svg");
 export const DEFAULT_LOGO_ICON_URL = absoluteUrl(
-  "/images/rallly-logo-mark.png",
+  "/images/kinpal-logo-mark.png",
 );
-export const DEFAULT_APP_NAME = "Rallly";
-export const LOGO_VIEWBOX = { width: 192, height: 128 };
+export const DEFAULT_APP_NAME = "Kinpal";
+export const LOGO_VIEWBOX = { width: 128, height: 128 };
 export const LIGHT_MODE_BACKGROUND = "#ffffff";
 export const DARK_MODE_BACKGROUND = "#171717";

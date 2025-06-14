@@ -33,7 +33,7 @@ That's a legitimate business choice, and if your company schedules client meetin
 
 ## If you just need a scheduling poll
 
-That's the gap [Rallly](https://rallly.co) fills. It does one thing: you suggest some times, share a link, and everyone votes on what works. The things Doodle now charges for are free here:
+That's the gap [Kinpal](https://kinpal.com) fills. It does one thing: you suggest some times, share a link, and everyone votes on what works. The things Doodle now charges for are free here:
 
 - **Unlimited polls.** Create as many as you need.
 - **No ads.** Not for you, not for your participants.
@@ -41,10 +41,10 @@ That's the gap [Rallly](https://rallly.co) fills. It does one thing: you suggest
 - **Unlimited participants.** No caps on how many people can vote.
 - **Automatic time zone conversion.** Everyone sees the options in their own time zone.
 
-Rallly is also [open source](https://github.com/lukevella/rallly), so you can inspect exactly how it works and even host it on your own server.
+Kinpal is also [open source](https://github.com/lukevella/rallly), so you can inspect exactly how it works and even host it on your own server.
 
-To be equally transparent about our model: Rallly makes money from [Rallly Pro](https://rallly.co/pricing), which adds features you'd want if you use it professionally, like custom branding and polls that stay around indefinitely. That's what keeps the free plan free, without ads, for everyone else.
+To be equally transparent about our model: Kinpal makes money from [Kinpal Pro](https://kinpal.com/pricing), which adds features you'd want if you use it professionally, like custom branding and polls that stay around indefinitely. That's what keeps the free plan free, without ads, for everyone else.
 
-If you want a feature-by-feature comparison, see [how Rallly compares to Doodle](https://rallly.co/best-doodle-alternative).
+If you want a feature-by-feature comparison, see [how Kinpal compares to Doodle](https://kinpal.com/best-doodle-alternative).
 
-Or skip the reading and [create a poll](https://app.rallly.co/new) right now. It takes about a minute, and nobody has to sign up for anything.
+Or skip the reading and [create a poll](https://app.kinpal.com/new) right now. It takes about a minute, and nobody has to sign up for anything.

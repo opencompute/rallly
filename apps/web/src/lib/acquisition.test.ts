@@ -50,28 +50,28 @@ const setCookies = (url: string) => {
 describe("setRefCookie", () => {
   it("persists both ref and cta", () => {
     const cookies = setCookies(
-      "https://app.rallly.co/?ref=pricing&cta=pricing_pro",
+      "https://app.kinpal.com/?ref=pricing&cta=pricing_pro",
     );
     expect(cookies.get(REF_COOKIE_NAME)?.value).toBe("pricing");
     expect(cookies.get(CTA_COOKIE_NAME)?.value).toBe("pricing_pro");
   });
 
   it("keeps ref but stores no cta when cta is invalid", () => {
-    const cookies = setCookies("https://app.rallly.co/?ref=pricing&cta=NOPE");
+    const cookies = setCookies("https://app.kinpal.com/?ref=pricing&cta=NOPE");
     expect(cookies.get(REF_COOKIE_NAME)?.value).toBe("pricing");
     // Rejected values take the clear path, so nothing bogus is ever persisted.
     expect(cookies.get(CTA_COOKIE_NAME)?.value).toBe("");
   });
 
   it("ignores cta without a ref", () => {
-    const cookies = setCookies("https://app.rallly.co/?cta=pricing_pro");
+    const cookies = setCookies("https://app.kinpal.com/?cta=pricing_pro");
     expect(cookies.getAll()).toHaveLength(0);
   });
 
   // A later ref-only click must not inherit the previous click's cta, or the
   // pair would describe two different visits.
   it("clears a stale cta when the new ref carries none", () => {
-    const cookies = setCookies("https://app.rallly.co/?ref=home");
+    const cookies = setCookies("https://app.kinpal.com/?ref=home");
     const cta = cookies.get(CTA_COOKIE_NAME);
     expect(cta?.value).toBe("");
     expect(cta?.expires).toEqual(new Date(0));

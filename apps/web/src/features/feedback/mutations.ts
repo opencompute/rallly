@@ -15,7 +15,7 @@ export async function submitFeedback({
   content: string;
 }) {
   await sendRawEmail({
-    to: "feedback@rallly.co",
+    to: "feedback@kinpal.com",
     replyTo: userEmail,
     subject: "Feedback",
     text: `User: ${userName} (${userEmail})\n\n${content}`,

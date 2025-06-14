@@ -148,7 +148,7 @@ async function FinalizeParticipantEmail({
 FinalizeParticipantEmail.PreviewProps = {
   title: "Untitled Poll",
   hostName: "Host",
-  pollUrl: "https://rallly.co",
+  pollUrl: "https://kinpal.com",
   day: "12",
   dow: "Fri",
   date: "Friday, 12th June 2020",

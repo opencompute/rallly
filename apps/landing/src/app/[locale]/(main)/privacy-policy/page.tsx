@@ -1,17 +1,19 @@
 "use cache";
 
 import { cacheLife } from "next/cache";
-import { LegalPageLayout } from "@/components/legal-page-layout";
 import { Section } from "@/components/section";
-import { LinkBase } from "@/i18n/client/link";
 
 export default async function PrivacyPolicy() {
   cacheLife("max");
   return (
     <Section>
-      <LegalPageLayout title="Privacy policy" lastUpdated="2026-09-08">
+      <h1 className="max-w-2xl text-balance font-medium text-3xl text-gray-800 tracking-tight sm:text-4xl">
+        Privacy policy
+      </h1>
+      <p className="mt-4 text-gray-500 text-sm">Last updated: 30 August 2026</p>
+      <div className="longform mt-8 max-w-2xl">
         <p>
-          At rallly.co, we take your privacy seriously. This privacy policy
+          At kinpal.com, we take your privacy seriously. This privacy policy
           explains how we collect, use, and disclose your personal data, and
           your rights in relation to your personal data under the General Data
           Protection Regulation (GDPR).
@@ -46,15 +48,6 @@ export default async function PrivacyPolicy() {
           website.
         </p>
 
-        <p>
-          If you have an account, your analytics profile in Posthog is keyed to
-          your account and carries your name and email address. We keep the
-          email address there so that, when you contact us about a problem, we
-          can find your account&apos;s activity and work out what went wrong. It
-          is not written into individual analytics events, is not used for
-          marketing, and is erased from Posthog when you delete your account.
-        </p>
-
         <h2>Optional information about your work</h2>
 
         <p>
@@ -74,7 +67,7 @@ export default async function PrivacyPolicy() {
         </ul>
 
         <p>
-          We use this to understand which professional groups use Rallly, so we
+          We use this to understand which professional groups use Kinpal, so we
           can improve the product for them and focus our documentation and
           marketing on the people it is written for. This information is also
           shared with Posthog, our analytics processor, for the same purpose.
@@ -91,10 +84,10 @@ export default async function PrivacyPolicy() {
 
         <p>
           Both fields are optional. You can skip either one when setting up your
-          account, and neither is required to use Rallly — skipping them has no
+          account, and neither is required to use Kinpal — skipping them has no
           effect on the service you receive. To change or remove an answer you
           have already given, email us at{" "}
-          <a href="mailto:support@rallly.co">support@rallly.co</a> and we will
+          <a href="mailto:support@kinpal.com">support@kinpal.com</a> and we will
           update or erase it.
         </p>
 
@@ -118,15 +111,6 @@ export default async function PrivacyPolicy() {
           can withdraw consent at any time by asking us to erase the answer.
         </p>
 
-        <p>
-          We keep your name and email address on your analytics profile on the
-          basis of our legitimate interest in providing support and diagnosing
-          faults: without them we cannot connect a support request to the
-          activity that caused it. You can object to this processing at any time
-          by contacting us at the address below, and we will remove those
-          details from your analytics profile.
-        </p>
-
         <h2>Retention of personal data</h2>
 
         <p>
@@ -148,46 +132,9 @@ export default async function PrivacyPolicy() {
         </p>
 
         <p>
-          We rely on the following service providers to operate rallly.co, each
-          of which may process personal data for the purpose described:
-        </p>
-
-        <ul>
-          <li>Vercel — application hosting (United States)</li>
-          <li>Neon — managed PostgreSQL database (United States)</li>
-          <li>Upstash — session data and rate limiting (United States)</li>
-          <li>
-            Amazon Web Services — transactional email and object storage (United
-            States)
-          </li>
-          <li>
-            Stripe — payment processing, billing contact data only (United
-            States)
-          </li>
-          <li>PostHog — product analytics (European Union)</li>
-          <li>Sentry — error monitoring (United States)</li>
-        </ul>
-
-        <p>
-          The same providers are listed, with transfer mechanisms, in the
-          Sub-processor annex of our{" "}
-          <LinkBase href="/dpa">Data Processing Agreement</LinkBase>.
-        </p>
-
-        <p>
-          We also use Featurebase to make it easy for users to submit feedback.
-          Your name and email may be shared with Featurebase to provide a
-          seamless transition between the two services.
-        </p>
-
-        <h2>Processing on behalf of organizations</h2>
-
-        <p>
-          Where we process personal data on behalf of an organization using
-          Rallly, for example the details of people invited to that
-          organization&apos;s polls and events, we act as a processor and that
-          processing is governed by our{" "}
-          <LinkBase href="/dpa">Data Processing Agreement</LinkBase>.
+          For example, we use Featurebase to make it easy for users to submit
+          feedback. Your name and email may be shared with Featurbase to provide
+          a seamless transition between the two services.
         </p>
 
         <h2>Your rights</h2>
@@ -224,7 +171,7 @@ export default async function PrivacyPolicy() {
 
         <p>
           To exercise any of these rights, please contact us at{" "}
-          <a href="mailto:support@rallly.co">support@rallly.co</a>.
+          <a href="mailto:support@kinpal.com">support@kinpal.com</a>.
         </p>
 
         <h2>Contact</h2>
@@ -232,9 +179,9 @@ export default async function PrivacyPolicy() {
         <p>
           If you have any questions or concerns about our privacy policy or our
           practices with regards to your personal data, please contact us at{" "}
-          <a href="mailto:support@rallly.co">support@rallly.co</a>.
+          <a href="mailto:support@kinpal.com">support@kinpal.com</a>.
         </p>
-      </LegalPageLayout>
+      </div>
     </Section>
   );
 }
@@ -242,7 +189,7 @@ export default async function PrivacyPolicy() {
 export async function generateMetadata() {
   cacheLife("max");
   return {
-    title: "Privacy Policy",
-    description: "The privacy policy for Rallly.",
+    title: "Kinpal: Privacy Policy",
+    description: "The privacy policy for Kinpal.",
   };
 }

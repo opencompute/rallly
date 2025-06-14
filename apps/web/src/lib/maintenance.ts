@@ -4,7 +4,7 @@
 // misconfigured server var. Shape is still validated in `@/env`.
 
 export const MAINTENANCE_PATH = "/maintenance";
-export const MAINTENANCE_BYPASS_COOKIE_NAME = "rallly-maintenance-bypass";
+export const MAINTENANCE_BYPASS_COOKIE_NAME = "kinpal-maintenance-bypass";
 export const MAINTENANCE_BYPASS_COOKIE_MAX_AGE = 60 * 60 * 4;
 
 export function isMaintenanceModeEnabled() {

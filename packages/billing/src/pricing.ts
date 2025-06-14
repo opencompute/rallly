@@ -1,10 +1,10 @@
 export const pricingData = {
   monthly: {
-    amount: 700,
+    amount: 600,
     currency: "usd",
   },
   yearly: {
-    amount: 5600,
+    amount: 6000,
     currency: "usd",
   },
 };
@@ -24,7 +24,7 @@ export const displayedCurrencies = ["usd", "eur", "gbp"] as const;
 // Set by the landing proxy from the request country and rewritten when the
 // visitor picks a currency on the pricing page. Shared with the app through
 // the cookie domain so the pay wall opens in the same currency.
-export const CURRENCY_COOKIE_NAME = "rallly_currency";
+export const CURRENCY_COOKIE_NAME = "kinpal_currency";
 
 export type DisplayedCurrency = (typeof displayedCurrencies)[number];
 

@@ -6,9 +6,9 @@ import NewParticipantEmail from "./new-participant";
 const baseProps = {
   title: "Team Meeting",
   participantName: "Jane Doe",
-  pollUrl: "https://rallly.co/poll/abc",
-  unsubscribeUrl: "https://rallly.co/unsubscribe/token",
-  disableNotificationsUrl: "https://rallly.co/settings",
+  pollUrl: "https://kinpal.com/poll/abc",
+  unsubscribeUrl: "https://kinpal.com/unsubscribe/token",
+  disableNotificationsUrl: "https://kinpal.com/settings",
   chrome: previewChrome,
 };
 
@@ -38,8 +38,8 @@ describe("NewParticipantEmail", () => {
 
   it("links both footer actions", async () => {
     const html = await renderEmail();
-    expect(html).toContain('href="https://rallly.co/unsubscribe/token"');
-    expect(html).toContain('href="https://rallly.co/settings"');
+    expect(html).toContain('href="https://kinpal.com/unsubscribe/token"');
+    expect(html).toContain('href="https://kinpal.com/settings"');
   });
 
   it("shows reply guidance only when a reply address exists", async () => {

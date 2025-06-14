@@ -86,7 +86,7 @@ export default async function Page(props: {
               t={t}
               ns="home"
               i18nKey="assistantsFaqExternalGuestsAnswer"
-              defaults="Yes. Anyone with the link can respond, whether or not they use Rallly and whichever calendar system their company runs on. They don't need an account and there is no limit on how many people you invite, so board members, clients and external counsel can all reply the same way."
+              defaults="Yes. Anyone with the link can respond, whether or not they use Kinpal and whichever calendar system their company runs on. They don't need an account and there is no limit on how many people you invite, so board members, clients and external counsel can all reply the same way."
             />
           </FaqItem>
           <FaqItem
@@ -154,7 +154,7 @@ export default async function Page(props: {
               t={t}
               ns="home"
               i18nKey="assistantsFaqBrandingAnswer"
-              defaults="With <0>Rallly Pro</0> you can add your own logo and colours and remove Rallly attribution, so a poll you send to a board or a client looks like it came from your organization. Everything else is free to use."
+              defaults="With <0>Kinpal Pro</0> you can add your own logo and colours and remove Kinpal attribution, so a poll you send to a board or a client looks like it came from your organization. Everything else is free to use."
               components={[
                 <Link
                   key="pricing"
@@ -178,7 +178,7 @@ export default async function Page(props: {
               t={t}
               ns="home"
               i18nKey="faqPrivacyAnswer"
-              defaults="Yes. Privacy is central to how we build Rallly. We do not show ads or sell your data, we collect only what we need to run the service, and polls on the free plan are deleted automatically once they become inactive. Rallly is also open source, so anyone can inspect how their data is handled. You can read the details in our <0>privacy policy</0>."
+              defaults="Yes. Privacy is central to how we build Kinpal. We do not show ads or sell your data, we collect only what we need to run the service, and polls on the free plan are deleted automatically once they become inactive. Kinpal is also open source, so anyone can inspect how their data is handled. You can read the details in our <0>privacy policy</0>."
               components={[
                 <Link
                   key="privacy"
@@ -248,7 +248,7 @@ export async function generateMetadata(props: {
     description: t("assistantsMetaDescription", {
       ns: "home",
       defaultValue:
-        "Rallly is a free scheduling tool for executive, administrative and personal assistants. Coordinate meetings across busy calendars and time zones with one link. No account needed to respond.",
+        "Kinpal is a free scheduling tool for executive, administrative and personal assistants. Coordinate meetings across busy calendars and time zones with one link. No account needed to respond.",
     }),
   };
 }

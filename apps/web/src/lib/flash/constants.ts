@@ -5,5 +5,5 @@
 export const FLASH_MAX_AGE = 5 * 60;
 
 export function flashCookieName(key: string) {
-  return `rallly_flash_${key}`;
+  return `kinpal_flash_${key}`;
 }

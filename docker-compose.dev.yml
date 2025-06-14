@@ -1,5 +1,5 @@
 services:
-  rallly_db:
+  kinpal_db:
     image: postgres:18-alpine
     restart: always
     ports:
@@ -45,8 +45,8 @@ services:
       - garage-meta:/var/lib/garage/meta
       - garage-data:/var/lib/garage/data
     environment:
-      - GARAGE_DEFAULT_ACCESS_KEY=rallly-access-key
-      - GARAGE_DEFAULT_SECRET_KEY=rallly-secret-key
+      - GARAGE_DEFAULT_ACCESS_KEY=kinpal-access-key
+      - GARAGE_DEFAULT_SECRET_KEY=kinpal-secret-key
       - GARAGE_DEFAULT_BUCKET=rallly
     command: /garage server --single-node --default-bucket
     healthcheck:
@@ -74,8 +74,8 @@ services:
       garage:
         condition: service_healthy
     environment:
-      - AWS_ACCESS_KEY_ID=rallly-access-key
-      - AWS_SECRET_ACCESS_KEY=rallly-secret-key
+      - AWS_ACCESS_KEY_ID=kinpal-access-key
+      - AWS_SECRET_ACCESS_KEY=kinpal-secret-key
       - AWS_DEFAULT_REGION=garage
     volumes:
       - ./docker/cors.json:/cors.json:ro

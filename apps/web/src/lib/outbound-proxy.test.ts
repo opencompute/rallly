@@ -108,14 +108,14 @@ test("Node's global fetch routes through the proxy from HTTP_PROXY", async () =>
 
   setupOutboundProxy();
 
-  const res = await fetch("http://rallly-proxy-contract-check.invalid/ping", {
+  const res = await fetch("http://kinpal-proxy-contract-check.invalid/ping", {
     signal: AbortSignal.timeout(5000),
   });
 
   expect(res.status).toBe(200);
   expect(await res.text()).toBe("proxied");
   expect(targets).toContainEqual(
-    expect.stringContaining("rallly-proxy-contract-check.invalid"),
+    expect.stringContaining("kinpal-proxy-contract-check.invalid"),
   );
 });
 

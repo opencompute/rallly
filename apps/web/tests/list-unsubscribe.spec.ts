@@ -16,7 +16,7 @@ import { createUserInDb, loginWithEmail } from "./test-utils";
  * a tokenized link. Both mute the poll for the owner without a session.
  */
 
-const OWNER_EMAIL = "list-unsubscribe-owner@rallly.co";
+const OWNER_EMAIL = "list-unsubscribe-owner@kinpal.com";
 const POLL_TITLE = "List Unsubscribe Poll";
 
 test.describe.configure({ mode: "serial" });

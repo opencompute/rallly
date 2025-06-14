@@ -18,7 +18,7 @@ import { prisma } from "@rallly/database";
 const ZONE_A = "Asia/Kathmandu";
 const ZONE_B = "America/St_Johns";
 
-const HOST_EMAIL = "cross-tz-host@rallly.co";
+const HOST_EMAIL = "cross-tz-host@kinpal.com";
 
 const ZONED_POLL_ID = "cross-tz-zoned-poll";
 const FLOATING_POLL_ID = "cross-tz-floating-poll";

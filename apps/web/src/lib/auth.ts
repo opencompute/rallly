@@ -143,7 +143,7 @@ function warnMicrosoftClaimMissing() {
   }
   microsoftClaimWarned = true;
   logger.warn(
-    "Microsoft sign-in is creating accounts from unverified email addresses because the app registration does not emit the verified_primary_email claim. Add it before the next release, which will refuse these sign-ins: https://support.rallly.co/self-hosting/single-sign-on#microsoft",
+    "Microsoft sign-in is creating accounts from unverified email addresses because the app registration does not emit the verified_primary_email claim. Add it before the next release, which will refuse these sign-ins: https://support.kinpal.com/self-hosting/single-sign-on#microsoft",
   );
 }
 
@@ -187,7 +187,7 @@ export const authLib = betterAuth({
   plugins: [
     admin(),
     anonymous({
-      emailDomainName: "rallly.co",
+      emailDomainName: "kinpal.com",
       generateName: async () => {
         const { t } = await getTranslation();
         return t("guest");
@@ -272,6 +272,13 @@ export const authLib = betterAuth({
               }
               return {};
             },
+          }
+        : undefined,
+    github:
+      env.GITHUB_CLIENT_ID && env.GITHUB_CLIENT_SECRET
+        ? {
+            clientId: env.GITHUB_CLIENT_ID,
+            clientSecret: env.GITHUB_CLIENT_SECRET,
           }
         : undefined,
   },

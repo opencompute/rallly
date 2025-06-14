@@ -15,7 +15,7 @@ import {
  * lands in mailpit, plus the invite row the action wrote.
  */
 
-const HOST_EMAIL = "rsvp-email-host@rallly.co";
+const HOST_EMAIL = "rsvp-email-host@kinpal.com";
 const EVENT_ID = "rsvp-email-event";
 const EVENT_UID = "rsvp-email-event-uid";
 const EVENT_TITLE = "RSVP Email Test Event";

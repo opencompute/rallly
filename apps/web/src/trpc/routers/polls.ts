@@ -824,7 +824,7 @@ export const polls = router({
                   .map((p) => ({
                     inviteeName: p.name,
                     inviteeEmail:
-                      p.user?.email ?? p.email ?? `${p.id}@rallly.co`,
+                      p.user?.email ?? p.email ?? `${p.id}@kinpal.com`,
                     inviteeTimeZone:
                       p.user?.timeZone ?? p.timeZone ?? poll.timeZone,
                     status: (

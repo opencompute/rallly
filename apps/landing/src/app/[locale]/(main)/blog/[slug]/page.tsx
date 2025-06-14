@@ -38,20 +38,19 @@ export default async function Page(props: {
         </div>
         <div className="mt-8 flex items-center gap-x-4">
           <Image
-            src="/static/images/luke-vella.jpg"
-            width={48}
-            height={48}
-            className="rounded-full"
-            alt="Luke Vella"
+            src="/logo.svg"
+            width={32}
+            height={32}
+            alt="Kinpal"
           />
           <div>
-            <div className="font-medium leading-none">Luke Vella</div>
+            <div className="font-medium leading-none">Kinpal</div>
             <div>
               <Link
                 className="text-muted-foreground text-sm hover:text-primary"
-                href="https://twitter.com/imlukevella"
+                href="https://x.com/kinpalai"
               >
-                @imlukevella
+                @kinpalai
               </Link>
             </div>
           </div>

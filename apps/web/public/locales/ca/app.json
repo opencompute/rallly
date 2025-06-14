@@ -92,7 +92,7 @@
   "polls": "Enquestes",
   "timeZoneSelect__noOption": "No s'ha trobat cap opció",
   "timeZoneSelect__inputPlaceholder": "Cerca…",
-  "poweredByRallly": "Amb la tecnologia de <a>{name}</a>",
+  "poweredByKinpal": "Amb la tecnologia de <a>{name}</a>",
   "participants": "Participants",
   "language": "Idioma",
   "languageDescription": "Canvia el teu idioma preferit",

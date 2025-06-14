@@ -10,7 +10,7 @@ import { getTranslation } from "@/i18n/server";
 import { getUserCount } from "@/lib/data";
 
 export async function Bonus(props: { locale: string }) {
-  const userCount = await getUserCount();
+  // const userCount = await getUserCount();
   const { t } = await getTranslation(props.locale, ["home"]);
 
   return (
@@ -24,7 +24,7 @@ export async function Bonus(props: { locale: string }) {
           i18nKey="statsUsersRegistered"
           ns="home"
           defaults="{count, number, ::compact-short} registered users"
-          values={{ count: userCount }}
+          values={{ count: 80 * 1000 }}
         />
       </BonusItem>
       <BonusItem

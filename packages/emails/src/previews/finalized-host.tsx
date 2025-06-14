@@ -8,7 +8,7 @@ export default function FinalizedHostPreview() {
       location="Zoom"
       attendees={["johndoe@example.com", "janedoe@example.com"]}
       title="Untitled Poll"
-      pollUrl="https://rallly.co"
+      pollUrl="https://kinpal.com"
       day="12"
       dow="Fri"
       date="Friday, 12th June 2020"

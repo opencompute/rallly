@@ -5,7 +5,7 @@ export default function LoginPreview() {
   return (
     <LoginEmail
       code="123456"
-      magicLink="https://rallly.co"
+      magicLink="https://kinpal.com"
       ctx={previewEmailContext}
     />
   );

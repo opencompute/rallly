@@ -18,17 +18,17 @@ export function PollHeader() {
         <div className="flex items-center gap-x-2.5">
           <Link
             className="transition-transform active:translate-y-1"
-            href="https://rallly.co"
+            href="https://kinpal.com"
           >
             <Image
               src="/images/logo-mark.svg"
-              alt="Rallly"
+              alt="Kinpal"
               width={32}
               height={32}
               priority={true}
               className="shrink-0"
             />
-            <span className="sr-only">Rallly</span>
+            <span className="sr-only">Kinpal</span>
           </Link>
         </div>
         <div className="flex items-center gap-x-2.5">

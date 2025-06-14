@@ -41,7 +41,7 @@ export const PreferencesProvider = ({
 }) => {
   const { user } = useUser();
   const [preferences = {}, setPreferences] = useLocalStorage(
-    "rallly.preferences",
+    "kinpal.preferences",
     initialValue,
     {
       raw: false,

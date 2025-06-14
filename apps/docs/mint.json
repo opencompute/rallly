@@ -1,0 +1,87 @@
+{
+  "name": "Kinpal",
+  "logo": {
+    "light": "/logo/logo.svg",
+    "dark": "/logo/logo.svg",
+    "href": "https://kinpal.com"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#4F46E5",
+    "light": "#6366f1",
+    "dark": "#4F46E5",
+    "background": {
+      "light": "#FFFFFF",
+      "dark": "#18181B"
+    },
+    "anchors": { "from": "#878AFA", "to": "#4347F1" }
+  },
+  "topbarCtaButton": {
+    "name": "Go to App",
+    "url": "https://app.kinpal.com"
+  },
+  "topbarLinks": [
+    {
+      "name": "Contact",
+      "url": "/contact/support"
+    }
+  ],
+  "tabs": [
+  ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": ["introduction", "faq"]
+    },
+    {
+      "group": "How it Works",
+      "pages": ["workflow/create", "workflow/invite", "workflow/finalize"]
+    },
+    {
+      "group": "Spaces",
+      "pages": [
+        "spaces/introduction",
+        "spaces/managing-seats",
+        "spaces/members",
+        "spaces/billing"
+      ]
+    },
+    {
+      "group": "Guides",
+      "pages": ["guide/participant-guide"]
+    },
+    {
+      "group": "Contact",
+      "pages": ["contact/support"]
+    }
+  ],
+  "footerSocials": {
+    "x-twitter": "https://x.com/kinpalai",
+    "linkedin": "https://www.linkedin.com/company/kinpal",
+    "github": "https://github.com/kinpalai",
+    "discord": "https://discord.gg/ZRZKqJf3tY",
+    "website": "https://kinpal.com"
+  },
+  "redirects": [
+    {
+      "source": "/administrators/creating-a-meeting-poll",
+      "destination": "/workflow/create"
+    },
+    {
+      "source": "/administrators/sharing-a-meeting-poll",
+      "destination": "/workflow/invite"
+    },
+    {
+      "source": "/participants/submitting-a-response",
+      "destination": "/guide/participant-guide"
+    },
+    {
+      "source": "/participants/editing-a-response",
+      "destination": "/guide/participant-guide"
+    },
+    {
+      "source": "/self-hosting/pricing",
+      "destination": "/self-hosting/licensing"
+    }
+  ]
+}

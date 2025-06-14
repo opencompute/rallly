@@ -72,7 +72,7 @@ export async function GET(request: NextRequest) {
         },
       ],
       mode: "payment",
-      success_url: "https://rallly.co/licensing/thank-you",
+      success_url: "https://kinpal.com/licensing/thank-you",
       ...(promoCodeId
         ? { discounts: [{ promotion_code: promoCodeId }] }
         : { allow_promotion_codes: true }),

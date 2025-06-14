@@ -92,7 +92,7 @@
   "polls": "Ankety",
   "timeZoneSelect__noOption": "Neboli nájdené žiadne možnosti",
   "timeZoneSelect__inputPlaceholder": "Hľadať…",
-  "poweredByRallly": "Poháňané <a>{name}</a>",
+  "poweredByKinpal": "Poháňané <a>{name}</a>",
   "participants": "Účastníkov",
   "language": "Jazyk",
   "languageDescription": "Vyberte preferovaný jazyk",

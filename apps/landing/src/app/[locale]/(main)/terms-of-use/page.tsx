@@ -2,10 +2,10 @@ export default function TermsOfUse() {
   return (
     <div className="prose mx-auto max-w-3xl">
       <h1>Terms of Use</h1>
-      <p>Last updated: 4 July 2023</p>
+      <p>Last updated: July 4, 2023</p>
       <p>
-        {`This website is operated by Stack Snap Ltd. References made to "we",
-          "us" or "our" pertain directly and exclusively to Stack Snap Ltd. We
+        {`This website is operated by Kinpal Inc. References made to "we",
+          "us" or "our" pertain directly and exclusively to Kinpal Inc. We
           provide you, as the user, with this website, which includes all the
           information, tools, and services accessible on it, under the
           stipulation that you agree to all the terms, conditions, policies, and
@@ -39,7 +39,7 @@ export default function TermsOfUse() {
       <h2>4. Links to Third-Party Websites</h2>
       <p>
         This website may contain links to third-party websites that are not
-        owned or controlled by rallly.co. We have no control over, and assume no
+        owned or controlled by kinpal.com. We have no control over, and assume no
         responsibility for, the content, privacy policies, or practices of any
         third-party websites.
       </p>
@@ -55,21 +55,7 @@ export default function TermsOfUse() {
       <h2>6. Contact</h2>
       <p>
         If you have any questions about these terms of use, please contact us at{" "}
-        <a href="mailto:support@rallly.co">support@rallly.co</a>.
-      </p>
-
-      <p className="font-semibold text-sm">
-        Stack Snap Ltd.
-        <br />
-        The Gallery 14
-        <br />
-        Upland Road
-        <br />
-        London
-        <br />
-        SE22 9EE
-        <br />
-        United Kingdom
+        <a href="mailto:support@kinpal.com">support@kinpal.com</a>.
       </p>
     </div>
   );
@@ -77,7 +63,7 @@ export default function TermsOfUse() {
 
 export function generateMetadata() {
   return {
-    title: "Rallly: Terms of Use",
-    description: "The terms of use for Rallly.",
+    title: "Kinpal: Terms of Use",
+    description: "The terms of use for Kinpal.",
   };
 }

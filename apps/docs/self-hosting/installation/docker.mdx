@@ -1,10 +1,10 @@
 ---
 icon: docker
 title: Docker
-description: How to Self-Host Rallly using Docker
+description: How to Self-Host Kinpal using Docker
 ---
 
-This page will guide you through the process of setting up a self-hosted instance of Rallly using the Docker Compose configuration published in the [rallly-selfhosted](https://github.com/lukevella/rallly-selfhosted) repository on Github.
+This page will guide you through the process of setting up a self-hosted instance of Kinpal using the Docker Compose configuration published in the [rallly-selfhosted](https://github.com/opencompute/rallly-selfhosted) repository on Github.
 
 ## Requirements
 
@@ -20,14 +20,14 @@ _You will also need to have access to an SMTP server to send emails._
 ### 1. Clone the repository
 
 ```sh
-git clone https://github.com/lukevella/rallly-selfhosted.git
+git clone https://github.com/opencompute/rallly-selfhosted.git
 cd rallly-selfhosted
 ```
 
 If you don't have `git` installed you can download the repo using `curl`
 
 ```sh
-curl -L https://github.com/lukevella/rallly-selfhosted/archive/master.tar.gz | tar -xz
+curl -L https://github.com/opencompute/rallly-selfhosted/archive/master.tar.gz | tar -xz
 cd rallly-selfhosted-main
 ```
 
@@ -35,7 +35,7 @@ cd rallly-selfhosted-main
 
 In the root of this project you will find a file called `config.env`.
 This is where you can set your environment variables to configure your instance.
-This guide will go through the basics but, you can check out the full list of [configuration options](/self-hosting/configuration-options) in the [self-hosting docs](https://support.rallly.co/self-hosting).
+This guide will go through the basics but, you can check out the full list of [configuration options](/self-hosting/configuration-options) in the [self-hosting docs](https://support.kinpal.com/self-hosting).
 
 Start by generating a secret key. **Must be at least 32-characters long**.
 
@@ -100,11 +100,11 @@ This command will:
 
 By default the app will run unencrypted on port 3000. If you want to serve the app over HTTPS you will need to use a reverse proxy.
 
-After setting up a reverse proxy be sure to change this line `- 3000:3000` to - `127.0.0.1:3000:3000` in `docker-compose.yml` and restart the container for it to apply the changes. This prevents Rallly from being accessed remotely using HTTP on port 3000 which is a security concern.
+After setting up a reverse proxy be sure to change this line `- 3000:3000` to - `127.0.0.1:3000:3000` in `docker-compose.yml` and restart the container for it to apply the changes. This prevents Kinpal from being accessed remotely using HTTP on port 3000 which is a security concern.
 
 ## Version Management
 
-Rallly uses semantic versioning and releases are published as tags on [Docker Hub](https://hub.docker.com/r/lukevella/rallly).
+Kinpal uses semantic versioning and releases are published as tags on [Docker Hub](https://hub.docker.com/r/lukevella/rallly).
 You can use `latest` to get the most recent release but it is recommended that you pin the image to a major version to avoid accidentally pulling in breaking changes.
 You can set the version in `docker-compose.yml` by changing the following line:
 
@@ -112,12 +112,12 @@ You can set the version in `docker-compose.yml` by changing the following line:
 - image: lukevella/rallly:<version>
 ```
 
-Check the [releases](https://github.com/lukevella/rallly/releases) to see what versions are available.
+Check the [releases](https://github.com/opencompute/rallly/releases) to see what versions are available.
 We follow semver versioning so you may want to set your version to a major release (e.g. `lukevella/rallly:3`) to avoid pulling in breaking changes.
 
 ## Update Instructions
 
-Rallly is constantly being updated but you will need to manually pull these updates and restart the server to run the latest version. You can do this by running the following commands from within the same directory as your `docker-compose.yml`:
+Kinpal is constantly being updated but you will need to manually pull these updates and restart the server to run the latest version. You can do this by running the following commands from within the same directory as your `docker-compose.yml`:
 
 ```sh
 docker compose down

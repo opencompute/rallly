@@ -6,8 +6,8 @@ export default function NewParticipantPreview() {
     <NewParticipantEmail
       participantName="John Doe"
       title="Untitled Poll"
-      pollUrl="https://rallly.co"
-      disableNotificationsUrl="https://rallly.co"
+      pollUrl="https://kinpal.com"
+      disableNotificationsUrl="https://kinpal.com"
       ctx={previewEmailContext}
     />
   );

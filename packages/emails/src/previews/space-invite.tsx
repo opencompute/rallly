@@ -7,7 +7,7 @@ export default function SpaceInvitePreview() {
       spaceName="Marketing Team"
       inviterName="John Smith"
       spaceRole="member"
-      inviteUrl="https://rallly.co/invite/abc123"
+      inviteUrl="https://kinpal.com/invite/abc123"
       ctx={previewEmailContext}
     />
   );

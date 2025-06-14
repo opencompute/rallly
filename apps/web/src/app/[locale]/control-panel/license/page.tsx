@@ -134,7 +134,7 @@ export default async function LicensePage() {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://support.rallly.co/self-hosting/licensing"
+                  href="https://support.kinpal.com/self-hosting/licensing"
                 >
                   <Icon>
                     <ShoppingBagIcon />

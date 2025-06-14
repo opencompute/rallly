@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Rallly",
+  "name": "Kinpal",
   "colors": {
     "primary": "#4f39f6",
     "light": "#F8FAFC",
@@ -51,63 +51,12 @@
           }
         ]
       },
-      {
-        "tab": "Self-Hosting",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "self-hosting/introduction",
-              {
-                "group": "Installation",
-                "icon": "server",
-                "pages": [
-                  "self-hosting/installation/docker"
-                ]
-              },
-              "self-hosting/licensing",
-              "self-hosting/configuration"
-            ]
-          },
-          {
-            "group": "Guides",
-            "pages": [
-              "self-hosting/control-panel"
-            ]
-          },
-          {
-            "group": "Misc",
-            "pages": [
-              "self-hosting/managed-hosting"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Contribute",
-        "groups": [
-          {
-            "group": "Contribute",
-            "pages": [
-              "contribute/introduction"
-            ]
-          },
-          {
-            "group": "How to Contribute",
-            "pages": [
-              "contribute/donations",
-              "contribute/translations",
-              "contribute/documentation"
-            ]
-          }
-        ]
-      }
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg",
-    "href": "https://rallly.co"
+    "light": "/logo/logo.svg",
+    "dark": "/logo/logo.svg",
+    "href": "https://kinpal.com"
   },
   "background": {
     "color": {
@@ -115,26 +64,13 @@
       "dark": "#18181B"
     }
   },
-  "navbar": {
-    "links": [
-      {
-        "label": "Contact",
-        "href": "https://support.rallly.co/contact/support"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://github.com/lukevella/rallly"
-    }
-  },
   "footer": {
     "socials": {
-      "twitter": "https://twitter.com/ralllyco",
-      "linkedin": "https://www.linkedin.com/company/rallly/",
-      "github": "https://github.com/lukevella/rallly",
-      "discord": "https://discord.com/invite/uzg4ZcHbuM",
-      "website": "https://rallly.co/"
+      "twitter": "https://x.com/kinpalai",
+      "linkedin": "https://www.linkedin.com/company/kinpal",
+      "github": "https://github.com/kinpalai",
+      "discord": "https://discord.gg/ZRZKqJf3tY",
+      "website": "https://kinpal.com"
     }
   },
   "redirects": [

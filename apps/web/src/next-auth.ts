@@ -8,6 +8,7 @@ import { CustomPrismaAdapter } from "./auth/adapters/prisma";
 import { isEmailBanned, isEmailBlocked } from "./auth/helpers/is-email-blocked";
 import { mergeGuestsIntoUser } from "./auth/helpers/merge-user";
 import { EmailProvider } from "./auth/providers/email";
+import { GithubProvider } from "./auth/providers/github";
 import { GoogleProvider } from "./auth/providers/google";
 import { GuestProvider } from "./auth/providers/guest";
 import { MicrosoftProvider } from "./auth/providers/microsoft";
@@ -34,7 +35,7 @@ const {
     RegistrationTokenProvider,
     EmailProvider,
     GuestProvider,
-    ...([GoogleProvider(), OIDCProvider(), MicrosoftProvider()].filter(
+    ...([GoogleProvider(), OIDCProvider(), MicrosoftProvider(), GithubProvider()].filter(
       Boolean,
     ) as Provider[]),
   ],

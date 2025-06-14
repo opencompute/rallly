@@ -41,10 +41,10 @@ export default async function Root(props: { children: React.ReactNode }) {
       <header className="flex w-full items-center">
         <div className="flex grow items-center gap-x-12">
           <LinkBase className="inline-block rounded" href="/">
-            <Image src="/logo.svg" width={130} height={30} alt="rallly.co" />
+            <Image src="/logo.svg" width={28} height={28} alt="kinpal.com" /> Kinpal
           </LinkBase>
           <nav className="hidden items-center gap-2 lg:flex">
-            <NavLink href="https://support.rallly.co/workflow/create">
+            <NavLink href="https://support.kinpal.com/workflow/create">
               <Trans t={t} i18nKey="howItWorks" defaults="How it Works" />
             </NavLink>
             <NavLink href="/pricing">
@@ -53,7 +53,7 @@ export default async function Root(props: { children: React.ReactNode }) {
             <NavLink href="/blog">
               <Trans t={t} i18nKey="blog" />
             </NavLink>
-            <NavLink href="https://support.rallly.co">
+            <NavLink href="https://support.kinpal.com">
               <Trans t={t} i18nKey="support" />
             </NavLink>
           </nav>

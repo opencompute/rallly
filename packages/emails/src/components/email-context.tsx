@@ -7,10 +7,10 @@ i18nInstance.init({
 });
 
 export const previewEmailContext: EmailContext = {
-  logoUrl: "https://d39ixtfgglw55o.cloudfront.net/images/rallly-logo-mark.png",
-  baseUrl: "https://rallly.co",
-  domain: "rallly.co",
-  supportEmail: "support@rallly.co",
+  logoUrl: "https://d1vc0q3r9a4nkh.cloudfront.net/kinpal.png",
+  baseUrl: "https://kinpal.com",
+  domain: "kinpal.com",
+  supportEmail: "support@kinpal.com",
   i18n: i18nInstance,
   t: i18nInstance.getFixedT("en"),
 };

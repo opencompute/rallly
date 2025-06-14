@@ -271,7 +271,7 @@ export default async function Page() {
             />
           </p>
           <Button asChild>
-            <Link href="mailto:support@rallly.co">
+            <Link href="mailto:support@kinpal.com">
               <SendIcon className="size-4" />
               <Trans i18nKey="contactSupport" defaults="Contact Support" />
             </Link>

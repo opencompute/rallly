@@ -6,7 +6,9 @@ export function MicrosoftProvider() {
       name: "Microsoft",
       clientId: process.env.MICROSOFT_CLIENT_ID,
       clientSecret: process.env.MICROSOFT_CLIENT_SECRET,
-      issuer: `https://login.microsoftonline.com/${process.env.MICROSOFT_TENANT_ID || "common"}/v2.0`,
+      allowDangerousEmailAccountLinking: true,
+      wellKnown:
+        "https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration",
     });
   }
 }

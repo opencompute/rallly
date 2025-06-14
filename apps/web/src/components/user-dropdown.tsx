@@ -102,7 +102,7 @@ export const UserDropdown = ({ className }: { className?: string }) => {
         <DropdownMenuItem asChild={true}>
           <Link
             target="_blank"
-            href="https://support.rallly.co"
+            href="https://support.kinpal.com"
             className="flex items-center gap-x-2"
           >
             <LifeBuoyIcon className="size-4 text-muted-foreground" />
@@ -116,7 +116,7 @@ export const UserDropdown = ({ className }: { className?: string }) => {
           <DropdownMenuItem asChild={true}>
             <Link
               target="_blank"
-              href="https://support.rallly.co/self-hosting/pricing"
+              href="https://support.kinpal.com/self-hosting/pricing"
               className="flex items-center gap-x-2"
             >
               <GemIcon className="size-4 text-muted-foreground" />
@@ -128,7 +128,7 @@ export const UserDropdown = ({ className }: { className?: string }) => {
           <DropdownMenuItem asChild={true}>
             <Link
               target="_blank"
-              href="https://feedback.rallly.co"
+              href="https://kinpal.featurebase.app"
               className="flex items-center gap-x-2"
             >
               <MegaphoneIcon className="size-4 text-muted-foreground" />

@@ -1,1 +1,1 @@
-export const isSpacesEnabled = false;
+export const isSpacesEnabled = process.env.SPACE_ENABLED === "true";

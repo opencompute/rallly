@@ -1,4 +1,4 @@
-import { prisma } from "@rallly/database";
+// import { prisma } from "@rallly/database";
 import {
   CalendarCheck2Icon,
   LanguagesIcon,
@@ -12,9 +12,7 @@ import { getTranslation } from "@/i18n/server";
 
 export async function Bonus() {
   const { t } = await getTranslation();
-  const userCount = await prisma.user.count();
-  const roundedUserCount =
-    userCount > 100000 ? Math.floor(userCount / 10000) * 10000 : userCount;
+  // const userCount = await prisma.user.count();
   return (
     <div className="mx-auto flex flex-wrap justify-center gap-2 whitespace-nowrap text-center sm:grid-cols-4 sm:gap-4 sm:gap-x-8">
       <BonusItem
@@ -26,7 +24,7 @@ export async function Bonus() {
           i18nKey="statsUsersRegistered"
           ns="home"
           defaults="{count, number, ::compact-short} registered users"
-          values={{ count: roundedUserCount }}
+          values={{ count: 80 * 1000 }}
         />
       </BonusItem>
       <BonusItem

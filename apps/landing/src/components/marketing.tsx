@@ -142,7 +142,7 @@ export const BigTestimonial = () => {
           <Trans
             ns="home"
             i18nKey="ericQuote"
-            defaults="“If your scheduling workflow lives in emails, I strongly encourage you to try and let Rallly simplify your scheduling tasks for a more organized and less stressful workday.”"
+            defaults="“If your scheduling workflow lives in emails, I strongly encourage you to try and let Kinpal simplify your scheduling tasks for a more organized and less stressful workday.”"
           />
         </p>
         <p className="mt-1">

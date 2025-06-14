@@ -159,6 +159,13 @@ export const authLib = betterAuth({
             clientSecret: env.MICROSOFT_CLIENT_SECRET,
           }
         : undefined,
+    github:
+      env.GITHUB_CLIENT_ID && env.GITHUB_CLIENT_SECRET
+        ? {
+            clientId: env.GITHUB_CLIENT_ID,
+            clientSecret: env.GITHUB_CLIENT_SECRET,
+          }
+        : undefined,
   },
   user: {
     additionalFields: {

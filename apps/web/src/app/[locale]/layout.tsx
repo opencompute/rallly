@@ -45,7 +45,7 @@ async function loadData() {
           id: session.user.id,
           name: "Guest",
           isGuest: true,
-          email: `${session.user.id}@rallly.co`,
+          email: `${session.user.id}@kinpal.com`,
           role: "user",
           locale: session.user.locale ?? undefined,
           timeZone: session.user.timeZone ?? undefined,
@@ -115,8 +115,8 @@ export default async function Root({
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: {
-      template: "%s | Rallly",
-      default: "Rallly",
+      template: "%s | Kinpal",
+      default: "Kinpal",
     },
   };
 }

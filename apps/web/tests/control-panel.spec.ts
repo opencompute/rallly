@@ -4,8 +4,8 @@ import { prisma } from "@rallly/database";
 import { deleteAllMessages } from "./mailpit/mailpit";
 import { createUserInDb, loginWithEmail } from "./test-utils";
 
-const CONTROL_PANEL_NON_ADMIN_EMAIL = "cp-non-admin@rallly.co";
-const CONTROL_PANEL_ADMIN_EMAIL = "cp-admin@rallly.co";
+const CONTROL_PANEL_NON_ADMIN_EMAIL = "cp-non-admin@kinpal.com";
+const CONTROL_PANEL_ADMIN_EMAIL = "cp-admin@kinpal.com";
 
 test.describe
   .serial("Control Panel Access (/control-panel)", () => {

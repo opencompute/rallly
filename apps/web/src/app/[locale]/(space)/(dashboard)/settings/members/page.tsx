@@ -171,7 +171,7 @@ export default async function MembersSettingsPage() {
                           <Link
                             className="underline"
                             prefetch={false}
-                            href="https://support.rallly.co/self-hosting/licensing"
+                            href="https://support.kinpal.com/self-hosting/licensing"
                           />
                         ),
                       }}

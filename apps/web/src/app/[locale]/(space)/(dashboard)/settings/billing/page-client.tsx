@@ -169,7 +169,7 @@ export function BillingPageClient({
             }}
             asChild
           >
-            <a href="mailto:support@rallly.co">
+            <a href="mailto:support@kinpal.com">
               <Icon>
                 <SendIcon />
               </Icon>

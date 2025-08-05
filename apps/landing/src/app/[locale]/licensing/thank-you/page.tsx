@@ -9,7 +9,7 @@ export default async function LicensingThankYouPage() {
     <main className="relative flex h-dvh flex-col p-4 sm:justify-center sm:p-16">
       <div className="relative z-10 mx-auto w-full max-w-2xl space-y-6">
         <div className="py-4">
-          <LinkBase className="inline-block rounded" href="/">
+          <LinkBase className="flex rounded items-center gap-1 font-semibold text-primary-600" href="/">
             <Image src="/logo.svg" width={28} height={28} alt="kinpal.com" /> Kinpal
           </LinkBase>
         </div>

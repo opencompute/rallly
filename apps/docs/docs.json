@@ -50,7 +50,7 @@
             ]
           }
         ]
-      },
+      }
     ]
   },
   "logo": {
@@ -64,9 +64,22 @@
       "dark": "#18181B"
     }
   },
+  "navbar": {
+    "links": [
+      {
+        "label": "Contact",
+        "href": "https://support.kinpal.com/contact/support"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Go to App",
+      "href": "https://app.kinpal.com"
+    }
+  },
   "footer": {
     "socials": {
-      "twitter": "https://x.com/kinpalai",
+      "x": "https://x.com/kinpalai",
       "linkedin": "https://www.linkedin.com/company/kinpal",
       "github": "https://github.com/kinpalai",
       "discord": "https://discord.gg/ZRZKqJf3tY",

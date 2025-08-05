@@ -67,7 +67,7 @@
   "license_key_support": "Vastaa tähän sähköpostiin tai ota meihin yhteyttä osoitteessa <a>{supportEmail}</a>, jos tarvitset apua.",
   "license_key_signoff": "Kiitos, että valitsit Kinpaln!",
   "license_key_preview": "Lisenssiavaimesi on luotu.",
-  "license_key_subject": "Rallly Self-Hosted {tier} -lisenssisi",
+  "license_key_subject": "Kinpal Self-Hosted {tier} -lisenssisi",
   "eventCanceledContent": "<b>{hostName}</b> on perunut tapahtuman <b>{title}</b>, jonka ajankohta oli:",
   "eventCanceledPreview": "Tapahtuma peruttu",
   "eventCanceledHeading": "Tapahtuma peruttu",

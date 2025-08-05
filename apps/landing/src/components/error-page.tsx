@@ -33,7 +33,7 @@ const ErrorPage: React.FunctionComponent<ComponentProps> = ({
             <LinkBase href="/">{t("goToHome")}</LinkBase>
           </Button>
           <Button asChild>
-            <a href="https://support.rallly.co">{t("support")}</a>
+            <a href="https://support.kinpal.com">{t("support")}</a>
           </Button>
         </div>
       </div>

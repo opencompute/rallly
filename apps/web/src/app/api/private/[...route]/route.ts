@@ -44,7 +44,7 @@ app.get(
   openAPIRouteHandler(app, {
     documentation: {
       info: {
-        title: "Rallly Private API",
+        title: "Kinpal Private API",
         version: "0.0.1",
       },
       servers: [{ url: "/api/private" }],
@@ -64,7 +64,7 @@ app.get(
   "/docs",
   Scalar({
     url: "/api/private/openapi",
-    pageTitle: "Rallly Private API Documentation",
+    pageTitle: "Kinpal Private API Documentation",
     theme: "purple",
   }),
 );

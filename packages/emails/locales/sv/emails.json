@@ -51,10 +51,10 @@
   "abandoned_checkout_noname": "Hejsan,",
   "abandoned_checkout_content": "Jag noterade att du kollade in <b>Kinpal Pro</b> tidigare. Jag ville se om du hade några frågor eller behövde hjälp med något.",
   "abandoned_checkout_offer": "För att hjälpa dig komma igång kan du få <b>{discount}% rabatt på</b> ditt första år. Använd bara koden nedan när du checkar ut:",
-  "abandoned_checkout_button": "Uppgradera till Rallly Pro",
-  "abandoned_checkout_support": "Om du har några frågor om Rallly Pro eller behöver hjälp med något alls, svara bara på detta mejl. Jag är här för att hjälpa till!",
-  "abandoned_checkout_preview": "Exklusivt erbjudande: Få {discount}% rabatt på ditt första år av Rallly Pro!",
-  "abandoned_checkout_subject": "Få {discount}% rabatt på ditt första år av Rallly Pro",
+  "abandoned_checkout_button": "Uppgradera till Kinpal Pro",
+  "abandoned_checkout_support": "Om du har några frågor om Kinpal Pro eller behöver hjälp med något alls, svara bara på detta mejl. Jag är här för att hjälpa till!",
+  "abandoned_checkout_preview": "Exklusivt erbjudande: Få {discount}% rabatt på ditt första år av Kinpal Pro!",
+  "abandoned_checkout_subject": "Få {discount}% rabatt på ditt första år av Kinpal Pro",
   "abandoned_checkout_signoff": "Vänliga hälsningar,",
   "license_key_plan": "Plan"
 }

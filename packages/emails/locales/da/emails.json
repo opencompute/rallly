@@ -67,7 +67,7 @@
   "license_key_support": "Svar på denne e-mail eller kontakt os på <a>{supportEmail}</a> hvis du har brug for hjælp.",
   "license_key_signoff": "Tak fordi du valgte Kinpal!",
   "license_key_preview": "Din licensnøgle er blevet genereret.",
-  "license_key_subject": "Din Rallly Self-Hosted {tier} Licens",
+  "license_key_subject": "Din Kinpal Self-Hosted {tier} Licens",
   "eventCanceledContent": "<b>{hostName}</b> har annulleret <b>{title}</b>, der var planlagt til:",
   "eventCanceledPreview": "Begivenhed annulleret",
   "eventCanceledHeading": "Begivenhed annulleret",

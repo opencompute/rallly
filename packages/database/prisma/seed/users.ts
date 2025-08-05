@@ -72,7 +72,7 @@ async function createTeamSpace() {
     data: {
       id: "team-owner",
       name: "Sarah Johnson",
-      email: "sarah@rallly.co",
+      email: "sarah@kinpal.com",
       timeZone: "America/New_York",
     },
   });
@@ -91,7 +91,7 @@ async function createTeamSpace() {
       data: {
         id: "team-admin",
         name: "Michael Chen",
-        email: "michael@rallly.co",
+        email: "michael@kinpal.com",
         timeZone: "America/Los_Angeles",
       },
     }),
@@ -99,7 +99,7 @@ async function createTeamSpace() {
       data: {
         id: "team-member-1",
         name: "Emily Rodriguez",
-        email: "emily@rallly.co",
+        email: "emily@kinpal.com",
         timeZone: "America/Chicago",
       },
     }),
@@ -107,7 +107,7 @@ async function createTeamSpace() {
       data: {
         id: "team-member-2",
         name: "James Wilson",
-        email: "james@rallly.co",
+        email: "james@kinpal.com",
         timeZone: "Europe/London",
       },
     }),
@@ -115,7 +115,7 @@ async function createTeamSpace() {
       data: {
         id: "team-member-3",
         name: "Lisa Park",
-        email: "lisa@rallly.co",
+        email: "lisa@kinpal.com",
         timeZone: "Asia/Tokyo",
       },
     }),

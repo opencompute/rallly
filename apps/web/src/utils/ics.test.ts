@@ -2,7 +2,7 @@ import { createIcsEvent } from "./ics";
 
 describe("createIcsEvent", () => {
   const baseOptions = {
-    uid: "test-uid-123@rallly.co",
+    uid: "test-uid-123@kinpal.com",
     title: "Test Event",
     start: new Date("2024-03-15T10:30:00Z"), // 10:30 UTC
     end: new Date("2024-03-15T11:30:00Z"), // 11:30 UTC
@@ -150,7 +150,7 @@ describe("createIcsEvent", () => {
       });
 
       expect(result.error).toBeFalsy();
-      expect(result.value).toContain("UID:test-uid-123@rallly.co");
+      expect(result.value).toContain("UID:test-uid-123@kinpal.com");
       expect(result.value).toContain("SUMMARY:Test Event");
       expect(result.value).toContain("DESCRIPTION:Test Description");
       expect(result.value).toContain("LOCATION:Test Location");
@@ -159,12 +159,12 @@ describe("createIcsEvent", () => {
       );
       expect(result.value).toContain("SEQUENCE:5");
       expect(result.value).toContain("STATUS:CONFIRMED");
-      expect(result.value).toContain("PRODID:-//Rallly//EN");
+      expect(result.value).toContain("PRODID:-//Kinpal//EN");
     });
 
     it("should handle optional properties gracefully", () => {
       const result = createIcsEvent({
-        uid: "minimal@rallly.co",
+        uid: "minimal@kinpal.com",
         title: "Minimal Event",
         start: new Date("2024-03-15T10:00:00Z"),
         end: new Date("2024-03-15T11:00:00Z"),
@@ -172,13 +172,13 @@ describe("createIcsEvent", () => {
       });
 
       expect(result.error).toBeFalsy();
-      expect(result.value).toContain("UID:minimal@rallly.co");
+      expect(result.value).toContain("UID:minimal@kinpal.com");
       expect(result.value).toContain("SUMMARY:Minimal Event");
     });
 
     it("should set default values correctly", () => {
       const result = createIcsEvent({
-        uid: "defaults@rallly.co",
+        uid: "defaults@kinpal.com",
         title: "Default Event",
         start: new Date("2024-03-15T10:00:00Z"),
         end: new Date("2024-03-15T11:00:00Z"),

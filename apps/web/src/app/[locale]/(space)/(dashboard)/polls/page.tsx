@@ -130,7 +130,7 @@ export default async function Page(props: {
             <div className="mb-6 flex gap-x-2">
               <SearchInput
                 placeholder={t("searchPollsPlaceholder", {
-                  defaultValue: "Search polls by title...",
+                  defaultValue: "Search by title...",
                 })}
               />
               <MemberSelector members={members.data} />

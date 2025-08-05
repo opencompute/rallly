@@ -551,7 +551,7 @@
   "instanceSettingsDescription": "Configure suas configurações de instância",
   "usersDescription": "Gerenciar usuários nesta instância",
   "whiteLabelAddon": "Complemento White Label",
-  "whiteLabelAddonDescription": "Este complemento permite que você personalize o Rallly com seu próprio logotipo e cores.",
+  "whiteLabelAddonDescription": "Este complemento permite que você personalize o Kinpal com seu próprio logotipo e cores.",
   "refreshLicense": "Atualizar Licença",
   "setEnvironmentVariable": "Este valor pode ser alterado definindo a variável de ambiente <env />.",
   "branding": "Branding",

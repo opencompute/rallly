@@ -152,12 +152,12 @@ export default async function LicensePage() {
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     <Trans
                       i18nKey="whiteLabelAddonDescription"
-                      defaults="This add-on allows you to brand Rallly with your own logo and colors."
+                      defaults="This add-on allows you to brand Kinpal with your own logo and colors."
                     />
                   </p>
                   <p className="mt-4 text-sm">
                     <a
-                      href="https://support.rallly.co/self-hosting/white-labeling"
+                      href="https://support.kinpal.com/self-hosting/white-labeling"
                       target="_blank"
                       rel="noreferrer"
                       className="text-link"

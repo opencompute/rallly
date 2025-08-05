@@ -15,7 +15,7 @@
   "statsLanguagesSupported": "10+ tuettua kieltä",
   "hint": "Se ei maksa mitään! Kirjautumista ei tarvita.",
   "doodleAlternative": "Paras ilmainen vaihtoehto Doodlelle",
-  "doodleAlternativeDescription": "Rallly on kaikkien kaipaama vaihtoehto Doodlelle. Jo tuhannet käyttäjät ovat vaihtaneet ja nauttivat nyt ammattimaisista kokouskyselyistä intuitiivisella ja helpolla käyttöliittymällä ilman mainoksia.        ",
+  "doodleAlternativeDescription": "Kinpal on kaikkien kaipaama vaihtoehto Doodlelle. Jo tuhannet käyttäjät ovat vaihtaneet ja nauttivat nyt ammattimaisista kokouskyselyistä intuitiivisella ja helpolla käyttöliittymällä ilman mainoksia.        ",
   "createAPoll": "Luo tapaamiskysely",
   "doodleAlternativeMetaTitle": "Paras ilmainen vaihtoehto Doodlelle | Kinpal",
   "doodleAlternativeMetaDescription": "Etsitkö vaihtoehtoa Doodlelle? Kokeile Kinpala! Se on ilmainen ja helppokäyttöinen, eikä se vaadi tunnusta.",
@@ -25,11 +25,11 @@
   "freeSchedulingPollTitle": "Löydä seuraavalle tapahtumallesi päivämäärä",
   "freeSchedulingPollDescription": "Kinpaln avulla luot kauniita ja helppokäyttöisiä aikataulukyselyitä, joilla löydät parhaan ajankohdat seuraavaa tapahtumaasi varten.",
   "new": "Uutta",
-  "metaTitle": "Rallly: Ilmainen ryhmätapaamisten aikataulutyökalu",
+  "metaTitle": "Kinpal: Ilmainen ryhmätapaamisten aikataulutyökalu",
   "metaDescription": "Luo kyselyitä ja äänestä parhaasta päivästä tai ajankohdasta. Ilmainen vaihtoehto Doodlelle.",
   "when2meetAlternativeMetaTitle": "Paras vaihtoehto When2Meetille: Kinpal",
   "when2meetAlternativeMetaDescription": "Löydä parempi tapa aikatauluttaa kokouksia Kinpaln avulla, joka on paras ilmainen vaihtoehto When2Meetille. Helppokäyttöinen ja ilmainen.",
   "when2meetAlternative": "Käytätkö yhä When2Meetiä?",
-  "when2meetAlternativeDescription": "Luo ammattimaisia, mainoksettomia kokouskyselyitä ilmaiseksi Ralllyn avulla.",
+  "when2meetAlternativeDescription": "Luo ammattimaisia, mainoksettomia kokouskyselyitä ilmaiseksi Kinpaln avulla.",
   "whiteLabelingBlog": "White label -brändäys itse ylläpidetyille instansseille"
 }

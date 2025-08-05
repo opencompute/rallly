@@ -1,18 +1,18 @@
 ---
 title: White Labeling for Self-Hosted Instances
 date: "2026-01-15"
-excerpt: Customize your Rallly instance with your own branding, colors, and logos.
+excerpt: Customize your Kinpal instance with your own branding, colors, and logos.
 ---
 
-I'm pleased to announce that white labeling is now available for self-hosted Rallly instances.
+I'm pleased to announce that white labeling is now available for self-hosted Kinpal instances.
 
-![White Labeling Example](https://support.rallly.co/images/self-hosting/whitelabel-splash.webp)
+![White Labeling Example](https://support.kinpal.com/images/self-hosting/whitelabel-splash.webp)
 
-This feature was built in response to a request from an enterprise client who needed their Rallly deployment to seamlessly integrate with their existing brand. It's now available to all Enterprise license holders as an optional add-on.
+This feature was built in response to a request from an enterprise client who needed their Kinpal deployment to seamlessly integrate with their existing brand. It's now available to all Enterprise license holders as an optional add-on.
 
-If you've been following along, you might remember I recently added [dark mode support](/blog/introducing-dark-mode) and mentioned that theming capabilities were on the way. White labeling is the realization of that work. You can now customize your instance's name, primary colors (for both light and dark modes), logos, and remove Rallly attribution entirely.
+If you've been following along, you might remember I recently added [dark mode support](/blog/introducing-dark-mode) and mentioned that theming capabilities were on the way. White labeling is the realization of that work. You can now customize your instance's name, primary colors (for both light and dark modes), logos, and remove Kinpal attribution entirely.
 
-For technical details and configuration options, check out the [White Labeling documentation](https://support.rallly.co/self-hosting/white-labeling).
+For technical details and configuration options, check out the [White Labeling documentation](https://support.kinpal.com/self-hosting/white-labeling).
 
 ## Why an Enterprise Add-on?
 

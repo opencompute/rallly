@@ -44,7 +44,7 @@ export default async function Root(props: {
     <div className="relative z-10 mx-auto flex min-h-full w-full max-w-7xl flex-col space-y-8 p-4 sm:p-8">
       <header className="flex w-full items-center">
         <div className="flex grow items-center gap-x-12">
-          <LinkBase className="inline-block rounded" href="/">
+          <LinkBase className="flex rounded items-center gap-1 font-semibold text-primary-600" href="/">
             <Image src="/logo.svg" width={28} height={28} alt="kinpal.com" /> Kinpal
           </LinkBase>
           <nav className="hidden items-center gap-2 lg:flex">
@@ -78,7 +78,7 @@ export default async function Root(props: {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-48" align="end" sideOffset={16}>
                 <DropdownMenuItem asChild>
-                  <LinkBase href="https://support.rallly.co/workflow/create">
+                  <LinkBase href="https://support.kinpal.com/workflow/create">
                     <Trans t={t} i18nKey="howItWorks" defaults="How it Works" />
                   </LinkBase>
                 </DropdownMenuItem>
@@ -93,7 +93,7 @@ export default async function Root(props: {
                   </LinkBase>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <LinkBase href="https://support.rallly.co">
+                  <LinkBase href="https://support.kinpal.com">
                     <Trans t={t} i18nKey="support" />
                   </LinkBase>
                 </DropdownMenuItem>

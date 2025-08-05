@@ -487,7 +487,7 @@ describe("Private API - /polls", () => {
 
       expect(res.status).toBe(200);
       const json = await res.json();
-      expect(json.info.title).toBe("Rallly Private API");
+      expect(json.info.title).toBe("Kinpal Private API");
     });
 
     it("should return docs page", async () => {

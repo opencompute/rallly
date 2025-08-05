@@ -70,7 +70,7 @@ export async function GET(request: NextRequest) {
         },
       ],
       mode: "payment",
-      success_url: "https://rallly.co/licensing/thank-you",
+      success_url: "https://kinpal.com/licensing/thank-you",
       allow_promotion_codes: true,
       tax_id_collection: {
         enabled: true,

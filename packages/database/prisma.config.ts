@@ -2,7 +2,7 @@ import path from "node:path";
 import { defineConfig } from "prisma/config";
 
 try {
-  process.loadEnvFile(path.join(__dirname, ".env"));
+  process.loadEnvFile(path.join(__dirname, "../../.env"));
 } catch {
   console.info("No .env file found, continuing without it");
 }

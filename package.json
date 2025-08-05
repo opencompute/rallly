@@ -50,7 +50,7 @@
     "dotenv-cli": "^8.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "next": "^15.3.1",
+    "next": "^16.2.1",
     "portless": "^0.7.2",
     "prettier": "^3.5.3",
     "prisma": "^7.8.0",

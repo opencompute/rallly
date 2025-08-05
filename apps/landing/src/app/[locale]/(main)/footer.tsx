@@ -75,6 +75,7 @@ export const Footer: React.FunctionComponent = () => {
             alt="Kinpal"
           />
           <div className="flex items-center space-x-4">
+            <span className="invisible size-3" aria-hidden="true" />
             <a
               target="_blank"
               href="https://x.com/kinpalai"

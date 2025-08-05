@@ -551,7 +551,7 @@
   "instanceSettingsDescription": "Määritä instanssisi asetukset",
   "usersDescription": "Hallinnoi instanssin käyttäjiä",
   "whiteLabelAddon": "White label -lisäosa",
-  "whiteLabelAddonDescription": "Tällä lisäosalla voit brändätä Ralllyn omalla logollasi ja väreilläsi.",
+  "whiteLabelAddonDescription": "Tällä lisäosalla voit brändätä Kinpaln omalla logollasi ja väreilläsi.",
   "refreshLicense": "Päivitä lisenssi",
   "setEnvironmentVariable": "Tämän arvon voi muuttaa asettamalla <env /> -ympäristömuuttujan.",
   "branding": "Brändäys",

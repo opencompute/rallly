@@ -181,7 +181,7 @@ export default async function MembersSettingsPage() {
                               <Link
                                 className="underline hover:text-foreground"
                                 prefetch={false}
-                                href="https://support.rallly.co/self-hosting/licensing"
+                                href="https://support.kinpal.com/self-hosting/licensing"
                               />
                             ),
                           }}

@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/poll/:path*",
-      "destination": "https://app.rallly.co/invite/:path*"
+      "destination": "https://app.kinpal.com/invite/:path*"
     }
   ]
 }

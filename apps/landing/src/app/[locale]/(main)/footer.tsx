@@ -115,7 +115,7 @@ export const Footer: React.FunctionComponent = () => {
             </li>
             <li>
               <a
-                href="https://support.rallly.co"
+                href="https://support.kinpal.com"
                 className="inline-block font-normal text-gray-500 hover:text-gray-800 hover:no-underline"
               >
                 <Trans ns="common" i18nKey="support" defaults="Support" />

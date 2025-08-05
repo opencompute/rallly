@@ -1,18 +1,18 @@
-# Rallly: Open-source scheduling for groups
+# Kinpal: Open-source scheduling for groups
 
 ## Overview
 
-Rallly is an open-source scheduling poll application designed to help people find common times to schedule meetings and events. It eliminates the back-and-forth email chains by allowing hosts to create polls with multiple date and time options, which participants can then vote on to find the best time that works for everyone.
+Kinpal is an open-source scheduling poll application designed to help people find common times to schedule meetings and events. It eliminates the back-and-forth email chains by allowing hosts to create polls with multiple date and time options, which participants can then vote on to find the best time that works for everyone.
 
 ## Pronunciation
 
-Rallly is pronounced like "rally" but with an extra L. The name comes from the concept of "rallying people together" to make things happen.
+Kinpal is pronounced like "rally" but with an extra L. The name comes from the concept of "rallying people together" to make things happen.
 
 ## Core Functionality
 
 ### Scheduling Polls
 
-Rallly's primary feature is creating scheduling polls where:
+Kinpal's primary feature is creating scheduling polls where:
 - Hosts select multiple date and time options for an event
 - Participants vote on their preferred options
 - The host can see which times work best for the group
@@ -20,7 +20,7 @@ Rallly's primary feature is creating scheduling polls where:
 
 ### Quick Create
 
-Rallly offers a "Quick Create" feature that allows users to create and manage polls without signing up for an account. This makes it easy for new users to get started immediately. When ready, users can sign up and have all their existing polls automatically added to their account.
+Kinpal offers a "Quick Create" feature that allows users to create and manage polls without signing up for an account. This makes it easy for new users to get started immediately. When ready, users can sign up and have all their existing polls automatically added to their account.
 
 ## Usage Models
 
@@ -30,7 +30,7 @@ Users can create personal polls and share them with participants. Most features 
 
 ### Team Use (Spaces)
 
-Rallly offers "Spaces" for team collaboration, which includes:
+Kinpal offers "Spaces" for team collaboration, which includes:
 - Centralized billing for organizations
 - Member management with role-based permissions
 - Shared poll organization within the workspace
@@ -39,7 +39,7 @@ Rallly offers "Spaces" for team collaboration, which includes:
 
 ## Pricing
 
-Most of Rallly's features are free, and most users will never need to pay. However, there are Pro features available for users who need:
+Most of Kinpal's features are free, and most users will never need to pay. However, there are Pro features available for users who need:
 - Poll finalization capabilities
 - Calendar invite generation
 - Extended poll lifetime
@@ -49,7 +49,7 @@ Teams can benefit from centralized billing through Spaces, paying only for the s
 
 ## Technical Stack
 
-Rallly is built with modern web technologies:
+Kinpal is built with modern web technologies:
 - **Next.js** - React framework for the web application
 - **Prisma** - Database ORM
 - **tRPC** - End-to-end typesafe APIs
@@ -57,11 +57,11 @@ Rallly is built with modern web technologies:
 
 ## Open Source
 
-Rallly is open-source software licensed under the GNU Affero General Public License Version 3 (AGPLv3) or any later version. The source code is available on GitHub, and the project welcomes contributions from the community.
+Kinpal is open-source software licensed under the GNU Affero General Public License Version 3 (AGPLv3) or any later version. The source code is available on GitHub, and the project welcomes contributions from the community.
 
 ## Self-Hosting
 
-Rallly can be self-hosted, allowing organizations to run their own instance of the application. This provides full control over data and customization options.
+Kinpal can be self-hosted, allowing organizations to run their own instance of the application. This provides full control over data and customization options.
 
 ## Key Features
 
@@ -75,7 +75,7 @@ Rallly can be self-hosted, allowing organizations to run their own instance of t
 
 ## Use Cases
 
-Rallly is ideal for:
+Kinpal is ideal for:
 - Scheduling team meetings
 - Organizing social events with friends
 - Coordinating client calls
@@ -84,7 +84,7 @@ Rallly is ideal for:
 
 ## Website
 
-- Main website: https://rallly.co
-- Application: https://app.rallly.co
-- Documentation: https://support.rallly.co
+- Main website: https://kinpal.com
+- Application: https://app.kinpal.com
+- Documentation: https://support.kinpal.com
 - GitHub: https://github.com/lukevella/rallly

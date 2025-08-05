@@ -551,7 +551,7 @@
   "instanceSettingsDescription": "Configura le impostazioni della tua istanza",
   "usersDescription": "Gestisci gli utenti su questa istanza",
   "whiteLabelAddon": "White Label Add-on",
-  "whiteLabelAddonDescription": "Questo componente aggiuntivo ti consente di personalizzare Rallly con il tuo logo e i tuoi colori.",
+  "whiteLabelAddonDescription": "Questo componente aggiuntivo ti consente di personalizzare Kinpal con il tuo logo e i tuoi colori.",
   "refreshLicense": "Aggiorna Licenza",
   "setEnvironmentVariable": "Questo valore può essere modificato impostando la variabile d'ambiente <env />.",
   "branding": "Marchio",

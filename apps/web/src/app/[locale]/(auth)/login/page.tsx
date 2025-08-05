@@ -55,7 +55,7 @@ export default async function LoginPage(props: {
     (plugin) => plugin.id === "generic-oauth",
   );
 
-  const hasSocialLogin = hasGoogleProvider || hasMicrosoftProvider || || hasGithubProvider;
+  const hasSocialLogin = hasGoogleProvider || hasMicrosoftProvider || hasGithubProvider;
 
   const hasAlternateLoginMethods = hasSocialLogin || hasOidc;
 

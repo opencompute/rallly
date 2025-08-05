@@ -50,7 +50,7 @@ const CookieConsentPopover = () => {
                 <button
                   type="button"
                   onClick={() => {
-                    Cookies.set("rallly_cookie_consent", "1", { expires: 365 });
+                    Cookies.set("kinpal_cookie_consent", "1", { expires: 365 });
                     setVisible(false);
                   }}
                   className="grow rounded-md bg-primary-600 px-5 py-1 font-semibold text-white shadow-sm transition-all hover:bg-primary-600/90 focus:ring-2 focus:ring-primary-200 active:bg-primary-600/90"

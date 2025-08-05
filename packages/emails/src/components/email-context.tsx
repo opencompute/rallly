@@ -13,5 +13,5 @@ export const previewEmailContext: EmailContext = {
   supportEmail: "support@kinpal.com",
   i18n: i18nInstance,
   t: i18nInstance.getFixedT("en"),
-  appName: "Rallly",
+  appName: "Kinpal",
 };

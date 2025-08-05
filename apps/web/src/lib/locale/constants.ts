@@ -1,1 +1,1 @@
-export const LOCALE_COOKIE_NAME = "rallly_locale";
+export const LOCALE_COOKIE_NAME = "kinpal_locale";

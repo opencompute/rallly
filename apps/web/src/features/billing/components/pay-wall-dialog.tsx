@@ -215,7 +215,7 @@ export function PayWallDialog({
                           defaults="Pay for {payMonths, number} months, get 12."
                           i18nKey="annualDiscount"
                           values={{
-                            payMonths: 8,
+                            payMonths: 10,
                           }}
                         />
                       </div>

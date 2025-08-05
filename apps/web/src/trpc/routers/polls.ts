@@ -805,7 +805,7 @@ export const polls = router({
       }
 
       const eventId = nanoid();
-      const uid = `${eventId}@rallly.co`;
+      const uid = `${eventId}@kinpal.com`;
 
       const attendees = poll.participants.filter((p) =>
         p.votes.some((v) => v.optionId === input.optionId && v.type !== "no"),
@@ -843,7 +843,7 @@ export const polls = router({
         const event = await tx.scheduledEvent.create({
           data: {
             id: eventId,
-            uid: `${eventId}@rallly.co`,
+            uid: `${eventId}@kinpal.com`,
             start: eventStart.toDate(),
             end:
               option.duration > 0

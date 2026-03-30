@@ -74,7 +74,7 @@ export const Footer: React.FunctionComponent = () => {
             className="!border-l !border-gray-400 border-l-1"
             alt="Kinpal"
           />
-          <div className="flex items-center space-x-4">
+          <div className="mt-0.5 flex items-center space-x-5">
             <span className="invisible size-3" aria-hidden="true" />
             <a
               target="_blank"
@@ -105,7 +105,7 @@ export const Footer: React.FunctionComponent = () => {
                 defaultValue: "View our GitHub repository",
               })}
             >
-              <LinkedinIcon className="size-5" />
+              <LinkedinIcon className="size-4" />
             </a>
           </div>
         </div>
@@ -195,7 +195,7 @@ export const Footer: React.FunctionComponent = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-start gap-x-8 gap-y-8 sm:flex-row sm:items-end sm:pb-8">
+      <div className="sm:pb-8">
         <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm leading-loose">
           <li>
             <Link
@@ -222,43 +222,6 @@ export const Footer: React.FunctionComponent = () => {
             </Link>
           </li>
         </ul>
-        <div className="grid gap-2.5">
-          <div className="text-sm tracking-tight sm:text-right">
-            <Trans ns="common" i18nKey="poweredBy" defaults="Powered by" />
-          </div>
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-2 md:justify-end">
-            <div>
-              <a
-                target="_blank"
-                href="https://vercel.com?utm_source=kinpal&utm_campaign=oss"
-                className="inline-block text-white"
-                rel="noreferrer noopener"
-              >
-                <Image
-                  src="/static/images/partners/vercel-logotype-dark.svg"
-                  alt="Vercel"
-                  width={100}
-                  height={24}
-                />
-              </a>
-            </div>
-            <div>
-              <a
-                target="_blank"
-                className="inline-block"
-                href="https://supabase.com"
-                rel="noopener"
-              >
-                <Image
-                  src="/static/images/partners/supabase.svg"
-                  alt="Supabase"
-                  width={123}
-                  height={24}
-                />
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

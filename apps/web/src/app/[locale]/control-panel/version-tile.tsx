@@ -7,7 +7,7 @@ import { loadUpdateStatus } from "@/features/instance-settings/loaders";
 import { getTranslation } from "@/i18n/server";
 import { appVersion } from "@/lib/constants";
 
-const RELEASES_URL = "https://github.com/lukevella/rallly/releases";
+const RELEASES_URL = "https://github.com/opencompute/rallly/releases";
 
 const versionLabel = appVersion
   ? `v${appVersion.replace(/^v/, "")}`

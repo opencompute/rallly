@@ -39,7 +39,7 @@ Once installed, everything goes through the `rallly.sh` CLI:
 ./rallly.sh backup         # Back up the database to ./backups/
 ```
 
-Updates in particular are now a one liner. `./rallly.sh update` pulls the latest images, recreates containers, and preserves your data and configuration. By default the CLI tracks the `lukevella/rallly:4` tag, so you'll automatically get compatible 4.x releases.
+Updates in particular are now a one liner. `./rallly.sh update` pulls the latest images, recreates containers, and preserves your data and configuration. By default the CLI tracks the `opencompute/rallly:4` tag, so you'll automatically get compatible 4.x releases.
 
 Also, by having more control over the stack, we will be able to do things like add more services in the future without complicating the install process or requiring users to edit their compose files.
 

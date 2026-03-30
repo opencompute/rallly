@@ -13,7 +13,7 @@ import { buildReleaseChannels } from "./release-channels";
 const logger = createLogger("api/updates");
 
 const GITHUB_RELEASES_URL =
-  "https://api.github.com/repos/lukevella/rallly/releases";
+  "https://api.github.com/repos/kinpalai/rallly/releases";
 const RELEASES_PER_PAGE = 100;
 // Sequential unauthenticated requests count against a 60/hour IP budget, so
 // pagination is bounded; older majors beyond this window report no update.

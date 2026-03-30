@@ -5,7 +5,7 @@ import type { EmailChrome } from "../types";
  * Real sends build `chrome` from the caller's branding + env via `resolveChrome`.
  */
 export const previewChrome: EmailChrome = {
-  logoUrl: "https://d39ixtfgglw55o.cloudfront.net/images/kinpal-logo-mark.png",
+  logoUrl: "https://d1vc0q3r9a4nkh.cloudfront.net/kinpal.png",
   baseUrl: "https://kinpal.com",
   domain: "kinpal.com",
   supportEmail: "support@kinpal.com",

@@ -4,10 +4,6 @@
 
 Kinpal is an open-source scheduling poll application designed to help people find common times to schedule meetings and events. It eliminates the back-and-forth email chains by allowing hosts to create polls with multiple date and time options, which participants can then vote on to find the best time that works for everyone.
 
-## Pronunciation
-
-Kinpal is pronounced like "rally" but with an extra L. The name comes from the concept of "rallying people together" to make things happen.
-
 ## Core Functionality
 
 ### Scheduling Polls
@@ -87,4 +83,4 @@ Kinpal is ideal for:
 - Main website: https://kinpal.com
 - Application: https://app.kinpal.com
 - Documentation: https://support.kinpal.com
-- GitHub: https://github.com/lukevella/rallly
+- GitHub: https://github.com/opencompute/rallly

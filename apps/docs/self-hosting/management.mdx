@@ -35,7 +35,7 @@ After editing `.env`, apply changes with:
 
 This pulls the latest Docker images and recreates containers. Your data and configuration are preserved.
 
-By default the stack tracks the `lukevella/rallly:4` tag, so `update` will bring you the latest compatible `4.x` release. To pin to a specific version or follow a different major, set `RALLLY_IMAGE` in `.env` (see [Configuration](/self-hosting/configuration#advanced)).
+By default the stack tracks the `kinpalai/rallly:4` tag, so `update` will bring you the latest compatible `4.x` release. To pin to a specific version or follow a different major, set `KINPAL_IMAGE` in `.env` (see [Configuration](/self-hosting/configuration#advanced)).
 
 <Warning>
   Do not edit `docker-compose.yml` or other stack files. `./rallly.sh update` expects these files unchanged and will overwrite local edits. Only `.env` is safe to modify.

@@ -93,8 +93,8 @@ app.get("/remove-deleted-polls", async (c) => {
 });
 
 // Each user's removal makes external API calls, so give the function room
-// beyond the serverless default.
-export const maxDuration = 300;
+// beyond the serverless default (max 60 seconds on Vercel Hobby plan).
+export const maxDuration = 60;
 
 const REMOVE_DELETED_USERS_BATCH_SIZE = 50;
 // Backlog beyond this spills to the next daily run instead of risking a

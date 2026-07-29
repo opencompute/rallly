@@ -155,7 +155,7 @@ export default async function Page(props: {
         <PriceTables />
       </section>
       <section>
-        <div className="relative flex flex-col gap-4 overflow-hidden rounded-xl bg-blue-400/10 p-4 pr-36 text-blue-800 ring ring-black/5 ring-inset sm:flex-row sm:gap-6">
+        <div className="relative flex flex-col gap-4 overflow-hidden rounded-xl bg-blue-400/10 p-4 pr-36 text-blue-800 ring ring-black/5 ring-inset sm:flex-row sm:gap-6 dark:text-blue-300 dark:ring-white/10">
           <BirdIcon className="absolute -top-4 right-8 size-24 opacity-20" />
           <div>
             <h3 className="font-medium text-sm">

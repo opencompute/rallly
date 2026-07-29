@@ -5,14 +5,13 @@ import { cacheLife } from "next/cache";
 export default async function CookiePolicy() {
   cacheLife("max");
   return (
-    <div className="prose mx-auto max-w-3xl">
+    <div className="prose prose-gray dark:prose-invert mx-auto max-w-3xl">
       <h1>Cookie Policy</h1>
       <p>Last updated: May 19, 2023</p>
       <p>
         This Policy explains how we use cookies and other similar technologies
         on our website, and your options to control them.
       </p>
-
 
       <h2>What are cookies?</h2>
       <p>

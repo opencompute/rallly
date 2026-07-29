@@ -53,7 +53,7 @@ export default async function NotFoundPage() {
         })}
       />
       <ErrorPageLinkItem
-        href="https://github.com/opencompute/rallly"
+        href="https://github.com/kinpalai/rallly"
         icon={<GithubIcon className="size-4 text-muted-foreground" />}
         title={t("errorLinkGithub", { defaultValue: "GitHub" })}
         description={t("errorLinkGithubDescription", {

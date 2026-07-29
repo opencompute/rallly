@@ -150,7 +150,7 @@ export const BigTestimonial = () => {
         <p className="mt-1">
           <Link
             target="_blank"
-            className="text-gray-600 text-sm hover:underline"
+            className="text-muted-foreground text-sm hover:underline"
             href="https://www.trustpilot.com/reviews/645e1d1976733924e89d8203"
           >
             <Trans
@@ -172,7 +172,7 @@ export const BigTestimonial = () => {
         />
         <div>
           <div className="font-semibold">Eric Fletcher</div>
-          <div className="text-gray-600 text-sm">
+          <div className="text-muted-foreground text-sm">
             <Trans
               ns="home"
               i18nKey="ericJobTitle"
@@ -186,5 +186,5 @@ export const BigTestimonial = () => {
 };
 
 export const Marketing = ({ children }: React.PropsWithChildren) => {
-  return <div className="space-y-12 sm:space-y-24">{children}</div>;
+  return <main className="space-y-12 sm:space-y-24">{children}</main>;
 };

@@ -1,5 +1,4 @@
 "use client";
-import { posthog } from "@rallly/posthog/client";
 import { cn } from "@rallly/ui";
 import * as React from "react";
 import { useTranslation } from "@/i18n/client/use-translation";
@@ -39,7 +38,6 @@ export const VoteSelector = ({
               name={label}
               checked={isSelected}
               onChange={() => {
-                posthog?.capture("landing:hero_demo_vote_change", { vote });
                 setValue(vote);
               }}
               aria-label={voteLabels[vote]}

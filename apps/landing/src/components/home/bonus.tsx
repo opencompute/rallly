@@ -7,10 +7,8 @@ import {
 import { Trans } from "react-i18next/TransWithoutContext";
 import { BonusItem } from "@/components/home/bonus-item";
 import { getTranslation } from "@/i18n/server";
-import { getUserCount } from "@/lib/data";
 
 export async function Bonus(props: { locale: string }) {
-  // const userCount = await getUserCount();
   const { t } = await getTranslation(props.locale, ["home"]);
 
   return (

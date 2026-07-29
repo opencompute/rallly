@@ -1,22 +1,37 @@
 @import "tailwindcss";
 @import "@rallly/tailwind-config";
 
-/* Any app specific overrides will go here */
-
-body {
-  @apply bg-gray-100;
+/* Landing-specific semantic colors. */
+:root {
+  --background: var(--color-gray-100);
+  --foreground: var(--color-gray-700);
+  --muted-foreground: var(--color-gray-600);
+  --landing-surface: var(--color-gray-50);
+  --landing-selected: var(--color-gray-200);
+  --landing-subtle-foreground: var(--color-gray-400);
 }
 
-@theme {
-  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+.dark {
+  --background: var(--color-gray-950);
+  --foreground: var(--color-white);
+  --muted-foreground: var(--color-gray-400);
+  --landing-surface: var(--color-gray-900);
+  --landing-selected: var(--color-gray-800);
+  --landing-subtle-foreground: var(--color-gray-500);
 }
 
-h1,
-h2 {
-  font-family: var(--font-display);
+@theme inline {
+  --color-landing-surface: var(--landing-surface);
+  --color-landing-selected: var(--landing-selected);
+  --color-landing-subtle-foreground: var(--landing-subtle-foreground);
 }
 
-/* Long-form content styles (blog posts, policy pages) */
+@utility text-muted-link {
+  @apply text-muted-foreground hover:text-foreground hover:no-underline;
+}
+
+/* Blog post content styles */
+.blog-content,
 .longform {
   h2,
   h3,
@@ -24,19 +39,19 @@ h2 {
     @apply mb-4 mt-8;
   }
   h2 {
-    @apply scroll-mt-24 text-2xl font-medium tracking-tight text-gray-800;
+    @apply text-2xl font-semibold tracking-tight text-foreground;
   }
   h3 {
-    @apply text-xl font-medium tracking-tight text-gray-800;
+    @apply text-xl font-semibold text-foreground;
   }
   h4 {
-    @apply text-lg font-medium tracking-tight text-gray-800;
+    @apply text-lg font-semibold text-foreground;
   }
   p {
     @apply mb-6 leading-relaxed;
   }
   p:has(> img) {
-    @apply flex items-center justify-center overflow-hidden rounded-xl border bg-gray-50 p-2;
+    @apply flex items-center justify-center overflow-hidden rounded-xl border bg-landing-surface p-2;
   }
   img {
     @apply mx-auto rounded-lg border;
@@ -70,10 +85,10 @@ h2 {
     @apply text-primary hover:underline;
   }
   blockquote {
-    @apply my-6 border-l-4 border-gray-300 pl-4 italic text-gray-700;
+    @apply my-6 border-l-4 border-gray-300 pl-4 italic text-foreground dark:border-gray-600;
   }
   pre {
-    @apply my-6 overflow-x-auto rounded-lg border bg-gray-50 p-4;
+    @apply my-6 overflow-x-auto rounded-lg border bg-landing-surface p-4;
   }
   code {
     @apply rounded px-1 py-0.5;

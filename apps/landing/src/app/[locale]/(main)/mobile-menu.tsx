@@ -1,16 +1,13 @@
 "use client";
 
-import { posthog } from "@rallly/posthog/client";
 import { buttonVariants, cn } from "@rallly/ui";
 import { Button } from "@rallly/ui/button";
 import { MenuIcon, XIcon } from "lucide-react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { CtaButton } from "@/components/home/cta-button";
 import { LinkBase } from "@/i18n/client/link";
 import { linkToApp } from "@/lib/linkToApp";
-import { getRefSlug } from "@/lib/ref-slug";
 
 const PANEL_ID = "mobile-menu-panel";
 // Matches the `lg:hidden` on the panel below. Tailwind's default `lg`.
@@ -115,31 +112,17 @@ export const MobileMenu = ({
           ))}
         </nav>
         <div className="flex flex-col gap-3 border-t px-4 py-6 sm:px-6">
-          <Link
-            href={linkToApp("/login", {
-              ref: getRefSlug(pathname),
-              cta: "mobile_menu_login",
-            })}
+          <LinkBase
+            href={linkToApp("/login")}
             className={buttonVariants({
               variant: "default",
               size: "lg",
               className: "w-full",
             })}
-            onClick={() => {
-              posthog.capture("landing:login_click", {
-                cta: "mobile_menu_login",
-                ref: getRefSlug(pathname),
-              });
-            }}
           >
             {loginLabel}
-          </Link>
-          <CtaButton
-            size="lg"
-            className="w-full"
-            captureEvent="landing:mobile_menu_cta_click"
-            cta="mobile_menu"
-          >
+          </LinkBase>
+          <CtaButton size="lg" className="w-full">
             {ctaLabel}
           </CtaButton>
         </div>

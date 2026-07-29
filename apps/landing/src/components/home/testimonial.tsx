@@ -1,4 +1,6 @@
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { Trans } from "react-i18next/TransWithoutContext";
 import { FadeIn } from "@/components/home/fade-in";
 import { getTranslation } from "@/i18n/server";
@@ -18,7 +20,7 @@ export async function Testimonial({ locale }: { locale: string }) {
             i18nKey="ericQuote"
             defaults="“If your scheduling workflow lives in emails, I strongly encourage you to try and let Kinpal simplify your scheduling tasks for a more organized and less stressful workday.”"
           />
-        </div>
+        </p>
         <div className="sm:text-center">
           <p className="max-w-xl font-medium text-lg leading-normal sm:text-center">
             <Trans
@@ -31,7 +33,7 @@ export async function Testimonial({ locale }: { locale: string }) {
           <p className="mt-1">
             <Link
               target="_blank"
-              className="text-gray-600 text-sm hover:underline"
+              className="text-muted-foreground text-sm hover:underline"
               href="https://www.trustpilot.com/reviews/645e1d1976733924e89d8203"
             >
               <Trans
@@ -53,7 +55,7 @@ export async function Testimonial({ locale }: { locale: string }) {
           />
           <div>
             <div className="font-semibold">Eric Fletcher</div>
-            <div className="text-gray-600 text-sm">
+            <div className="text-muted-foreground text-sm">
               <Trans
                 t={t}
                 ns="home"

@@ -1,5 +1,4 @@
 "use client";
-import { posthog } from "@rallly/posthog/client";
 import { CircleCheckIcon, XIcon } from "lucide-react";
 import * as m from "motion/react-m";
 import Link from "next/link";
@@ -7,14 +6,12 @@ import * as React from "react";
 import { Trans } from "@/i18n/client/trans";
 import { useTranslation } from "@/i18n/client/use-translation";
 import { linkToApp } from "@/lib/linkToApp";
-import { useRefSlug } from "@/lib/use-ref-slug";
 
 // The action bar of the phone demo, plus the confirmation it opens. The
 // surrounding poll layout stays on the server. Must be a direct child of the
 // relative DemoScreen so the confirmation overlay covers the whole screen.
 export const VoteActions = () => {
   const { t } = useTranslation("home");
-  const ref = useRefSlug();
   const [submitted, setSubmitted] = React.useState(false);
 
   return (
@@ -29,7 +26,6 @@ export const VoteActions = () => {
         <button
           type="button"
           onClick={() => {
-            posthog?.capture("landing:hero_demo_continue_click");
             setSubmitted(true);
           }}
           className="flex-[2] cursor-pointer rounded-xl bg-indigo-500/90 py-2.5 text-center font-medium text-sm text-white shadow-sm backdrop-blur-md hover:bg-indigo-500"
@@ -49,7 +45,6 @@ export const VoteActions = () => {
               type="button"
               aria-label={t("heroDemoClose", { defaultValue: "Close" })}
               onClick={() => {
-                posthog?.capture("landing:hero_demo_close_click");
                 setSubmitted(false);
               }}
               className="absolute top-3 right-3 flex size-6 cursor-pointer items-center justify-center rounded-full text-gray-400 hover:bg-gray-100 hover:text-gray-600"
@@ -110,13 +105,7 @@ export const VoteActions = () => {
               className="mt-4"
             >
               <Link
-                href={linkToApp("/new", { ref, cta: "hero_demo_modal" })}
-                onClick={() => {
-                  posthog?.capture("landing:hero_demo_modal_cta_click", {
-                    cta: "hero_demo_modal",
-                    ref,
-                  });
-                }}
+                href={linkToApp("/new")}
                 className="font-medium text-indigo-600 text-xs hover:underline"
               >
                 <Trans

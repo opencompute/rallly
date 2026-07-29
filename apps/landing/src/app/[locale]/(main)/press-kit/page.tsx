@@ -27,8 +27,8 @@ function Fact({
 }) {
   return (
     <div>
-      <dt className="font-medium text-gray-800 text-sm">{label}</dt>
-      <dd className="mt-1 text-gray-600 text-sm">{children}</dd>
+      <dt className="font-medium text-foreground text-sm">{label}</dt>
+      <dd className="mt-1 text-muted-foreground text-sm">{children}</dd>
     </div>
   );
 }
@@ -57,8 +57,8 @@ function AssetCard({
       >
         {preview}
       </div>
-      <div className="flex items-center justify-between gap-2 border-t bg-gray-50 px-4 py-3">
-        <div className="text-gray-800 text-sm">{name}</div>
+      <div className="flex items-center justify-between gap-2 border-t bg-landing-surface px-4 py-3">
+        <div className="text-foreground text-sm">{name}</div>
         <div className="flex gap-3">
           {links.map((link) => (
             <a
@@ -192,7 +192,7 @@ export default async function Page(props: {
     <div className="divide-y">
       <Section>
         <SectionHeading>
-          <h1 className="text-balance font-medium text-3xl text-gray-800 tracking-tight sm:text-5xl">
+          <h1 className="text-balance font-medium text-3xl text-foreground tracking-tight sm:text-5xl">
             <Trans t={t} ns="home" i18nKey="pressKit" defaults="Press kit" />
           </h1>
           <SectionDescription>
@@ -233,7 +233,7 @@ export default async function Page(props: {
         </SectionHeading>
         <SectionContent className="space-y-8">
           <div>
-            <div className="font-medium text-gray-800 text-sm">
+            <div className="font-medium text-foreground text-sm">
               <Trans
                 t={t}
                 ns="home"
@@ -241,7 +241,7 @@ export default async function Page(props: {
                 defaults="One-line description"
               />
             </div>
-            <p className="mt-1 max-w-prose text-pretty text-gray-600 leading-relaxed">
+            <p className="mt-1 max-w-prose text-pretty text-muted-foreground leading-relaxed">
               <Trans
                 t={t}
                 ns="home"
@@ -251,7 +251,7 @@ export default async function Page(props: {
             </p>
           </div>
           <div>
-            <div className="font-medium text-gray-800 text-sm">
+            <div className="font-medium text-foreground text-sm">
               <Trans
                 t={t}
                 ns="home"
@@ -259,7 +259,7 @@ export default async function Page(props: {
                 defaults="Boilerplate"
               />
             </div>
-            <p className="mt-1 max-w-prose text-pretty text-gray-600 leading-relaxed">
+            <p className="mt-1 max-w-prose text-pretty text-muted-foreground leading-relaxed">
               <Trans
                 t={t}
                 ns="home"
@@ -323,12 +323,12 @@ export default async function Page(props: {
               }
             >
               <a
-                href="https://github.com/lukevella/rallly"
+                href="https://github.com/kinpalai/rallly"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                github.com/lukevella/rallly
+                github.com/kinpalai/rallly
               </a>
             </Fact>
             <Fact
@@ -420,9 +420,9 @@ export default async function Page(props: {
         </SectionHeading>
         <SectionContent>
           <div className="flex items-center gap-4">
-            <div className="size-16 rounded-lg bg-[#4F46E5] ring-1 ring-black/10 ring-inset" />
+            <div className="size-16 rounded-lg bg-[#4F46E5] ring-1 ring-black/10 ring-inset dark:ring-white/10" />
             <div>
-              <div className="font-medium text-gray-800 text-sm">
+              <div className="font-medium text-foreground text-sm">
                 <Trans
                   t={t}
                   ns="home"
@@ -430,7 +430,7 @@ export default async function Page(props: {
                   defaults="Primary"
                 />
               </div>
-              <div className="mt-1 font-mono text-gray-600 text-sm">
+              <div className="mt-1 font-mono text-muted-foreground text-sm">
                 #4F46E5
               </div>
             </div>
@@ -503,7 +503,7 @@ export default async function Page(props: {
               components={[
                 <a
                   key="email"
-                  className="text-gray-800 underline underline-offset-2 hover:text-gray-600"
+                  className="text-foreground underline underline-offset-2 hover:text-muted-foreground"
                   href="mailto:support@kinpal.com"
                 />,
               ]}

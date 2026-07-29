@@ -1,6 +1,6 @@
 "use client";
 
-import languages, { supportedLngs } from "@rallly/languages";
+import languages, { defaultLocale, supportedLngs } from "@rallly/languages";
 import {
   Select,
   SelectContent,
@@ -33,15 +33,18 @@ const LanguageSelect = () => {
           return;
         }
 
-        const isLocalizedPath = supportedLngs.some((lng) =>
-          pathname?.startsWith(`/${lng}`),
+        const localeInPath = supportedLngs.find(
+          (locale) =>
+            pathname === `/${locale}` || pathname.startsWith(`/${locale}/`),
         );
 
-        const newPath = isLocalizedPath
-          ? pathname.replace(new RegExp(`^/${i18n.language}`), "")
+        const newPath = localeInPath
+          ? pathname.slice(localeInPath.length + 1) || "/"
           : pathname;
 
-        router.replace(`/${newLocale}${newPath}`);
+        router.replace(
+          newLocale === defaultLocale ? newPath : `/${newLocale}${newPath}`,
+        );
       }}
     >
       <SelectTrigger
@@ -69,17 +72,16 @@ export const Footer: React.FunctionComponent = () => {
         <div className="lg:w-1/4">
           <Image
             src="/logo-grayscale.svg"
-            width={120}
-            height={120}
-            className="!border-l !border-gray-400 border-l-1"
+            width={100}
+            height={100}
+            className="!mb-4 !border-l !border-gray-400 border-l-1"
             alt="Kinpal"
           />
-          <div className="mt-0.5 flex items-center space-x-5">
-            <span className="invisible size-3" aria-hidden="true" />
+          <div className="flex items-center space-x-6">
             <a
               target="_blank"
               href="https://x.com/kinpalai"
-              className="text-gray-600 text-sm hover:text-primary hover:no-underline"
+              className="translate-x-1 text-muted-foreground text-sm hover:text-primary hover:no-underline"
               rel="noreferrer noopener"
               aria-label={t("footerXLabel", { defaultValue: "Follow us on X" })}
             >
@@ -88,7 +90,7 @@ export const Footer: React.FunctionComponent = () => {
             <a
               target="_blank"
               href="https://discord.gg/ZRZKqJf3tY"
-              className="text-gray-600 text-sm hover:text-primary hover:no-underline"
+              className="text-muted-foreground text-sm hover:text-primary hover:no-underline"
               rel="noreferrer noopener"
               aria-label={t("footerDiscordLabel", {
                 defaultValue: "Join us on Discord",
@@ -99,7 +101,7 @@ export const Footer: React.FunctionComponent = () => {
             <a
               target="_blank"
               href="https://www.linkedin.com/company/kinpal"
-              className="text-gray-600 text-sm hover:text-primary hover:no-underline"
+              className="text-muted-foreground text-sm hover:text-primary hover:no-underline"
               rel="noreferrer noopener"
               aria-label={t("footerGithubLabel", {
                 defaultValue: "View our GitHub repository",
@@ -116,26 +118,26 @@ export const Footer: React.FunctionComponent = () => {
           <ul className="grid gap-3 text-sm">
             <li>
               <LinkBase
-                className="inline-block font-normal text-gray-600 hover:text-gray-800 hover:no-underline"
+                className="inline-block font-normal text-muted-link"
                 href="/pricing"
               >
-                <Trans t={t} i18nKey="pricing" defaults="Pricing" />
+                <Trans i18nKey="pricing" defaults="Pricing" />
               </LinkBase>
             </li>
             <li>
               <LinkBase
                 href="/blog"
-                className="inline-block font-normal text-gray-600 hover:text-gray-800 hover:no-underline"
+                className="inline-block font-normal text-muted-link"
               >
-                <Trans t={t} ns="common" i18nKey="blog" defaults="Blog" />
+                <Trans ns="common" i18nKey="blog" defaults="Blog" />
               </LinkBase>
             </li>
             <li>
               <a
                 href="https://support.kinpal.com"
-                className="inline-block font-normal text-gray-600 hover:text-gray-800 hover:no-underline"
+                className="inline-block font-normal text-muted-link"
               >
-                <Trans t={t} ns="common" i18nKey="support" defaults="Support" />
+                <Trans ns="common" i18nKey="support" defaults="Support" />
               </a>
             </li>
           </ul>
@@ -147,11 +149,10 @@ export const Footer: React.FunctionComponent = () => {
           <ul className="grid gap-3 text-sm">
             <li>
               <LinkBase
-                className="inline-block font-normal text-gray-600 hover:text-gray-800 hover:no-underline"
+                className="inline-block font-normal text-muted-link"
                 href="/best-doodle-alternative"
               >
                 <Trans
-                  t={t}
                   ns="common"
                   i18nKey="doodleAlternative"
                   defaults="Doodle alternative"
@@ -160,34 +161,32 @@ export const Footer: React.FunctionComponent = () => {
             </li>
             <li>
               <LinkBase
-                className="inline-block font-normal text-gray-600 hover:text-gray-800 hover:no-underline"
+                className="inline-block font-normal text-muted-link"
+                href="/when2meet-alternative"
+              >
+                <Trans
+                  ns="common"
+                  i18nKey="when2MeetAlternative"
+                  defaults="When2Meet alternative"
+                />
+              </LinkBase>
+            </li>
+            <li>
+              <LinkBase
+                className="inline-block font-normal text-muted-link"
                 href="/free-scheduling-poll"
               >
                 <Trans
-                  t={t}
                   ns="common"
                   i18nKey="freeSchedulingPoll"
                   defaults="Free scheduling poll"
                 />
               </LinkBase>
             </li>
-            <li>
-              <LinkBase
-                className="inline-block font-normal text-gray-600 hover:text-gray-800 hover:no-underline"
-                href="/availability-poll"
-              >
-                <Trans
-                  t={t}                
-                  ns="common"
-                  i18nKey="availabilityPoll"
-                  defaults="Availability Poll"
-                />
-              </LinkBase>
-            </li>
           </ul>
         </div>
         <div className="lg:w-1/4">
-          <div className="mb-8 font-medium">
+          <div id="language-select-label" className="mb-8 font-medium">
             <Trans ns="common" i18nKey="language" defaults="Language" />
           </div>
           <div className="mb-4">
@@ -200,7 +199,7 @@ export const Footer: React.FunctionComponent = () => {
           <li>
             <Link
               href="/privacy-policy"
-              className="inline-block font-normal text-gray-600 hover:text-gray-800 hover:no-underline"
+              className="inline-block font-normal text-muted-link"
             >
               <Trans ns="common" i18nKey="privacyPolicy" />
             </Link>
@@ -208,7 +207,7 @@ export const Footer: React.FunctionComponent = () => {
           <li>
             <Link
               href="/cookie-policy"
-              className="inline-block font-normal text-gray-600 hover:text-gray-800 hover:no-underline"
+              className="inline-block font-normal text-muted-link"
             >
               <Trans ns="common" i18nKey="cookiePolicy" />
             </Link>
@@ -216,7 +215,7 @@ export const Footer: React.FunctionComponent = () => {
           <li>
             <Link
               href="/terms-of-use"
-              className="inline-block font-normal text-gray-600 hover:text-gray-800 hover:no-underline"
+              className="inline-block font-normal text-muted-link"
             >
               <Trans ns="common" i18nKey="termsOfUse" />
             </Link>

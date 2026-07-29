@@ -18,7 +18,7 @@ import Image from "next/image";
 import { Trans } from "react-i18next/TransWithoutContext";
 
 import { LoginButton } from "@/components/login-button";
-import { SignUpButton } from "@/components/sign-up-button";
+import { QuickCreateButton } from "@/components/quick-create-button";
 import { LinkBase } from "@/i18n/client/link";
 import { getTranslation } from "@/i18n/server";
 import { linkToApp } from "@/lib/linkToApp";
@@ -44,18 +44,23 @@ export default async function Root(props: {
   const { locale } = await params;
 
   const { t } = await getTranslation(locale);
+  const homeUrl = process.env.NEXT_PUBLIC_HOME_URL;
   return (
     <div className="relative z-10 mx-auto flex min-h-full w-full max-w-7xl flex-col space-y-8 p-4 sm:p-8">
       <header className="flex w-full items-center">
         <div className="flex grow items-center gap-x-12">
-          <LinkBase className="flex rounded items-center gap-1 font-semibold text-primary-600" href="/">
-            <Image src="/logo.svg" width={28} height={28} alt="kinpal.com" /> Kinpal
+          <LinkBase
+            className="flex items-center gap-1 rounded font-semibold text-primary-600"
+            href="/"
+          >
+            <Image src="/logo.svg" width={28} height={28} alt="kinpal.com" />{" "}
+            Kinpal
           </LinkBase>
           <nav className="hidden items-center gap-2 lg:flex">
             <NavLink href="https://support.kinpal.com/workflow/create">
               <Trans t={t} i18nKey="howItWorks" defaults="How it works" />
             </NavLink>
-            <NavLink href="/pricing">
+            <NavLink href="/pricing" prefetch={false}>
               <Trans t={t} i18nKey="pricing" />
             </NavLink>
             <NavLink href="/blog">
@@ -64,12 +69,22 @@ export default async function Root(props: {
             <NavLink href="https://support.kinpal.com">
               <Trans t={t} i18nKey="support" />
             </NavLink>
+            {homeUrl ? (
+              <NavLink href={homeUrl} target="_blank" rel="noreferrer noopener">
+                Social ↗︎
+              </NavLink>
+            ) : null}
           </nav>
         </div>
-        <div className="flex items-center gap-4 sm:gap-8">
-          <div className="hidden items-center gap-2 sm:flex">
+        <div className="flex items-center gap-2">
+          <div className="sm:hidden">
             <LoginButton />
-            <SignUpButton />
+          </div>
+          <div className="hidden items-center gap-2 sm:flex">
+            <div className="hidden lg:block">
+              <QuickCreateButton />
+            </div>
+            <LoginButton />
           </div>
           <div className="flex items-center justify-center lg:hidden">
             <DropdownMenu>
@@ -105,25 +120,33 @@ export default async function Root(props: {
                 >
                   <Trans t={t} i18nKey="support" />
                 </DropdownMenuItem>
+                {homeUrl ? (
+                  <DropdownMenuItem
+                    render={
+                      <LinkBase
+                        href={homeUrl}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      />
+                    }
+                  >
+                    Social ↗︎
+                  </DropdownMenuItem>
+                ) : null}
                 <DropdownMenuSeparator />
                 <DropdownMenuLabel className="space-y-2">
                   <LinkBase
-                    href={linkToApp("/login")}
+                    href={linkToApp("/new")}
                     className={buttonVariants({
                       variant: "default",
                       className: "w-full",
                     })}
                   >
-                    <Trans t={t} i18nKey="login" defaults="Login" />
-                  </LinkBase>
-                  <LinkBase
-                    href={linkToApp("/login")}
-                    className={buttonVariants({
-                      variant: "primary",
-                      className: "w-full",
-                    })}
-                  >
-                    <Trans t={t} i18nKey="signUp" defaults="Sign up" />
+                    <Trans
+                      t={t}
+                      i18nKey="quickCreate"
+                      defaults="Quick Create"
+                    />
                   </LinkBase>
                 </DropdownMenuLabel>
               </DropdownMenuContent>

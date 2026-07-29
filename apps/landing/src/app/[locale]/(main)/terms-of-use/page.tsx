@@ -6,12 +6,12 @@ import { cacheLife } from "next/cache";
 export default async function TermsOfUse() {
   cacheLife("max");
   return (
-    <div className="prose mx-auto max-w-3xl">
+    <div className="prose prose-gray dark:prose-invert mx-auto max-w-3xl">
       <h1>Terms of Use</h1>
       <p>Last updated: July 4, 2023</p>
       <p>
-        {`This website is operated by Kinpal Inc. References made to "we",
-          "us" or "our" pertain directly and exclusively to Kinpal Inc. We
+        {`This website is operated by Kinpal. References made to "we",
+          "us" or "our" pertain directly and exclusively to Kinpal. We
           provide you, as the user, with this website, which includes all the
           information, tools, and services accessible on it, under the
           stipulation that you agree to all the terms, conditions, policies, and
@@ -45,9 +45,9 @@ export default async function TermsOfUse() {
       <h2>4. Links to Third-Party Websites</h2>
       <p>
         This website may contain links to third-party websites that are not
-        owned or controlled by kinpal.com. We have no control over, and assume no
-        responsibility for, the content, privacy policies, or practices of any
-        third-party websites.
+        owned or controlled by kinpal.com. We have no control over, and assume
+        no responsibility for, the content, privacy policies, or practices of
+        any third-party websites.
       </p>
 
       <h2>5. Modifications to Terms of Use</h2>

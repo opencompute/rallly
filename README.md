@@ -7,7 +7,7 @@
 <p>
   <a href="https://kinpal.com"><strong>Website</strong></a> ·
   <a href="https://support.kinpal.com"><strong>Documentation</strong></a> ·
-  <a href="https://discord.gg/uzg4ZcHbuM"><strong>Discord</strong></a>
+  <a href="https://discord.gg/ZRZKqJf3tY"><strong>Discord</strong></a>
 </p>
 [**Website**](https://kinpal.com) · [**Documentation**](https://support.kinpal.com) · [**Discord**](https://discord.gg/uzg4ZcHbuM)
 

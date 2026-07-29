@@ -16,8 +16,12 @@ export default async function LicensingThankYouPage(props: {
     <main className="relative flex h-dvh flex-col p-4 sm:justify-center sm:p-16">
       <div className="relative z-10 mx-auto w-full max-w-2xl space-y-6">
         <div className="py-4">
-          <LinkBase className="flex rounded items-center gap-1 font-semibold text-primary-600" href="/">
-            <Image src="/logo.svg" width={28} height={28} alt="kinpal.com" /> Kinpal
+          <LinkBase
+            className="flex items-center gap-1 rounded font-semibold text-primary-600"
+            href="/"
+          >
+            <Image src="/logo.svg" width={28} height={28} alt="kinpal.com" />{" "}
+            Kinpal
           </LinkBase>
         </div>
         <div className="space-y-4">
@@ -45,7 +49,7 @@ export default async function LicensingThankYouPage(props: {
               defaults="Next steps"
             />
           </h2>
-          <p className="text-gray-700 dark:text-gray-300">
+          <p className="text-foreground">
             <Trans
               t={t}
               i18nKey="licensingThankYouLicenseEmailed"

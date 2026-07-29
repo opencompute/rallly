@@ -5,11 +5,6 @@ import { getAllPosts } from "@/lib/api";
 
 const seoPages = [
   "/best-doodle-alternative",
-  "/scheduling-for/assistants",
-  "/scheduling-for/committees",
-  "/scheduling-for/sports-clubs",
-  "/scheduling-for/thesis-defense",
-  "/scheduling-for/legal",
   "/free-scheduling-poll",
   "/when2meet-alternative",
 ];

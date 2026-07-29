@@ -1234,14 +1234,14 @@ describe("API v1 - /polls", () => {
       const res = await GET(new Request("https://api.example.com/v1/openapi"));
 
       expect(res.status).toBe(200);
-      expect((await res.json()).info.title).toBe("Rallly API");
+      expect((await res.json()).info.title).toBe("Kinpal API");
     });
 
     it("should serve /api/v1 on the app host by stripping the prefix", async () => {
       const res = await GET(new Request("https://example.com/api/v1/openapi"));
 
       expect(res.status).toBe(200);
-      expect((await res.json()).info.title).toBe("Rallly API");
+      expect((await res.json()).info.title).toBe("Kinpal API");
     });
 
     it("should keep the method and body when stripping the prefix", async () => {

@@ -4,7 +4,7 @@ import { buildReleaseChannels } from "./release-channels";
 function release(tag: string, overrides: Record<string, unknown> = {}) {
   return {
     tag_name: tag,
-    html_url: `https://github.com/lukevella/rallly/releases/tag/${tag}`,
+    html_url: `https://github.com/kinpalai/rallly/releases/tag/${tag}`,
     published_at: "2026-01-01T00:00:00Z",
     draft: false,
     prerelease: false,

@@ -23,10 +23,10 @@ const ErrorPage: React.FunctionComponent<ComponentProps> = ({
       <div className="space-y-8">
         <div className="space-y-4">
           {icon || (
-            <FileSearchIcon className="mb-4 inline-block size-24 text-gray-400" />
+            <FileSearchIcon className="mb-4 inline-block size-24 text-landing-subtle-foreground" />
           )}
           <div className="mb-2 font-bold text-3xl text-primary">{title}</div>
-          <p className="text-gray-600">{description}</p>
+          <p className="text-muted-foreground">{description}</p>
         </div>
         <div className="flex space-x-3">
           <LinkBase href="/" className={buttonVariants({ variant: "primary" })}>

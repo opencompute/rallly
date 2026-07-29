@@ -41,7 +41,7 @@ That's the gap [Kinpal](https://kinpal.com) fills. It does one thing: you sugges
 - **Unlimited participants.** No caps on how many people can vote.
 - **Automatic time zone conversion.** Everyone sees the options in their own time zone.
 
-Kinpal is also [open source](https://github.com/lukevella/rallly), so you can inspect exactly how it works and even host it on your own server.
+Kinpal is also [open source](https://github.com/kinpalai/rallly), so you can inspect exactly how it works and even host it on your own server.
 
 To be equally transparent about our model: Kinpal makes money from [Kinpal Pro](https://kinpal.com/pricing), which adds features you'd want if you use it professionally, like custom branding and polls that stay around indefinitely. That's what keeps the free plan free, without ads, for everyone else.
 

@@ -50,7 +50,7 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // The public API host (https://api.rallly.co) serves the versioned API
+  // The public API host (https://api.kinpal.com) serves the versioned API
   // without the app's `/api` prefix. Only `/v1` is exposed there: the rest of
   // `/api` stays app-host only, so a standalone API project can take over the
   // host later without inheriting them.
@@ -107,7 +107,12 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
-        source: "/api/auth/callback/microsoft-entra-id",
+        source: "/api/auth/callback/github",
+        destination: "/api/better-auth/callback/github",
+        permanent: false,
+      },
+      {
+        source: "/api/auth/callback/microsoft",
         destination: "/api/better-auth/callback/microsoft",
         permanent: false,
       },

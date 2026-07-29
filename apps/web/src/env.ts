@@ -179,7 +179,7 @@ export const env = createEnv({
      */
     TURNSTILE_SECRET_KEY: z.string().optional(),
     /**
-     * Base URL of the Kinpal cloud API (e.g. https://api.rallly.co).
+     * Base URL of the Kinpal cloud API (e.g. https://api.kinpal.com).
      * On the cloud deployment it names the host that serves `/v1` without
      * the app's `/api` prefix (see the rewrite in next.config.ts) and is
      * the `servers` entry of the OpenAPI document. The self-hosted Docker

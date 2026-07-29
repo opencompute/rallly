@@ -12,6 +12,16 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import PostHeader from "@/components/blog/post-header";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 
+function BlogImage({
+  alt,
+  loading: _loading,
+  ...props
+}: React.ComponentProps<"img">) {
+  // Post images are below the article header. Marking them lazy prevents React
+  // from preloading every image in long-form content during the initial load.
+  return <img {...props} alt={alt ?? ""} loading="lazy" decoding="async" />;
+}
+
 export default async function Page(props: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
@@ -40,17 +50,14 @@ export default async function Page(props: {
       <article className="space-y-4">
         <PostHeader title={post.title} date={post.date} />
         <div className="blog-content">
-          <MDXRemote source={post.content} />
+          <MDXRemote source={post.content} components={{ img: BlogImage }} />
         </div>
         <div className="mt-8 flex items-center gap-x-4">
-          <Image
-            src="/logo.svg"
-            width={32}
-            height={32}
-            alt="Kinpal"
-          />
+          <Image src="/logo.svg" width={32} height={32} alt="Kinpal" />
           <div>
-            <div className="font-medium text-foreground leading-none">Kinpal</div>
+            <div className="font-medium text-foreground leading-none">
+              Kinpal
+            </div>
             <div>
               <Link
                 className="text-muted-foreground text-sm hover:text-primary"

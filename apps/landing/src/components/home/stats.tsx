@@ -11,7 +11,7 @@ export function Stats({
   return (
     <p
       className={cn(
-        "mx-auto max-w-2xl text-balance text-center text-base text-gray-600 leading-loose sm:text-xl",
+        "mx-auto max-w-2xl text-balance text-center text-lg text-muted-foregroun sm:text-2xl",
         className,
       )}
     >

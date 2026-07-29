@@ -5,10 +5,13 @@ import Link from "next/link";
 import { Trans } from "@/i18n/client/trans";
 import { linkToApp } from "@/lib/linkToApp";
 
-export function LoginButton() {
+export const QuickCreateButton = () => {
   return (
-    <Link href={linkToApp()} className={buttonVariants({ variant: "primary" })}>
-      <Trans i18nKey="login" defaults="Login" />
+    <Link
+      href={linkToApp("/new")}
+      className={buttonVariants({ variant: "ghost" })}
+    >
+      <Trans i18nKey="quickCreate" defaults="Quick Create" />
     </Link>
   );
-}
+};

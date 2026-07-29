@@ -1,11 +1,9 @@
 "use client";
-import { posthog } from "@rallly/posthog/client";
 import { buttonVariants, cn } from "@rallly/ui";
-import { Badge } from "@rallly/ui/badge";
 import * as m from "motion/react-m";
 import Image from "next/image";
 import Link from "next/link";
-import type * as React from "react";
+import * as React from "react";
 import { handwritten } from "@/fonts/handwritten";
 import { Trans } from "@/i18n/client/trans";
 import { linkToApp } from "@/lib/linkToApp";
@@ -39,8 +37,8 @@ const Screenshot = () => {
           defaults="Create a page like this in seconds!"
         />
         <span className="absolute top-full left-1/2 z-10 h-8 w-px -translate-x-1/2 bg-gray-800" />
-        <span className="absolute -bottom-12 left-1/2 z-10 inline-block size-3 origin-center -translate-x-1/2 rounded-full bg-gray-800 ring-1 ring-gray-800 ring-offset-2" />
-        <span className="absolute -bottom-12 left-1/2 z-10 inline-block size-3 origin-center -translate-x-1/2 animate-ping rounded-full bg-gray-800 ring-1 ring-gray-800 ring-offset-2" />
+        <span className="absolute -bottom-12 left-1/2 z-10 inline-block size-3 origin-center -translate-x-1/2 rounded-full bg-gray-800 ring-1 ring-gray-800 ring-offset-2 dark:ring-offset-gray-950" />
+        <span className="absolute -bottom-12 left-1/2 z-10 inline-block size-3 origin-center -translate-x-1/2 animate-ping rounded-full bg-gray-800 ring-1 ring-gray-800 ring-offset-2 dark:ring-offset-gray-950" />
       </m.div>
       <m.div
         transition={{
@@ -57,12 +55,23 @@ const Screenshot = () => {
         className="mx-auto w-fit overflow-hidden rounded-md border shadow-huge"
       >
         <Image
-          src="/static/images/hero-shot.png"
+          src="/static/images/hero-shot.webp"
           alt="Screenshot of Kinpal Poll"
-          width={1440}
-          height={1152}
+          width={2560}
+          height={2266}
           quality={100}
-          preload
+          className="dark:hidden"
+          onLoad={() => {
+            setIsLoaded(true);
+          }}
+        />
+        <Image
+          src="/static/images/hero-dark.webp"
+          alt="Screenshot of Kinpal Poll"
+          width={1335}
+          height={1180}
+          quality={100}
+          className="hidden dark:block"
           onLoad={() => {
             setIsLoaded(true);
           }}
@@ -76,12 +85,10 @@ export const MarketingHero = ({
   title,
   description,
   callToAction,
-  demo,
 }: {
   title: string;
   description: string;
   callToAction: React.ReactNode;
-  demo: React.ReactNode;
 }) => {
   return (
     <article className="max-w-full space-y-12 text-center">
@@ -89,7 +96,7 @@ export const MarketingHero = ({
         <h1 className="mt-6 mb-2 text-pretty font-bold text-2xl tracking-tight sm:mb-4 sm:text-5xl">
           {title}
         </h1>
-        <h2 className="mx-auto max-w-3xl text-pretty font-normal text-base text-gray-600 sm:text-xl sm:leading-relaxed">
+        <h2 className="mx-auto max-w-3xl text-pretty font-normal text-base text-muted-foreground sm:text-xl sm:leading-relaxed">
           {description}
         </h2>
         <div className="mt-8 flex flex-col items-center justify-center gap-4">
@@ -100,17 +107,14 @@ export const MarketingHero = ({
               variant: "primary",
               className: "shadow-md transition-all active:shadow-none",
             })}
-            onClick={() => {
-              posthog.capture("landing:hero_cta_click");
-            }}
           >
             {callToAction}
           </Link>
           <p
             className={cn(
-              "whitespace-nowrap text-center text-gray-600 text-xs",
+              "whitespace-nowrap text-center text-muted-foreground text-xs",
               handwritten.className,
-              "decoration underline decoration-2 decoration-gray-300 underline-offset-8",
+              "decoration underline decoration-2 decoration-gray-300 underline-offset-8 dark:decoration-gray-600",
             )}
           >
             <Trans
@@ -121,7 +125,9 @@ export const MarketingHero = ({
           </p>
         </div>
       </header>
-      <section>{demo}</section>
+      <section>
+        <Screenshot />
+      </section>
     </article>
   );
 };

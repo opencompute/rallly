@@ -16,12 +16,14 @@ export function DefaultLogo({ className }: { className?: string }) {
       <img
         src="/static/logo.svg"
         alt={DEFAULT_APP_NAME}
+        fetchPriority="low"
         className="block max-h-full max-w-full object-contain dark:hidden"
       />
       {/* biome-ignore lint/performance/noImgElement: we don't need Image component here */}
       <img
         src="/static/logo-dark.svg"
         alt={DEFAULT_APP_NAME}
+        fetchPriority="low"
         className="hidden max-h-full max-w-full object-contain dark:block"
       />
     </div>

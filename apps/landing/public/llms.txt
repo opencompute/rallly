@@ -83,4 +83,4 @@ Kinpal is ideal for:
 - Main website: https://kinpal.com
 - Application: https://app.kinpal.com
 - Documentation: https://support.kinpal.com
-- GitHub: https://github.com/opencompute/rallly
+- GitHub: https://github.com/kinpalai/rallly

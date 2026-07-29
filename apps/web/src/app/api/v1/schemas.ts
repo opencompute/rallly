@@ -279,7 +279,7 @@ export const pollOrganizerSchema = z
     name: z.string().meta({ example: "John Doe" }),
     email: z.email().meta({ example: "organizer@example.com" }),
     image: z.string().nullable().meta({
-      example: "https://cdn.rallly.co/avatars/cm3f7d1qa0000t2k9c6b8h4jr.jpg",
+      example: "https://cdn.kinpal.com/avatars/cm3f7d1qa0000t2k9c6b8h4jr.jpg",
     }),
   })
   .meta({ id: "PollOrganizer" });
@@ -334,10 +334,10 @@ const pollSchema = z
     options: z.array(pollOptionSchema),
     adminUrl: z
       .string()
-      .meta({ example: "https://app.rallly.co/poll/Xk3pQ9vLm2Ab" }),
+      .meta({ example: "https://app.kinpal.com/poll/Xk3pQ9vLm2Ab" }),
     inviteUrl: z
       .string()
-      .meta({ example: "https://rallly.co/invite/Xk3pQ9vLm2Ab" }),
+      .meta({ example: "https://kinpal.com/invite/Xk3pQ9vLm2Ab" }),
   })
   .meta({ id: "Poll" });
 
